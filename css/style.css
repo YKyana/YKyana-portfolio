@@ -10,23 +10,12 @@ body {
     font-family: 'Inter', sans-serif;
 }
 
-header {
-    position: sticky;
-    top: 0;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    padding: 20px 60px;
-
-    background: rgba(15, 15, 16, 0.85);
-
-    backdrop-filter: blur(12px);
-
-    border-bottom: 1px solid rgba(255,255,255,0.08);
-
-    z-index: 1000;
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:25px 60px;
+    position:relative;
 }
 
 header h1 {
