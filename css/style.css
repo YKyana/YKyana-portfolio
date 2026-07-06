@@ -186,3 +186,14 @@ button:hover {
     transform:translateY(-3px);
 
 }
+.logo{
+    color:white;
+    text-decoration:none;
+    font-size:32px;
+    font-weight:700;
+    transition:.3s;
+}
+
+.logo:hover{
+    color:#4ea1ff;
+}
