@@ -267,60 +267,82 @@ nav{
 }
 @media (max-width:768px){
 
-header{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px;
-    flex-wrap:wrap;
-}
+    header{
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        flex-wrap:wrap;
+        padding:20px;
+    }
 
-.logo{
-    font-size:22px;
-}
+    .logo{
+        font-size:22px;
+    }
 
-.menu-toggle{
-    display:block;
-}
+    .menu-toggle{
+        display:block;
+        position:relative;
+        z-index:1001;
+    }
 
-.nav-menu a{
-    font-size:24px;
-    font-weight:600;
-    color:white;
-    text-decoration:none;
-    transition:transform .25s ease, color .25s ease;
-}
+    .nav-menu{
+        position:fixed;
+        top:80px;
+        left:0;
+        width:100%;
+        height:calc(100vh - 80px);
 
-.nav-menu a:hover{
-    transform:translateX(8px);
-    color:#6C63FF;
-}
+        display:flex;
+        flex-direction:column;
+        justify-content:flex-start;
+        align-items:center;
+        gap:35px;
 
-.nav-menu.active{
-    transform:translateY(0);
-    opacity:1;
-}
+        background:rgba(15,15,15,.96);
+        backdrop-filter:blur(12px);
 
-.nav-menu.active{
-} 
+        transform:translateY(-120%);
+        opacity:0;
+        transition:.4s ease;
 
-.hero{
-    padding:40px 20px;
-}
+        padding-top:60px;
+    }
 
-.hero h2{
-    font-size:42px;
-}
+    .nav-menu.active{
+        transform:translateY(0);
+        opacity:1;
+    }
 
-.description{
-    font-size:18px;
-}
+    .nav-menu a{
+        font-size:24px;
+        font-weight:600;
+        color:white;
+        text-decoration:none;
+        transition:transform .25s ease, color .25s ease;
+    }
 
-.button{
-    width:100%;
-    max-width:280px;
-    text-align:center;
-}
+    .nav-menu a:hover{
+        transform:translateX(8px);
+        color:#6C63FF;
+    }
+
+    .hero{
+        padding:40px 20px;
+    }
+
+    .hero h2{
+        font-size:42px;
+    }
+
+    .description{
+        font-size:18px;
+    }
+
+    .button{
+        width:100%;
+        max-width:280px;
+        text-align:center;
+    }
 
 }
 @keyframes fade{
