@@ -197,3 +197,56 @@ button:hover {
 .logo:hover{
     color:#4ea1ff;
 }
+/* ==========================
+   Mobile
+========================== */
+
+@media (max-width: 768px) {
+
+header{
+
+    flex-direction: column;
+
+    gap:20px;
+
+    padding:20px;
+
+}
+
+nav{
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:15px;
+
+}
+
+.hero{
+
+    padding:30px 20px;
+
+}
+
+.hero h2{
+
+    font-size:48px;
+
+}
+
+.description{
+
+    font-size:18px;
+
+}
+
+.button{
+
+    width:100%;
+
+    max-width:280px;
+
+}
+
+}
