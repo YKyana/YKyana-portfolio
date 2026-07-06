@@ -241,11 +241,6 @@ header{
     text-align:center;
 }
 
-}
-
-}
-
-}
 .menu-toggle{
 
     display:none;
@@ -334,4 +329,17 @@ display:flex;
 .menu-toggle.active span:nth-child(3){
     transform:rotate(-45deg);
     top:18px;
+}
+@keyframes fade{
+
+from{
+    opacity:0;
+    transform:translateY(-15px);
+}
+
+to{
+    opacity:1;
+    transform:translateY(0);
+}
+
 }
