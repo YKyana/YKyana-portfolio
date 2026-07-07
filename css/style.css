@@ -125,6 +125,9 @@ header {
 /* ===================================================
    HERO
 =================================================== */
+/* ===================================================
+   HERO (Оновлений)
+=================================================== */
 .hero {
     max-width: 1400px;
     margin: 0 auto;
@@ -157,6 +160,22 @@ header {
     margin-bottom: 28px;
 }
 
+.highlight {
+    color: #4EA1FF;
+    position: relative;
+}
+
+.highlight::after {
+    content: '';
+    position: absolute;
+    bottom: 8px;
+    left: 0;
+    width: 100%;
+    height: 18px;
+    background: rgba(78, 161, 255, 0.15);
+    z-index: -1;
+}
+
 .description {
     font-size: 21px;
     color: #A7A7A7;
@@ -168,6 +187,42 @@ header {
     display: flex;
     gap: 18px;
     flex-wrap: wrap;
+}
+
+/* Hero Image */
+.hero-image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 720px;
+    position: relative;
+    z-index: 2;
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+    transition: transform 0.5s ease;
+}
+
+.hero-image img:hover {
+    transform: translateY(-12px) scale(1.02);
+}
+
+.glow {
+    position: absolute;
+    width: 580px;
+    height: 580px;
+    background: #2563EB;
+    border-radius: 50%;
+    filter: blur(160px);
+    opacity: 0.22;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 /* Hero Image */
