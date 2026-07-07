@@ -207,6 +207,58 @@ button:hover {
 .logo:hover {
     color: #4ea1ff;
 }
+
+.hero{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:80px;
+    min-height:90vh;
+}
+
+.hero-content{
+    flex:1;
+}
+
+.hero-image{
+    flex:1;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+}
+
+.hero-image img{
+    width:100%;
+    max-width:650px;
+    height:auto;
+    position:relative;
+    z-index:2;
+}
+
+.glow{
+    position:absolute;
+    width:450px;
+    height:450px;
+    border-radius:50%;
+    background:#2563eb;
+    filter:blur(120px);
+    opacity:.18;
+    z-index:1;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:20px;
+    margin-top:35px;
+    flex-wrap:wrap;
+}
+
+.button.secondary{
+    background:transparent;
+    border:1px solid #666;
+}
+
 /* ==========================
    Mobile
 ========================== */
