@@ -42,14 +42,57 @@ a{
 
 }
 
-button{
+/* ===================================================
+   BUTTONS
+=================================================== */
 
-    font-family:inherit;
+.button{
 
-    cursor:pointer;
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    min-width:180px;
+
+    padding:18px 34px;
+
+    border-radius:8px;
+
+    background:#4EA1FF;
+
+    color:white;
+
+    font-weight:600;
+
+    transition:.3s;
 
 }
 
+.button:hover{
+
+    transform:translateY(-3px);
+
+    background:#3B8EF0;
+
+}
+
+.button.secondary{
+
+    background:transparent;
+
+    border:1px solid rgba(255,255,255,.18);
+
+}
+
+.button.secondary:hover{
+
+    background:white;
+
+    color:#111;
+
+}
 /* ===================================================
    HEADER
 =================================================== */
@@ -157,6 +200,62 @@ header{
     gap:18px;
 
     flex-wrap:wrap;
+
+}
+
+/* ===================================================
+   HERO IMAGE
+=================================================== */
+
+.hero-image{
+
+    position:relative;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.hero-image img{
+
+    width:100%;
+
+    max-width:720px;
+
+    position:relative;
+
+    z-index:2;
+
+    transition:transform .35s ease;
+
+}
+
+.hero-image img:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.glow{
+
+    position:absolute;
+
+    width:520px;
+
+    height:520px;
+
+    background:#2563EB;
+
+    border-radius:50%;
+
+    filter:blur(140px);
+
+    opacity:.18;
+
+    z-index:1;
 
 }
 
