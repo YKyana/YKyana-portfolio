@@ -346,3 +346,71 @@ header{
     font-size:32px;
 
 }
+
+/* ===================================================
+   PROJECT HERO
+=================================================== */
+
+.project-hero{
+
+    max-width:1400px;
+
+    margin:0 auto;
+
+    padding:90px 60px 120px;
+
+    text-align:center;
+
+}
+
+.project-hero .section-title{
+
+    display:inline-block;
+
+    color:#4EA1FF;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+    margin-bottom:20px;
+
+}
+
+.project-hero h1{
+
+    font-size:72px;
+
+    font-weight:800;
+
+    margin-bottom:18px;
+
+}
+
+.project-subtitle{
+
+    font-size:22px;
+
+    color:#A8A8A8;
+
+    margin-bottom:70px;
+
+}
+
+.project-hero img{
+
+    width:100%;
+
+    max-width:1200px;
+
+    margin:0 auto;
+
+    border-radius:12px;
+
+    box-shadow:0 20px 60px rgba(0,0,0,.45);
+
+}
