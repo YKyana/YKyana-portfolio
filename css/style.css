@@ -258,6 +258,103 @@ button:hover {
     background:transparent;
     border:1px solid #666;
 }
+
+/* ==========================
+   FEATURED PROJECT
+========================== */
+
+.featured-project {
+
+    max-width: 1400px;
+
+    margin: 140px auto;
+
+    padding: 0 80px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1.2fr;
+
+    align-items: center;
+
+    gap: 80px;
+
+}
+
+.featured-text{
+
+    max-width:500px;
+
+}
+
+.section-title{
+
+    color:#8f8f8f;
+
+    font-size:14px;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+    margin-bottom:18px;
+
+}
+
+.featured-text h2{
+
+    font-size:56px;
+
+    margin-bottom:25px;
+
+}
+
+.featured-text p{
+
+    color:#bdbdbd;
+
+    font-size:20px;
+
+    line-height:1.8;
+
+    margin-bottom:40px;
+
+}
+
+.button{
+
+    display:inline-block;
+
+    padding:18px 42px;
+
+    border:1px solid white;
+
+    color:white;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+.button:hover{
+
+    background:white;
+
+    color:black;
+
+}
+
+.featured-image img{
+
+    width:100%;
+
+    display:block;
+
+    border-radius:10px;
+
+}
+
 /* ==========================
    Mobile Menu
 ========================== */
@@ -373,7 +470,36 @@ button:hover {
         max-width:280px;
         text-align:center;
     }
+.featured-project{
 
+    grid-template-columns:1fr;
+
+    gap:50px;
+
+    padding:0 30px;
+
+    margin:90px auto;
+
+}
+
+.featured-text{
+
+    max-width:100%;
+
+}
+
+.featured-text h2{
+
+    font-size:42px;
+
+}
+
+.featured-text p{
+
+    font-size:18px;
+
+}
+    
 }
 
 @keyframes fade{
