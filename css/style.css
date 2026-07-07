@@ -519,6 +519,84 @@ header{
 }
 
 /* ===================================================
+   PROJECT OVERVIEW
+=================================================== */
+
+.project-overview{
+
+    max-width:1400px;
+
+    margin:0 auto;
+
+    padding:120px 60px;
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr;
+
+    gap:80px;
+
+    align-items:start;
+
+}
+
+.overview-text h2{
+
+    font-size:52px;
+
+    margin:20px 0 30px;
+
+}
+
+.overview-text p{
+
+    color:#B5B5B5;
+
+    font-size:20px;
+
+    line-height:1.8;
+
+}
+
+.overview-info{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:40px;
+
+}
+
+.info-item{
+
+    padding:30px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:12px;
+
+    background:#161617;
+
+}
+
+.info-item h3{
+
+    margin-bottom:20px;
+
+    color:white;
+
+}
+
+.info-item p{
+
+    color:#B5B5B5;
+
+    margin-bottom:10px;
+
+}
+
+/* ===================================================
    MOBILE
 =================================================== */
 
