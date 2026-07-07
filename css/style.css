@@ -446,3 +446,105 @@ header{
     border-radius:10px;
 
 }
+
+/* ===================================================
+   MOBILE
+=================================================== */
+
+@media (max-width:768px){
+
+    header{
+        padding:20px;
+    }
+
+    .logo{
+        font-size:22px;
+    }
+
+    .menu-toggle{
+        display:block;
+    }
+
+    .nav-menu{
+
+        position:fixed;
+
+        top:79px;
+        left:0;
+
+        width:100%;
+        height:calc(100vh - 79px);
+
+        display:flex;
+        flex-direction:column;
+        justify-content:flex-start;
+        align-items:center;
+
+        gap:35px;
+        padding-top:60px;
+
+        background:rgba(15,15,16,.96);
+        backdrop-filter:blur(14px);
+
+        transform:translateY(-100%);
+        opacity:0;
+        visibility:hidden;
+
+        transition:
+            transform .45s ease,
+            opacity .35s ease,
+            visibility .35s;
+    }
+
+    .nav-menu.active{
+
+        transform:translateY(0);
+
+        opacity:1;
+
+        visibility:visible;
+    }
+
+    .nav-menu a{
+
+        font-size:24px;
+
+    }
+
+    .hero{
+
+        grid-template-columns:1fr;
+
+        text-align:center;
+
+        padding:50px 24px;
+
+        gap:50px;
+
+    }
+
+    .hero h1{
+
+        font-size:48px;
+
+    }
+
+    .hero-buttons{
+
+        justify-content:center;
+
+    }
+
+    .project-hero{
+
+        padding:60px 24px 80px;
+
+    }
+
+    .project-hero h1{
+
+        font-size:44px;
+
+    }
+
+}
