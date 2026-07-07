@@ -418,18 +418,18 @@ header {
     }
 }
 /* ===================================================
-   FEATURED PROJECTS 
+   FEATURED PROJECTS + CARDS
 =================================================== */
 .featured-projects {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 100px 60px;
+    padding: 110px 60px;
     background: #0A0A0B;
 }
 
 .section-header {
     text-align: center;
-    margin-bottom: 70px;
+    margin-bottom: 80px;
 }
 
 .section-header .section-title {
@@ -439,36 +439,37 @@ header {
     font-weight: 600;
     letter-spacing: 4px;
     text-transform: uppercase;
-    margin-bottom: 16px;
+    margin-bottom: 18px;
 }
 
 .section-header h2 {
     font-size: 52px;
     font-weight: 800;
-    margin-bottom: 16px;
 }
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
     gap: 40px;
 }
 
+/* === КАРТКА === */
 .project-card {
     background: #161617;
     border-radius: 20px;
     overflow: hidden;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.4s cubic-bezier(0.4, 0.0, 0.2, 1);
     text-decoration: none;
     color: inherit;
     height: 100%;
     display: flex;
     flex-direction: column;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .project-card:hover {
-    transform: translateY(-15px);
-    box-shadow: 0 35px 70px rgba(0, 0, 0, 0.6);
+    transform: translateY(-18px);
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.55);
 }
 
 .project-image {
@@ -481,15 +482,15 @@ header {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.7s ease;
+    transition: transform 0.8s ease;
 }
 
 .project-card:hover .project-image img {
-    transform: scale(1.1);
+    transform: scale(1.12);
 }
 
 .project-info {
-    padding: 32px;
+    padding: 32px 32px 36px;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
@@ -499,12 +500,54 @@ header {
     font-size: 26px;
     margin-bottom: 10px;
     font-weight: 700;
+    line-height: 1.2;
 }
 
 .project-info p {
     color: #A0A0A0;
     font-size: 17px;
     margin-top: auto;
+}
+
+/* Coming Soon */
+.coming-soon {
+    opacity: 0.8;
+    pointer-events: none;
+}
+
+.coming-soon:hover {
+    transform: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.coming-soon .project-info p {
+    color: #4EA1FF;
+}
+
+/* ===================================================
+   RESPONSIVE FOR CARDS
+=================================================== */
+@media (max-width: 768px) {
+    .featured-projects {
+        padding: 80px 24px;
+    }
+
+    .section-header h2 {
+        font-size: 42px;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .project-image {
+        height: 250px;
+    }
+
+    .project-info {
+        padding: 28px;
+    }
 }
 
 /* Coming Soon */
