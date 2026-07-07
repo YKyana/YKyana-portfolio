@@ -78,6 +78,88 @@ header{
 
 }
 
+/* ===================================================
+   HERO
+=================================================== */
+
+.hero{
+
+    max-width:1400px;
+
+    margin:0 auto;
+
+    min-height:calc(100vh - 90px);
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    align-items:center;
+
+    gap:80px;
+
+    padding:80px 60px;
+
+}
+
+.hero-content{
+
+    max-width:620px;
+
+}
+
+.subtitle{
+
+    display:inline-block;
+
+    margin-bottom:22px;
+
+    color:#4EA1FF;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+}
+
+.hero h1{
+
+    font-size:78px;
+
+    font-weight:800;
+
+    line-height:1.05;
+
+    margin-bottom:28px;
+
+}
+
+.description{
+
+    font-size:21px;
+
+    color:#A7A7A7;
+
+    line-height:1.8;
+
+    margin-bottom:42px;
+
+}
+
+.hero-buttons{
+
+    display:flex;
+
+    gap:18px;
+
+    flex-wrap:wrap;
+
+}
+
 .logo{
 
     font-size:30px;
