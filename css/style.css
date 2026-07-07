@@ -1,6 +1,6 @@
-/* =====================================================
+/* ===================================================
    RESET
-===================================================== */
+=================================================== */
 
 *{
     margin:0;
@@ -13,45 +13,66 @@ html{
 }
 
 body{
-    background:#0f0f10;
-    color:#ffffff;
+
+    background:#0F0F10;
+
+    color:#FFFFFF;
+
     font-family:"Inter",sans-serif;
+
     overflow-x:hidden;
+
+    line-height:1.6;
+
 }
 
 img{
+
     display:block;
+
     max-width:100%;
+
 }
 
 a{
-    text-decoration:none;
+
     color:inherit;
+
+    text-decoration:none;
+
 }
 
 button{
+
     font-family:inherit;
+
+    cursor:pointer;
+
 }
 
-/* =====================================================
+/* ===================================================
    HEADER
-===================================================== */
+=================================================== */
 
 header{
 
     position:sticky;
+
     top:0;
+
     z-index:1000;
 
     display:flex;
+
     justify-content:space-between;
+
     align-items:center;
 
     padding:22px 60px;
 
     background:rgba(15,15,16,.88);
 
-    backdrop-filter:blur(12px);
+    backdrop-filter:blur(16px);
 
     border-bottom:1px solid rgba(255,255,255,.08);
 
@@ -59,7 +80,7 @@ header{
 
 .logo{
 
-    font-size:32px;
+    font-size:30px;
 
     font-weight:700;
 
@@ -69,7 +90,7 @@ header{
 
 .logo:hover{
 
-    color:#4ea1ff;
+    color:#4EA1FF;
 
 }
 
@@ -85,9 +106,11 @@ header{
 
 .nav-menu a{
 
-    color:white;
+    position:relative;
 
-    font-size:18px;
+    font-size:17px;
+
+    color:#F5F5F5;
 
     transition:.3s;
 
@@ -95,184 +118,50 @@ header{
 
 .nav-menu a:hover{
 
-    color:#4ea1ff;
+    color:#4EA1FF;
 
 }
 
-/* =====================================================
-   HERO
-===================================================== */
+.nav-menu a::after{
 
-.hero{
+    content:"";
 
-    max-width:1400px;
+    position:absolute;
 
-    margin:0 auto;
+    left:0;
 
-    min-height:calc(100vh - 90px);
+    bottom:-6px;
 
-    display:flex;
+    width:0;
 
-    justify-content:space-between;
+    height:2px;
 
-    align-items:center;
-
-    gap:90px;
-
-    padding:60px;
-
-}
-
-.hero-content{
-
-    flex:1;
-
-}
-
-.subtitle{
-
-    color:#4ea1ff;
-
-    text-transform:uppercase;
-
-    letter-spacing:4px;
-
-    font-size:14px;
-
-    margin-bottom:24px;
-
-}
-
-.hero h1{
-
-    font-size:78px;
-
-    line-height:1.1;
-
-    margin-bottom:28px;
-
-}
-
-.description{
-
-    color:#a9a9a9;
-
-    font-size:22px;
-
-    line-height:1.7;
-
-    max-width:600px;
-
-    margin-bottom:45px;
-
-}
-
-.hero-buttons{
-
-    display:flex;
-
-    gap:18px;
-
-    flex-wrap:wrap;
-
-}
-
-/* =====================================================
-   BUTTONS
-===================================================== */
-
-.button{
-
-    display:inline-flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    padding:18px 42px;
-
-    border-radius:8px;
-
-    background:#4ea1ff;
-
-    color:white;
-
-    font-weight:600;
+    background:#4EA1FF;
 
     transition:.3s;
 
 }
 
-.button:hover{
-
-    transform:translateY(-3px);
-
-    background:#3b8ef0;
-
-}
-
-.button.secondary{
-
-    background:transparent;
-
-    border:1px solid rgba(255,255,255,.25);
-
-}
-
-.button.secondary:hover{
-
-    background:white;
-
-    color:black;
-
-}
-
-/* =====================================================
-   HERO IMAGE
-===================================================== */
-
-.hero-image{
-
-    flex:1;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    position:relative;
-
-}
-
-.hero-image img{
+.nav-menu a:hover::after{
 
     width:100%;
 
-    max-width:650px;
-
-    position:relative;
-
-    z-index:2;
-
 }
 
-.glow{
+/* ===================================================
+   BURGER
+=================================================== */
 
-    position:absolute;
+.menu-toggle{
 
-    width:450px;
+    display:none;
 
-    height:450px;
+    background:none;
 
-    border-radius:50%;
+    border:none;
 
-    background:#2563eb;
+    color:white;
 
-    filter:blur(120px);
-
-    opacity:.18;
-
-    z-index:1;
+    font-size:32px;
 
 }
