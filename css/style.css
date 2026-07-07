@@ -695,5 +695,26 @@ header{
         font-size:44px;
 
     }
+.project-overview{
 
+    grid-template-columns:1fr;
+
+    padding:70px 24px;
+
+    gap:40px;
+
+}
+
+.overview-text h2{
+
+    font-size:40px;
+
+}
+
+.overview-text p{
+
+    font-size:18px;
+
+}
+   
 }
