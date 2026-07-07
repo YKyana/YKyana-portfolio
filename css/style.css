@@ -25,6 +25,12 @@ body{
     line-height:1.6;
 
 }
+body.menu-open{
+
+    overflow:hidden;
+
+}
+
 
 img{
 
@@ -414,7 +420,6 @@ header{
     box-shadow:0 20px 60px rgba(0,0,0,.45);
 
 }
-
 /* ===================================================
    PROJECT HERO MOBILE
 =================================================== */
@@ -445,6 +450,72 @@ header{
 
     border-radius:10px;
 
+}
+
+/* ===================================================
+   BURGER BUTTON
+=================================================== */
+
+.menu-toggle{
+
+    display:none;
+
+    width:46px;
+
+    height:46px;
+
+    background:none;
+
+    border:none;
+
+    position:relative;
+
+    z-index:1100;
+
+    cursor:pointer;
+
+}
+
+.menu-toggle span{
+
+    position:absolute;
+
+    left:9px;
+
+    width:28px;
+
+    height:2px;
+
+    background:#fff;
+
+    transition:.35s ease;
+
+}
+
+.menu-toggle span:nth-child(1){
+    top:14px;
+}
+
+.menu-toggle span:nth-child(2){
+    top:22px;
+}
+
+.menu-toggle span:nth-child(3){
+    top:30px;
+}
+
+.menu-toggle.active span:nth-child(1){
+    transform:rotate(45deg);
+    top:22px;
+}
+
+.menu-toggle.active span:nth-child(2){
+    opacity:0;
+}
+
+.menu-toggle.active span:nth-child(3){
+    transform:rotate(-45deg);
+    top:22px;
 }
 
 /* ===================================================
