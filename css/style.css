@@ -414,3 +414,35 @@ header{
     box-shadow:0 20px 60px rgba(0,0,0,.45);
 
 }
+
+/* ===================================================
+   PROJECT HERO MOBILE
+=================================================== */
+
+.project-hero{
+
+    padding:60px 24px 80px;
+
+}
+
+.project-hero h1{
+
+    font-size:44px;
+
+}
+
+.project-subtitle{
+
+    font-size:18px;
+
+    margin-bottom:40px;
+
+}
+
+.project-hero img{
+
+    width:100%;
+
+    border-radius:10px;
+
+}
