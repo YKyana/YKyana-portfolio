@@ -340,7 +340,7 @@ header {
 }
 
 /* ===================================================
-   THEME TOGGLE + LIGHT THEME (покращена версія)
+   THEME TOGGLE + LIGHT THEME (фінальна версія)
 =================================================== */
 .theme-toggle {
     background: none;
@@ -360,7 +360,7 @@ header {
 .theme-toggle .moon { display: none; }
 .theme-toggle .sun { display: inline; }
 
-/* Світла тема — покращена контрастність */
+/* Світла тема */
 body.light {
     background: #F8F9FA;
     color: #111111;
@@ -377,8 +377,15 @@ body.light .button {
 }
 
 body.light .button.secondary {
-    border-color: #0066FF;
+    background: transparent;
+    border: 2px solid #0066FF;
     color: #0066FF;
+    font-weight: 600;
+}
+
+body.light .button.secondary:hover {
+    background: #0066FF;
+    color: white;
 }
 
 body.light .nav-menu a {
@@ -414,11 +421,11 @@ body.light .about {
     background: #F8F9FA;
 }
 
-/* Гамбургер на світлій темі */
+/* Гамбургер на світлій */
 body.light .menu-toggle span {
-    background: #111111;
+    background: #111;
 }
 
-/* Іконки теми */
+/* Іконки */
 .theme-toggle.light .moon { display: inline; }
 .theme-toggle.light .sun { display: none; }
