@@ -420,3 +420,44 @@ body.light .section-header .section-title {
 body.light .about {
     background: #F8F9FA;
 }
+/* ===================================================
+   LIGHT THEME FIXES (повне виправлення)
+=================================================== */
+body.light .featured-projects {
+    background: #F4F6F9;
+}
+
+body.light .project-card {
+    background: #FFFFFF;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+body.light .project-info h3 {
+    color: #111;
+}
+
+body.light .project-info p {
+    color: #555;
+}
+
+body.light .section-header .section-title {
+    color: #0066FF;
+}
+
+body.light .section-header h2 {
+    color: #111;
+}
+
+body.light .about {
+    background: #F8F9FA;
+}
+
+body.light .button.secondary {
+    color: #0066FF;
+    border-color: #0066FF;
+}
+
+/* Кнопки в хедері */
+body.light .nav-menu a {
+    color: #222;
+}
