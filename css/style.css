@@ -440,4 +440,20 @@ body.light .nav-menu {
 body.light .nav-menu a {
     color: #1F1F1F;
 }
+/* Фікс для інших сторінок (Contact, Resume, About) */
+body.light main,
+body.light section {
+    background: #F8F9FA;
+}
 
+body.light .resume-content,
+body.light form {
+    color: #111;
+}
+
+body.light input,
+body.light textarea {
+    background: #FFFFFF;
+    color: #111;
+    border: 1px solid #CCC;
+}
