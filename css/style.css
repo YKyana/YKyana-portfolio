@@ -55,7 +55,7 @@ a { color: inherit; text-decoration: none; }
 }
 
 /* ===================================================
-   HEADER + HERO + OVERVIEW (Ð·Ð°Ð»Ð¸ÑÐ°Ñ ÑÐº Ð±ÑÐ»Ð¾)
+   HEADER + HERO + OVERVIEW
 =================================================== */
 header {
     position: sticky;
@@ -279,10 +279,69 @@ header {
    MOBILE
 =================================================== */
 @media (max-width: 768px) {
-    header { padding: 20px; }
-    .logo { font-size: 22px; }
-    .menu-toggle { display: block; }
+    header { 
+        padding: 18px 24px; 
+    }
+    
+    .logo { 
+        font-size: 22px; 
+    }
 
+    /* Кнопка гамбургер */
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 22px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        z-index: 1100;
+    }
+
+    .menu-toggle span {
+        width: 100%;
+        height: 3px;
+        background: #FFFFFF;
+        border-radius: 3px;
+        transition: all 0.35s ease;
+    }
+
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    /* Мобільне меню */
+    .nav-menu {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: rgba(15,15,16,0.98);
+        flex-direction: column;
+        padding: 40px 24px;
+        gap: 28px;
+        text-align: center;
+        z-index: 1050;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        display: none;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    /* Інше */
     .hero {
         grid-template-columns: 1fr;
         text-align: center;
