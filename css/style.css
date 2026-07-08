@@ -338,3 +338,61 @@ header {
     .hero { padding: 50px 24px; gap: 40px; text-align: center; }
     .hero h1 { font-size: 46px; }
 }
+
+/* ===================================================
+   THEME TOGGLE (Світла / Темна тема)
+=================================================== */
+.theme-toggle {
+    background: none;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    padding: 8px;
+    margin-left: 16px;
+    z-index: 1001;
+    transition: transform 0.3s;
+}
+
+.theme-toggle:hover {
+    transform: rotate(30deg);
+}
+
+.theme-toggle .moon { display: none; }
+.theme-toggle .sun { display: inline; }
+
+/* Світла тема */
+body.light {
+    background: #F8F9FA;
+    color: #111111;
+}
+
+body.light header {
+    background: rgba(248, 249, 250, 0.96);
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+body.light .button {
+    background: #0066FF;
+}
+
+body.light .button.secondary {
+    border-color: #0066FF;
+    color: #0066FF;
+}
+
+body.light .nav-menu a {
+    color: #111;
+}
+
+body.light .project-card {
+    background: #FFFFFF;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+body.light .project-info p {
+    color: #555;
+}
+
+/* Іконки при світлій темі */
+.theme-toggle.light .moon { display: inline; }
+.theme-toggle.light .sun { display: none; }
