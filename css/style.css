@@ -396,3 +396,27 @@ body.light .project-info p {
 /* Іконки при світлій темі */
 .theme-toggle.light .moon { display: inline; }
 .theme-toggle.light .sun { display: none; }
+
+/* Виправлення для світлої теми */
+body.light .featured-projects {
+    background: #F0F2F5;
+}
+
+body.light .project-card {
+    background: #FFFFFF;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+body.light .project-info p {
+    color: #555;
+}
+
+body.light .section-header h2,
+body.light .section-header .section-title {
+    color: #111;
+}
+
+/* Якщо є інші темні блоки */
+body.light .about {
+    background: #F8F9FA;
+}
