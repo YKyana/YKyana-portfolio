@@ -340,7 +340,7 @@ header {
 }
 
 /* ===================================================
-   THEME TOGGLE + LIGHT THEME FIXES
+   THEME TOGGLE + LIGHT THEME (покращена версія)
 =================================================== */
 .theme-toggle {
     background: none;
@@ -360,19 +360,20 @@ header {
 .theme-toggle .moon { display: none; }
 .theme-toggle .sun { display: inline; }
 
-/* Світла тема */
+/* Світла тема — покращена контрастність */
 body.light {
     background: #F8F9FA;
     color: #111111;
 }
 
 body.light header {
-    background: rgba(248, 249, 250, 0.96);
-    border-bottom: 1px solid rgba(0,0,0,0.1);
+    background: rgba(248, 249, 250, 0.98);
+    border-bottom: 1px solid rgba(0,0,0,0.12);
 }
 
 body.light .button {
     background: #0066FF;
+    color: white;
 }
 
 body.light .button.secondary {
@@ -381,12 +382,12 @@ body.light .button.secondary {
 }
 
 body.light .nav-menu a {
-    color: #222;
+    color: #1F1F1F;
 }
 
 body.light .project-card {
     background: #FFFFFF;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
 }
 
 body.light .project-info h3 {
@@ -394,7 +395,7 @@ body.light .project-info h3 {
 }
 
 body.light .project-info p {
-    color: #555;
+    color: #444;
 }
 
 body.light .section-header .section-title {
@@ -406,11 +407,16 @@ body.light .section-header h2 {
 }
 
 body.light .featured-projects {
-    background: #F4F6F9;
+    background: #F0F2F5;
 }
 
 body.light .about {
     background: #F8F9FA;
+}
+
+/* Гамбургер на світлій темі */
+body.light .menu-toggle span {
+    background: #111111;
 }
 
 /* Іконки теми */
