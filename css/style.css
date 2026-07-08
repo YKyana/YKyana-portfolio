@@ -429,3 +429,15 @@ body.light .menu-toggle span {
 /* Іконки */
 .theme-toggle.light .moon { display: inline; }
 .theme-toggle.light .sun { display: none; }
+
+/* Мобільне меню на світлій темі */
+body.light .nav-menu {
+    background: #F8F9FA;
+    color: #111;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+body.light .nav-menu a {
+    color: #1F1F1F;
+}
+
