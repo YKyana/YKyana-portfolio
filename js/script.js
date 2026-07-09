@@ -3,11 +3,13 @@ const menuToggle = document.querySelector(".menu-toggle");
 const navMenu = document.querySelector(".nav-menu");
 const navLinks = document.querySelectorAll(".nav-menu a");
 
-menuToggle.addEventListener("click", () => {
-    menuToggle.classList.toggle("active");
-    navMenu.classList.toggle("active");
-    document.body.classList.toggle("menu-open");
-});
+if (menuToggle && navMenu) {
+    menuToggle.addEventListener("click", () => {
+        menuToggle.classList.toggle("active");
+        navMenu.classList.toggle("active");
+        document.body.classList.toggle("menu-open");
+    });
+}
 
 // Close menu after clicking a link
 navLinks.forEach(link => {
