@@ -268,3 +268,15 @@ body.light .nav-menu {
     background: #F8F9FA;
     color: #111;
 }
+
+/* Фікс для Resume та Contact на світлій темі */
+body.light #resume,
+body.light #contact {
+    background: #F8F9FA !important;
+    color: #111;
+}
+
+body.light #resume h2,
+body.light #contact h2 {
+    color: #111;
+}
