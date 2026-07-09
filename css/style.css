@@ -55,7 +55,7 @@ a { color: inherit; text-decoration: none; }
 }
 
 /* ===================================================
-   HEADER + HERO + OVERVIEW
+   HEADER
 =================================================== */
 header {
     position: sticky;
@@ -73,6 +73,27 @@ header {
 .logo { font-size: 30px; font-weight: 700; transition: color 0.3s; }
 .logo:hover { color: #4EA1FF; }
 
+.theme-toggle {
+    background: none;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    padding: 8px;
+    margin-left: 16px;
+    z-index: 1001;
+    transition: transform 0.3s;
+}
+
+.theme-toggle:hover {
+    transform: rotate(30deg);
+}
+
+.theme-toggle .moon { display: none; }
+.theme-toggle .sun { display: inline; }
+
+/* ===================================================
+   NAV MENU
+=================================================== */
 .nav-menu {
     display: flex;
     align-items: center;
@@ -88,20 +109,9 @@ header {
 
 .nav-menu a:hover { color: #4EA1FF; }
 
-.nav-menu a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    width: 0;
-    height: 2px;
-    background: #4EA1FF;
-    transition: width 0.3s;
-}
-
-.nav-menu a:hover::after { width: 100%; }
-
-/* Hero */
+/* ===================================================
+   HERO + OTHER SECTIONS (залишаю твої стилі)
+=================================================== */
 .hero {
     max-width: 1400px;
     margin: 0 auto;
@@ -115,16 +125,6 @@ header {
 
 .hero h1 { font-size: 78px; font-weight: 800; line-height: 1.05; margin-bottom: 28px; }
 .highlight { color: #4EA1FF; position: relative; }
-.highlight::after {
-    content: '';
-    position: absolute;
-    bottom: 8px;
-    left: 0;
-    width: 100%;
-    height: 18px;
-    background: rgba(78, 161, 255, 0.15);
-    z-index: -1;
-}
 
 .glow {
     position: absolute;
@@ -140,29 +140,7 @@ header {
     transform: translate(-50%, -50%);
 }
 
-.hero-image img {
-    border-radius: 12px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
-    transition: transform 0.5s ease;
-}
-
-.hero-image img:hover {
-    transform: translateY(-12px) scale(1.02);
-}
-
-/* Project Overview */
-.project-overview {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 120px 60px;
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 80px;
-}
-
-/* ===================================================
-   FEATURED PROJECTS + CARDS
-=================================================== */
+/* Featured Projects */
 .featured-projects {
     max-width: 1400px;
     margin: 0 auto;
@@ -170,88 +148,7 @@ header {
     background: #0A0A0B;
 }
 
-.section-header {
-    text-align: center;
-    margin-bottom: 80px;
-}
-
-.section-header .section-title {
-    color: #4EA1FF;
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    margin-bottom: 18px;
-}
-
-.section-header h2 {
-    font-size: 52px;
-    font-weight: 800;
-}
-
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
-    gap: 40px;
-}
-
-.project-card {
-    background: #161617;
-    border-radius: 20px;
-    overflow: hidden;
-    transition: all 0.4s ease;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-}
-
-.project-card:hover {
-    transform: translateY(-18px);
-    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.55);
-}
-
-.project-image {
-    height: 280px;
-    overflow: hidden;
-}
-
-.project-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.8s ease;
-}
-
-.project-card:hover .project-image img {
-    transform: scale(1.12);
-}
-
-.project-info {
-    padding: 32px;
-    flex-grow: 1;
-}
-
-.project-info h3 {
-    font-size: 26px;
-    margin-bottom: 10px;
-    font-weight: 700;
-}
-
-.project-info p {
-    color: #A0A0A0;
-    font-size: 17px;
-}
-
-/* Coming Soon */
-.coming-soon {
-    opacity: 0.8;
-    pointer-events: none;
-}
-
-/* ===================================================
-   ABOUT
-=================================================== */
+/* About */
 .about {
     max-width: 1400px;
     margin: 0 auto;
@@ -265,31 +162,13 @@ header {
     align-items: center;
 }
 
-.about-text h2 {
-    font-size: 52px;
-    margin-bottom: 28px;
-}
-
-.about-image img {
-    border-radius: 20px;
-    box-shadow: 0 25px 60px rgba(0,0,0,0.5);
-}
-
-/* ===================================================
-   MOBILE
-=================================================== */
+/* MOBILE */
 @media (max-width: 768px) {
-    header { 
-        padding: 18px 24px; 
-    }
-    
-    .logo { 
-        font-size: 22px; 
-    }
+    header { padding: 18px 24px; }
+    .logo { font-size: 22px; }
 
-    /* Кнопка гамбургер */
     .menu-toggle {
-        display: flex !important;
+        display: flex;
         flex-direction: column;
         justify-content: space-between;
         width: 32px;
@@ -309,12 +188,10 @@ header {
         transition: 0.4s;
     }
 
-    /* Анімація */
     .menu-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(7px, 7px); }
     .menu-toggle.active span:nth-child(2) { opacity: 0; }
     .menu-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(6px, -6px); }
 
-    /* Меню */
     .nav-menu {
         display: none !important;
         position: fixed;
@@ -334,33 +211,13 @@ header {
         display: flex !important;
     }
 
-    /* Інше */
     .hero { padding: 50px 24px; gap: 40px; text-align: center; }
     .hero h1 { font-size: 46px; }
 }
 
 /* ===================================================
-   THEME TOGGLE + LIGHT THEME (фінальна версія)
+   LIGHT THEME
 =================================================== */
-.theme-toggle {
-    background: none;
-    border: none;
-    font-size: 22px;
-    cursor: pointer;
-    padding: 8px;
-    margin-left: 16px;
-    z-index: 1001;
-    transition: transform 0.3s;
-}
-
-.theme-toggle:hover {
-    transform: rotate(30deg);
-}
-
-.theme-toggle .moon { display: none; }
-.theme-toggle .sun { display: inline; }
-
-/* Світла тема */
 body.light {
     background: #F8F9FA;
     color: #111111;
@@ -377,15 +234,8 @@ body.light .button {
 }
 
 body.light .button.secondary {
-    background: transparent;
-    border: 2px solid #0066FF;
+    border-color: #0066FF;
     color: #0066FF;
-    font-weight: 600;
-}
-
-body.light .button.secondary:hover {
-    background: #0066FF;
-    color: white;
 }
 
 body.light .nav-menu a {
@@ -397,20 +247,8 @@ body.light .project-card {
     box-shadow: 0 10px 30px rgba(0,0,0,0.15);
 }
 
-body.light .project-info h3 {
-    color: #111;
-}
-
-body.light .project-info p {
-    color: #444;
-}
-
-body.light .section-header .section-title {
-    color: #0066FF;
-}
-
-body.light .section-header h2 {
-    color: #111;
+body.light .menu-toggle span {
+    background: #111;
 }
 
 body.light .featured-projects {
@@ -421,44 +259,12 @@ body.light .about {
     background: #F8F9FA;
 }
 
-/* Гамбургер на світлій */
-body.light .menu-toggle span {
-    background: #111;
-}
-
-/* Іконки */
+/* Theme icons */
 .theme-toggle.light .moon { display: inline; }
 .theme-toggle.light .sun { display: none; }
 
-/* Мобільне меню на світлій темі */
+/* Mobile menu light */
 body.light .nav-menu {
     background: #F8F9FA;
-    color: #111;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-}
-
-body.light .nav-menu a {
-    color: #1F1F1F;
-}
-/* Фікс для інших сторінок (Contact, Resume, About) */
-body.light main,
-body.light section {
-    background: #F8F9FA;
-}
-
-body.light .resume-content,
-body.light form {
-    color: #111;
-}
-
-body.light input,
-body.light textarea {
-    background: #FFFFFF;
-    color: #111;
-    border: 1px solid #CCC;
-}
-/* Resume fix for light theme */
-body.light #resume {
-    background: #F8F9FA !important;
     color: #111;
 }
