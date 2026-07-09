@@ -3,163 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Yana Kyslichenko - Hard Surface Artist specializing in military props, weapons and game ready assets">
+    <meta name="description" content="Yana Kyslichenko - Hard Surface Artist">
     <title>Yana Kyslichenko | Hard Surface Artist</title>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <header>
+        <a href="#home" class="logo">Yana Kyslichenko</a>
+        <button class="menu-toggle" aria-label="Меню">
+            <span></span><span></span><span></span>
+        </button>
+        <nav class="nav-menu">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#resume">Resume</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
 
-<header>
-    <a href="index.html" class="logo">Yana Kyslichenko</a>
-
-    <button id="theme-toggle" class="theme-toggle" aria-label="Змінити тему">
-    <span class="sun">☀️</span>
-    <span class="moon">🌙</span>
-</button>
-    
-    <button class="menu-toggle" aria-label="Меню">
-        <span></span>
-        <span></span>
-        <span></span>
-    </button>
-
-    <nav class="nav-menu">
-        <a href="index.html">Home</a>
-        <a href="portfolio.html">Portfolio</a>
-        <a href="about.html">About</a>
-        <a href="resume.html">Resume</a>
-        <a href="contact.html">Contact</a>
-    </nav>
-</header>
-
-<main>
-    <!-- Hero -->
-    <section class="hero">
-        <div class="hero-content">
-            <p class="subtitle">Hard Surface Artist</p>
-            <h1>Creating High Quality<br><span class="highlight">Game Assets</span></h1>
-            <p class="description">
-                Military Props • Weapons • Vehicles • Game Ready Models
-            </p>
-            
-            <div class="hero-buttons">
-                <a href="project-cash-register.html" class="button">View Latest Project</a>
-                <a href="portfolio.html" class="button secondary">Browse All Works</a>
-            </div>
-        </div>
-
-        <div class="hero-image">
-            <div class="glow"></div>
-            <img src="images/cash-register.webp" 
-                 alt="Cash Register 3D Model by Yana Kyslichenko" 
-                 loading="eager">
-        </div>
-    </section>
-
-    <!-- Project Overview -->
-    <section class="project-overview">
-        <div class="overview-text">
-            <p class="section-title">PROJECT OVERVIEW</p>
-            <h2>Cash Register</h2>
-            <p>
-                This project was created as a game-ready hard surface prop. 
-                The complete production pipeline includes high poly modeling, 
-                low poly optimization, UV mapping, baking, PBR texturing and final presentation rendering.
-            </p>
-        </div>
-
-        <div class="overview-info">
-            <div class="info-item">
-                <h3>Software</h3>
-                <p>Maya</p>
-                <p>Substance 3D Painter</p>
-                <p>Marmoset Toolbag</p>
-                <p>Adobe Photoshop</p>
-            </div>
-            <div class="info-item">
-                <h3>Pipeline</h3>
-                <p>High Poly</p>
-                <p>Low Poly</p>
-                <p>UV</p>
-                <p>Bake</p>
-                <p>Texturing</p>
-                <p>Rendering</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Featured Projects -->
-    <section class="featured-projects">
-        <div class="section-header">
-            <p class="section-title">FEATURED PROJECTS</p>
-            <h2>Selected Works</h2>
-        </div>
-        
-        <div class="projects-grid">
-            <a href="project-cash-register.html" class="project-card">
-                <div class="project-image">
-                    <img src="images/cash-register.webp" alt="Cash Register">
-                </div>
-                <div class="project-info">
-                    <h3>Cash Register</h3>
-                    <p>Hard Surface Prop</p>
-                </div>
-            </a>
-
-            <div class="project-card coming-soon">
-                <div class="project-image">
-                    <img src="images/placeholder.webp" alt="Weapon Pack">
-                </div>
-                <div class="project-info">
-                    <h3>Weapon Pack</h3>
-                    <p>Coming Soon</p>
+    <main>
+        <!-- Hero -->
+        <section id="home" class="hero">
+            <!-- Твій поточний hero контент -->
+            <div class="hero-content">
+                <p class="subtitle">Hard Surface Artist</p>
+                <h1>Creating High Quality<br><span class="highlight">Game Assets</span></h1>
+                <p class="description">Military Props • Weapons • Vehicles • Game Ready Models</p>
+                <div class="hero-buttons">
+                    <a href="#portfolio" class="button">View Latest Project</a>
+                    <a href="#portfolio" class="button secondary">Browse All Works</a>
                 </div>
             </div>
+            <div class="hero-image">
+                <div class="glow"></div>
+                <img src="images/cash-register.webp" alt="Cash Register 3D Model">
+            </div>
+        </section>
 
-            <div class="project-card coming-soon">
-                <div class="project-image">
-                    <img src="images/placeholder.webp" alt="Military Crate">
+        <!-- About -->
+        <section id="about" class="about">
+            <div class="about-container">
+                <div class="about-text">
+                    <p class="section-title">ABOUT ME</p>
+                    <h2>Hi, I'm Yana</h2>
+                    <p>
+                        I'm a Hard Surface Artist specializing in modeling hard surfaces and creating clean, optimized game assets.
+                    </p>
+                    <p>
+                        I enjoy taking a simple shape and turning it into a finished asset that looks great and performs well in-game. 
+                        I work with Maya, Blender, Substance 3D Painter, Marmoset Toolbag, and Adobe Photoshop.
+                    </p>
+                    <p>
+                        I'm currently focusing on detailing and optimization, and I'm also diving deeper into Blender. 
+                        I want to keep developing in this direction and create even higher quality assets.
+                    </p>
+                    <a href="#contact" class="button secondary">Get in Touch →</a>
                 </div>
-                <div class="project-info">
-                    <h3>Military Crate</h3>
-                    <p>Coming Soon</p>
+                <div class="about-image">
+                    <img src="images/profile.webp" alt="Yana Kyslichenko">
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- About -->
-    <section id="about" class="about">
-    <div class="about-container">
-        <div class="about-text">
-            <p class="section-title">ABOUT ME</p>
-            <h2>Привіт, я Яна</h2>
-            <p>
-                Я — 3D-художник, що спеціалізується на моделюванні твердих поверхонь (Hard Surface) та створенні чистих, оптимізованих ігрових ресурсів.
-            </p>
-            <p>
-                Мені подобається брати просту форму і доводити її до готового асету, який виглядає круто і при цьому добре працює в грі. 
-                Працюю з Maya, Blender, Substance 3D Painter, Marmoset Toolbag та Adobe Photoshop.
-            </p>
-            <p>
-                Зараз проходжу повний цикл створення моделі — від блок-аута до фінального текстурингу і рендеру. 
-                Більше уваги приділяю деталізації та оптимізації, а також глибше вивчаю Blender.
-            </p>
-            <a href="#contact" class="button secondary">Написати мені →</a>
-        </div>
+        <!-- Portfolio / Featured Projects -->
+        <section id="portfolio" class="featured-projects">
+            <div class="section-header">
+                <p class="section-title">FEATURED PROJECTS</p>
+                <h2>Selected Works</h2>
+            </div>
+            <!-- Тут додаватимеш свої проєкти пізніше -->
+            <p style="text-align:center; color:#888;">Portfolio section coming soon...</p>
+        </section>
 
-        <div class="about-image">
-            <img src="images/profile.webp" alt="Яна Кисличенко">
-        </div>
-    </div>
-</section>
-</main>
+        <!-- Resume -->
+        <section id="resume" style="padding: 120px 60px; background:#0A0A0B;">
+            <h2 style="text-align:center; font-size:52px; margin-bottom:60px;">Resume</h2>
+            <p style="text-align:center;">Resume section — I'll help you fill it later.</p>
+        </section>
 
-<script src="js/script.js"></script>
+        <!-- Contact -->
+        <section id="contact" style="padding: 120px 60px;">
+            <h2 style="text-align:center; font-size:52px; margin-bottom:60px;">Get In Touch</h2>
+            <p style="text-align:center;">Contact form and details coming soon...</p>
+        </section>
+    </main>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
