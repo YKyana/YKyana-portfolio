@@ -110,7 +110,7 @@ header {
 .nav-menu a:hover { color: #4EA1FF; }
 
 /* ===================================================
-   HERO + OTHER SECTIONS (залишаю твої стилі)
+   HERO
 =================================================== */
 .hero {
     max-width: 1400px;
@@ -140,7 +140,9 @@ header {
     transform: translate(-50%, -50%);
 }
 
-/* Featured Projects */
+/* ===================================================
+   SECTIONS
+=================================================== */
 .featured-projects {
     max-width: 1400px;
     margin: 0 auto;
@@ -148,7 +150,6 @@ header {
     background: #0A0A0B;
 }
 
-/* About */
 .about {
     max-width: 1400px;
     margin: 0 auto;
@@ -162,7 +163,9 @@ header {
     align-items: center;
 }
 
-/* MOBILE */
+/* ===================================================
+   MOBILE
+=================================================== */
 @media (max-width: 768px) {
     header { padding: 18px 24px; }
     .logo { font-size: 22px; }
@@ -251,12 +254,19 @@ body.light .menu-toggle span {
     background: #111;
 }
 
-body.light .featured-projects {
+body.light .featured-projects,
+body.light #portfolio {
     background: #F0F2F5;
 }
 
-body.light .about {
+body.light .about,
+body.light #resume,
+body.light #contact {
     background: #F8F9FA;
+}
+
+body.light h1, body.light h2 {
+    color: #111;
 }
 
 /* Theme icons */
@@ -269,33 +279,7 @@ body.light .nav-menu {
     color: #111;
 }
 
-/* Фікс для Resume та Contact на світлій темі */
-body.light #resume,
-body.light #contact {
-    background: #F8F9FA !important;
-    color: #111;
-}
-
-body.light #resume h2,
-body.light #contact h2 {
-    color: #111;
-}
-/* Фінальний фікс для всіх секцій на світлій темі */
-body.light section {
-    background: #F8F9FA !important;
-}
-
-body.light #resume,
-body.light #contact,
-body.light #portfolio {
-    background: #F8F9FA !important;
-}
-
-body.light h1, body.light h2 {
-    color: #111;
-}
-
-/* Покращення Portfolio */
+/* Portfolio improvements */
 #portfolio .projects-grid {
     gap: 40px;
 }
