@@ -457,3 +457,8 @@ body.light textarea {
     color: #111;
     border: 1px solid #CCC;
 }
+/* Resume fix for light theme */
+body.light #resume {
+    background: #F8F9FA !important;
+    color: #111;
+}
