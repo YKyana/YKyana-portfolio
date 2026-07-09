@@ -280,3 +280,17 @@ body.light #resume h2,
 body.light #contact h2 {
     color: #111;
 }
+/* Фінальний фікс для всіх секцій на світлій темі */
+body.light section {
+    background: #F8F9FA !important;
+}
+
+body.light #resume,
+body.light #contact,
+body.light #portfolio {
+    background: #F8F9FA !important;
+}
+
+body.light h1, body.light h2 {
+    color: #111;
+}
