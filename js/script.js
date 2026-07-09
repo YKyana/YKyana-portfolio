@@ -1,3 +1,4 @@
+// Menu Toggle
 const menuToggle = document.querySelector(".menu-toggle");
 const navMenu = document.querySelector(".nav-menu");
 const navLinks = document.querySelectorAll(".nav-menu a");
@@ -8,7 +9,7 @@ menuToggle.addEventListener("click", () => {
     document.body.classList.toggle("menu-open");
 });
 
-// Закриття меню після кліку на посилання
+// Close menu after clicking a link
 navLinks.forEach(link => {
     link.addEventListener("click", () => {
         menuToggle.classList.remove("active");
@@ -21,19 +22,21 @@ navLinks.forEach(link => {
 const themeToggle = document.getElementById('theme-toggle');
 const body = document.body;
 
-const currentTheme = localStorage.getItem('theme');
-if (currentTheme === 'light') {
-    body.classList.add('light');
-    themeToggle.classList.add('light');
-}
-
-themeToggle.addEventListener('click', () => {
-    body.classList.toggle('light');
-    themeToggle.classList.toggle('light');
-    
-    if (body.classList.contains('light')) {
-        localStorage.setItem('theme', 'light');
-    } else {
-        localStorage.setItem('theme', 'dark');
+if (themeToggle) {
+    const currentTheme = localStorage.getItem('theme');
+    if (currentTheme === 'light') {
+        body.classList.add('light');
+        themeToggle.classList.add('light');
     }
-});
+
+    themeToggle.addEventListener('click', () => {
+        body.classList.toggle('light');
+        themeToggle.classList.toggle('light');
+        
+        if (body.classList.contains('light')) {
+            localStorage.setItem('theme', 'light');
+        } else {
+            localStorage.setItem('theme', 'dark');
+        }
+    });
+}
