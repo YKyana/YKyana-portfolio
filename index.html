@@ -30,13 +30,15 @@
       background: linear-gradient(135deg, #F0F4F8 0%, #E2E8F0 50%, #F8FAFC 100%);
     }
 
-    /* Header */
+    /* Header - більш прозорий */
     header {
-      background: linear-gradient(to bottom, rgba(16,17,20,0.98), rgba(16,17,20,0.95)) !important;
+      background: rgba(16, 17, 20, 0.85) !important;
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(43, 46, 53, 0.6);
     }
     body.light header {
-      background: linear-gradient(to bottom, rgba(248,249,250,0.98), rgba(241,245,249,0.95)) !important;
-      border-bottom: 1px solid #E2E8F0;
+      background: rgba(248, 249, 250, 0.75) !important;
+      border-bottom: 1px solid rgba(226, 232, 240, 0.8);
     }
 
     /* Секції */
@@ -56,7 +58,7 @@
       background: linear-gradient(135deg, #F1F5F9 0%, #E2E8F0 100%);
     }
 
-    /* Карточки проектів */
+    /* Карточки */
     .project-card {
       background: linear-gradient(145deg, #2B2E35, #1F242E);
       transition: all 0.3s ease;
@@ -69,9 +71,6 @@
     body.light .project-card {
       background: linear-gradient(145deg, #FFFFFF, #F8FAFC);
       box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
-    }
-    body.light .project-card:hover {
-      box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
     }
 
     /* Темна тема */
@@ -92,8 +91,8 @@
 </head>
 <body class="bg-[#101114] text-[#E7EAEE]">
 
-  <!-- HEADER -->
-  <header class="fixed top-0 w-full z-50 border-b border-[#2B2E35]">
+  <!-- HEADER (більш прозорий) -->
+  <header class="fixed top-0 w-full z-50">
     <nav class="max-w-7xl mx-auto px-6 py-6 flex justify-between items-center">
       <a href="#" class="text-3xl font-bold hover:text-[#9AA3AD] transition">Yana</a>
       
