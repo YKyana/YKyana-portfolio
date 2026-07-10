@@ -13,22 +13,23 @@
       font-family: 'Inter', sans-serif;
       scroll-behavior: smooth;
       transition: background 0.4s, color 0.4s;
-      -ms-overflow-style: none;      /* IE і Edge */
-      scrollbar-width: none;         /* Firefox */
+      -ms-overflow-style: none;
+      scrollbar-width: none;
     }
 
-    /* Приховуємо скролбар */
-    body::-webkit-scrollbar {
-      display: none;
+    body::-webkit-scrollbar { display: none; }
+    html { scroll-padding-top: 90px; }
+
+    /* ========== ГРАДІЄНТ НА HERO ========== */
+    .hero-bg {
+      background: linear-gradient(135deg, #101114 0%, #1A1F2E 50%, #101114 100%);
     }
 
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: 90px;
+    body.light .hero-bg {
+      background: linear-gradient(135deg, #F8F9FA 0%, #E8EEF7 50%, #F1F5F9 100%);
     }
 
     /* Темна тема */
-    .hero-bg { background: #101114; }
     .accent { color: #9AA3AD; }
     .text-light { color: #E7EAEE; }
     .text-muted { color: #C8CDD4; }
@@ -39,19 +40,14 @@
       color: #111827;
     }
 
-    body.light .hero-bg { background: #F8F9FA; }
-
     body.light .accent { color: #374151; }
     body.light .text-light { color: #111827 !important; }
     body.light .text-muted { color: #4B5563 !important; }
 
-    /* Фони */
+    /* Фони секцій */
     body.light .bg-\\[\\#2B2E35\\] { background: #F1F3F5 !important; }
     body.light .bg-\\[\\#101114\\] { background: #F8F9FA !important; }
     body.light .bg-\\[\\#4A4F59\\] { background: #E5E7EB !important; }
-
-    body.light .text-\\[\\#E7EAEE\\] { color: #111827 !important; }
-    body.light .text-\\[\\#C8CDD4\\] { color: #4B5563 !important; }
 
     /* Header */
     body.light header {
@@ -104,7 +100,7 @@
     </nav>
   </header>
 
-  <!-- HERO -->
+  <!-- HERO з градієнтом -->
   <section class="hero-bg min-h-screen flex items-center pt-20">
     <div class="max-w-7xl mx-auto px-6 text-center">
       <h1 class="text-6xl md:text-7xl font-bold text-light">Hard Surface Artist</h1>
@@ -161,14 +157,6 @@
     <div class="max-w-4xl mx-auto px-6 text-center">
       <h2 class="text-5xl font-bold mb-12 text-light">Get In Touch</h2>
       <p class="text-muted text-lg mb-10">Contact form and details coming soon...</p>
-      
-      <div class="flex flex-col md:flex-row gap-8 justify-center items-center">
-        <a href="mailto:your@email.com" class="text-[#9AA3AD] hover:text-white transition flex items-center gap-3 text-lg">
-          <i class="fas fa-envelope"></i>
-          <span>your@email.com</span>
-        </a>
-        <!-- Додай свої посилання -->
-      </div>
     </div>
   </section>
 
