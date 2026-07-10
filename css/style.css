@@ -257,3 +257,44 @@ body.light .button {
 body.light .button:hover {
     background: #F0F7FF !important;
 }
+/* ===================================================
+   LIGHT THEME - FULL LAYOUT FIX
+=================================================== */
+body.light .hero {
+    background: #F8F9FA;
+}
+
+body.light .hero-content h1,
+body.light .hero-content .subtitle {
+    color: #111111;
+}
+
+body.light .highlight {
+    color: #0066FF;
+}
+
+/* Виправлення відступів і структури */
+body.light main,
+body.light .about,
+body.light .featured-projects,
+body.light #resume,
+body.light #contact {
+    background: #F8F9FA;
+}
+
+body.light .section-title {
+    color: #555;
+}
+
+/* Hero layout fix */
+body.light .hero {
+    padding: 80px 60px;
+}
+
+/* Mobile fix */
+@media (max-width: 768px) {
+    body.light .hero {
+        padding: 50px 24px;
+    }
+}
+
