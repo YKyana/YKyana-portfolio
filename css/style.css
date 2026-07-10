@@ -217,3 +217,34 @@ body.light .nav-menu {
     .hero { padding: 50px 24px; gap: 40px; text-align: center; }
     .hero h1 { font-size: 46px; }
 }
+/* ===================================================
+   КНОПКИ У СВІТЛІЙ ТЕМІ (як ти просив)
+=================================================== */
+
+/* Основна кнопка (View Latest Project) */
+body.light .button {
+    background: #FFFFFF;
+    color: #0066FF;           /* синій текст */
+    border: 2px solid #0066FF;
+    font-weight: 700;
+    box-shadow: 0 4px 12px rgba(0, 102, 255, 0.15);
+}
+
+body.light .button:hover {
+    background: #F0F7FF;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 102, 255, 0.25);
+}
+
+/* Secondary кнопка */
+body.light .button.secondary {
+    background: #FFFFFF;
+    color: #0066FF;
+    border: 2px solid #0066FF;
+}
+
+body.light .button.secondary:hover {
+    background: #0066FF;
+    color: #FFFFFF;
+}
+
