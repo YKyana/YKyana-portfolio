@@ -30,17 +30,17 @@
     background: #F8F9FA; 
   }
 
-  /* Основні перевизначення */
+  /* Загальні правила для світлої теми */
   body.light .accent { color: #374151; }
-  body.light .text-light { color: #111827; }
-  body.light .text-muted { color: #4B5563; }
+  body.light .text-light { color: #111827 !important; }
+  body.light .text-muted { color: #4B5563 !important; }
 
   /* Фони секцій */
   body.light .bg-\\[\\#2B2E35\\] { background: #F1F3F5 !important; }
   body.light .bg-\\[\\#101114\\] { background: #F8F9FA !important; }
   body.light .bg-\\[\\#4A4F59\\] { background: #E5E7EB !important; }
 
-  /* Текст */
+  /* Текст в секціях */
   body.light .text-\\[\\#E7EAEE\\] { color: #111827 !important; }
   body.light .text-\\[\\#C8CDD4\\] { color: #4B5563 !important; }
 
@@ -49,29 +49,40 @@
     background: rgba(248, 249, 250, 0.98) !important;
     border-bottom-color: #E5E7EB !important;
   }
-
-  /* Навігація */
   body.light header a {
     color: #111827;
   }
   body.light header a:hover {
-    color: #374151;
+    color: #1F2937;
   }
 
-  /* Кнопка перемикання теми */
+  /* Кнопка теми */
   body.light #theme-toggle {
     color: #111827;
   }
   body.light #theme-toggle:hover {
     background-color: #E5E7EB;
   }
-    /* Contact */
-  body.light #contact {
+
+  /* ===================== СПЕЦІАЛЬНО ДЛЯ СЕКЦІЙ ===================== */
+  /* About */
+  body.light #about {
     background: #F1F3F5 !important;
   }
-  body.light #contact h2,
-  body.light #contact .text-light {
-    color: #111827 !important;
+
+  /* Projects */
+  body.light #projects {
+    background: #F8F9FA !important;
+  }
+
+  /* Resume */
+  body.light #resume {
+    background: #F1F3F5 !important;
+  }
+
+  /* Contact (якщо додаси) */
+  body.light #contact {
+    background: #F1F3F5 !important;
   }
 </style>
 </head>
