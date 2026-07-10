@@ -219,3 +219,43 @@ body.light .highlight {
     .hero { padding: 50px 24px; gap: 40px; text-align: center; }
     .hero h1 { font-size: 46px; }
 }
+
+/* ===================================================
+   ВИПРАВЛЕННЯ РОЗМІРУ КАРТИНОК
+=================================================== */
+
+/* Hero image */
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    object-fit: contain;
+}
+
+/* About image */
+.about-image img {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+body.light .about-image img {
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+/* Project images */
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Project main image */
+.project-main-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
