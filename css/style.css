@@ -90,7 +90,6 @@ header {
 .theme-toggle .moon { display: none; }
 .theme-toggle .sun { display: inline; }
 
-/* Nav */
 .nav-menu {
     display: flex;
     align-items: center;
@@ -107,7 +106,7 @@ header {
 .nav-menu a:hover { color: #4EA1FF; }
 
 /* ===================================================
-   LIGHT THEME - ВИПРАВЛЕНА ВЕРСІЯ
+   LIGHT THEME - ЧИСТА ВЕРСІЯ
 =================================================== */
 body.light {
     background: #F8F9FA;
@@ -120,21 +119,25 @@ body.light header {
 }
 
 body.light .button {
-    background: #0066FF;
-    color: #FFFFFF !important;
+    background: #FFFFFF;
+    color: #0066FF;
+    border: 2px solid #0066FF;
     font-weight: 700;
 }
 
 body.light .button:hover {
-    background: #0052cc;
+    background: #F0F7FF;
+    transform: translateY(-3px);
 }
 
 body.light .button.secondary {
-    border-color: #0066FF;
+    background: #FFFFFF;
     color: #0066FF;
+    border: 2px solid #0066FF;
 }
 
-body.light .nav-menu a {
+body.light .nav-menu a,
+body.light .logo {
     color: #1F1F1F;
 }
 
@@ -142,27 +145,26 @@ body.light .menu-toggle span {
     background: #111;
 }
 
-/* Важливі секції у світлій темі */
+/* Секції */
+body.light .hero,
+body.light .about,
 body.light .featured-projects,
 body.light #resume,
 body.light #contact,
 body.light .project-hero,
 body.light .project-content {
     background: #F8F9FA !important;
-    color: #111;
 }
 
-body.light h1, body.light h2, body.light .section-title {
-    color: #111;
+body.light h1, 
+body.light h2, 
+body.light .section-title,
+body.light .highlight {
+    color: #111111;
 }
 
-/* Theme icons */
-.theme-toggle.light .moon { display: inline; }
-.theme-toggle.light .sun { display: none; }
-
-body.light .nav-menu {
-    background: #F8F9FA;
-    color: #111;
+body.light .highlight {
+    color: #0066FF;
 }
 
 /* ===================================================
@@ -217,84 +219,3 @@ body.light .nav-menu {
     .hero { padding: 50px 24px; gap: 40px; text-align: center; }
     .hero h1 { font-size: 46px; }
 }
-/* ===================================================
-   КНОПКИ У СВІТЛІЙ ТЕМІ (як ти просив)
-=================================================== */
-
-/* Основна кнопка (View Latest Project) */
-body.light .button {
-    background: #FFFFFF;
-    color: #0066FF;           /* синій текст */
-    border: 2px solid #0066FF;
-    font-weight: 700;
-    box-shadow: 0 4px 12px rgba(0, 102, 255, 0.15);
-}
-
-body.light .button:hover {
-    background: #F0F7FF;
-    transform: translateY(-3px);
-    box-shadow: 0 6px 16px rgba(0, 102, 255, 0.25);
-}
-
-/* Secondary кнопка */
-body.light .button.secondary {
-    background: #FFFFFF;
-    color: #0066FF;
-    border: 2px solid #0066FF;
-}
-
-body.light .button.secondary:hover {
-    background: #0066FF;
-    color: #FFFFFF;
-}
-/* Кнопки у світлій темі */
-body.light .button {
-    background: #FFFFFF !important;
-    color: #0066FF !important;
-    border: 2px solid #0066FF !important;
-}
-
-body.light .button:hover {
-    background: #F0F7FF !important;
-}
-/* ===================================================
-   LIGHT THEME - FULL LAYOUT FIX
-=================================================== */
-body.light .hero {
-    background: #F8F9FA;
-}
-
-body.light .hero-content h1,
-body.light .hero-content .subtitle {
-    color: #111111;
-}
-
-body.light .highlight {
-    color: #0066FF;
-}
-
-/* Виправлення відступів і структури */
-body.light main,
-body.light .about,
-body.light .featured-projects,
-body.light #resume,
-body.light #contact {
-    background: #F8F9FA;
-}
-
-body.light .section-title {
-    color: #555;
-}
-
-/* Hero layout fix */
-body.light .hero {
-    padding: 80px 60px;
-}
-
-/* Mobile fix */
-@media (max-width: 768px) {
-    body.light .hero {
-        padding: 50px 24px;
-    }
-}
-
