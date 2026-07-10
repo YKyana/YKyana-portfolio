@@ -8,11 +8,27 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+    body { 
+      font-family: 'Inter', sans-serif; 
+      scroll-behavior: smooth; 
+      transition: background 0.4s, color 0.4s;
+    }
     .hero-bg { background: #0F0F10; }
     .accent { color: #C9C2B6; }
     .text-light { color: #F2EFE9; }
     .text-muted { color: #A8A8A8; }
+
+    /* Світла тема */
+    body.light {
+      background: #F8F7F4;
+      color: #1F1F1F;
+    }
+    body.light .hero-bg { background: #F8F7F4; }
+    body.light .accent { color: #3B3B3B; }
+    body.light .text-light { color: #1F1F1F; }
+    body.light .text-muted { color: #555555; }
+    body.light .bg-[#1A1A1C] { background: #FFFFFF; }
+    body.light .bg-[#0F0F10] { background: #F8F7F4; }
   </style>
 </head>
 <body class="bg-[#0F0F10] text-[#F2EFE9]">
@@ -34,6 +50,7 @@
       </button>
     </nav>
   </header>
+
   <!-- HERO -->
   <section class="hero-bg min-h-screen flex items-center pt-20">
     <div class="max-w-7xl mx-auto px-6 text-center">
@@ -95,9 +112,20 @@
   </section>
 
   <script>
-    document.getElementById('theme-toggle').addEventListener('click', () => {
-      document.documentElement.classList.toggle('dark');
+    const themeToggle = document.getElementById('theme-toggle');
+    const icon = themeToggle.querySelector('i');
+
+    themeToggle.addEventListener('click', () => {
+      document.body.classList.toggle('light');
+      
+      if (document.body.classList.contains('light')) {
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
+      } else {
+        icon.classList.remove('fa-sun');
+        icon.classList.add('fa-moon');
+      }
     });
-<script src="script.js"></script>
+  </script>
 </body>
 </html>
