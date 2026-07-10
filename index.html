@@ -20,13 +20,58 @@
     body::-webkit-scrollbar { display: none; }
     html { scroll-padding-top: 90px; }
 
-    /* ========== ГРАДІЄНТ НА HERO ========== */
+    /* ========== ГРАДІЄНТИ ========== */
+
+    /* Hero */
     .hero-bg {
       background: linear-gradient(135deg, #101114 0%, #1A1F2E 50%, #101114 100%);
     }
-
     body.light .hero-bg {
-      background: linear-gradient(135deg, #F8F9FA 0%, #E8EEF7 50%, #F1F5F9 100%);
+      background: linear-gradient(135deg, #F0F4F8 0%, #E2E8F0 50%, #F8FAFC 100%);
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(to bottom, rgba(16,17,20,0.98), rgba(16,17,20,0.95)) !important;
+    }
+    body.light header {
+      background: linear-gradient(to bottom, rgba(248,249,250,0.98), rgba(241,245,249,0.95)) !important;
+      border-bottom: 1px solid #E2E8F0;
+    }
+
+    /* Секції */
+    #about, #resume, #contact {
+      background: linear-gradient(135deg, #1F242E 0%, #2B2E35 100%);
+    }
+    body.light #about,
+    body.light #resume,
+    body.light #contact {
+      background: linear-gradient(135deg, #F8FAFC 0%, #F1F5F9 100%);
+    }
+
+    #projects {
+      background: linear-gradient(135deg, #101114 0%, #1A1F2E 100%);
+    }
+    body.light #projects {
+      background: linear-gradient(135deg, #F1F5F9 0%, #E2E8F0 100%);
+    }
+
+    /* Карточки проектів */
+    .project-card {
+      background: linear-gradient(145deg, #2B2E35, #1F242E);
+      transition: all 0.3s ease;
+    }
+    .project-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.4);
+    }
+
+    body.light .project-card {
+      background: linear-gradient(145deg, #FFFFFF, #F8FAFC);
+      box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+    }
+    body.light .project-card:hover {
+      box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
     }
 
     /* Темна тема */
@@ -40,50 +85,15 @@
       color: #111827;
     }
 
-    body.light .accent { color: #374151; }
+    body.light .accent { color: #334155; }
     body.light .text-light { color: #111827 !important; }
-    body.light .text-muted { color: #4B5563 !important; }
-
-    /* Фони секцій */
-    body.light .bg-\\[\\#2B2E35\\] { background: #F1F3F5 !important; }
-    body.light .bg-\\[\\#101114\\] { background: #F8F9FA !important; }
-    body.light .bg-\\[\\#4A4F59\\] { background: #E5E7EB !important; }
-
-    /* Header */
-    body.light header {
-      background: rgba(248, 249, 250, 0.98) !important;
-      border-bottom-color: #E5E7EB !important;
-    }
-    body.light header a {
-      color: #111827;
-    }
-    body.light header a:hover {
-      color: #1F2937;
-    }
-
-    /* Кнопка теми */
-    body.light #theme-toggle {
-      color: #111827;
-    }
-    body.light #theme-toggle:hover {
-      background-color: #E5E7EB;
-    }
-
-    /* Секції */
-    body.light #about,
-    body.light #resume,
-    body.light #contact {
-      background: #F1F3F5 !important;
-    }
-    body.light #projects {
-      background: #F8F9FA !important;
-    }
+    body.light .text-muted { color: #475569 !important; }
   </style>
 </head>
 <body class="bg-[#101114] text-[#E7EAEE]">
 
   <!-- HEADER -->
-  <header class="fixed top-0 w-full z-50 bg-[#101114]/95 backdrop-blur-md border-b border-[#2B2E35]">
+  <header class="fixed top-0 w-full z-50 border-b border-[#2B2E35]">
     <nav class="max-w-7xl mx-auto px-6 py-6 flex justify-between items-center">
       <a href="#" class="text-3xl font-bold hover:text-[#9AA3AD] transition">Yana</a>
       
@@ -100,7 +110,7 @@
     </nav>
   </header>
 
-  <!-- HERO з градієнтом -->
+  <!-- HERO -->
   <section class="hero-bg min-h-screen flex items-center pt-20">
     <div class="max-w-7xl mx-auto px-6 text-center">
       <h1 class="text-6xl md:text-7xl font-bold text-light">Hard Surface Artist</h1>
@@ -112,7 +122,7 @@
   </section>
 
   <!-- ABOUT -->
-  <section id="about" class="py-24 bg-[#2B2E35]">
+  <section id="about" class="py-24">
     <div class="max-w-5xl mx-auto px-6">
       <h2 class="text-5xl font-bold mb-12 text-light">About Me</h2>
       <div class="grid md:grid-cols-2 gap-12 items-center">
@@ -128,15 +138,15 @@
   </section>
 
   <!-- PROJECTS -->
-  <section id="projects" class="py-24 bg-[#101114]">
+  <section id="projects" class="py-24">
     <div class="max-w-6xl mx-auto px-6">
       <h2 class="text-5xl font-bold mb-12 text-light">Featured Projects</h2>
       <div class="grid md:grid-cols-2 gap-8">
-        <div class="bg-[#2B2E35] p-10 rounded-3xl">
+        <div class="project-card p-10 rounded-3xl">
           <h3 class="text-3xl font-semibold text-light">Cash Register</h3>
           <p class="text-muted mt-2">Hard Surface Prop</p>
         </div>
-        <div class="bg-[#2B2E35] p-10 rounded-3xl">
+        <div class="project-card p-10 rounded-3xl">
           <h3 class="text-3xl font-semibold text-light">Weapon Pack</h3>
           <p class="text-muted mt-2">Coming Soon</p>
         </div>
@@ -145,7 +155,7 @@
   </section>
 
   <!-- RESUME -->
-  <section id="resume" class="py-24 bg-[#2B2E35]">
+  <section id="resume" class="py-24">
     <div class="max-w-4xl mx-auto px-6">
       <h2 class="text-5xl font-bold mb-12 text-light">Resume</h2>
       <p class="text-muted text-lg">Resume section will be filled soon.</p>
@@ -153,7 +163,7 @@
   </section>
 
   <!-- CONTACT -->
-  <section id="contact" class="py-24 bg-[#2B2E35]">
+  <section id="contact" class="py-24">
     <div class="max-w-4xl mx-auto px-6 text-center">
       <h2 class="text-5xl font-bold mb-12 text-light">Get In Touch</h2>
       <p class="text-muted text-lg mb-10">Contact form and details coming soon...</p>
