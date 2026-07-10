@@ -247,4 +247,13 @@ body.light .button.secondary:hover {
     background: #0066FF;
     color: #FFFFFF;
 }
+/* Кнопки у світлій темі */
+body.light .button {
+    background: #FFFFFF !important;
+    color: #0066FF !important;
+    border: 2px solid #0066FF !important;
+}
 
+body.light .button:hover {
+    background: #F0F7FF !important;
+}
