@@ -1,124 +1,196 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Yana Kyslichenko - Hard Surface Artist">
-    <title>Yana Kyslichenko | Hard Surface Artist</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yana | Hard Surface 3D Artist</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .hero-bg {
+      background: linear-gradient(135deg, #4338ca 0%, #6b21a8 100%);
+    }
+    .section-title {
+      position: relative;
+      display: inline-block;
+    }
+    .section-title::after {
+      content: '';
+      position: absolute;
+      width: 60px;
+      height: 4px;
+      background: #a855f7;
+      bottom: -10px;
+      left: 0;
+    }
+  </style>
 </head>
-<body>
-<header>
-    <a href="#home" class="logo">Yana Kyslichenko</a>
-    
-    <button id="theme-toggle" class="theme-toggle" aria-label="Змінити тему">
-        <span class="sun">☀️</span>
-        <span class="moon">🌙</span>
-    </button>
+<body class="bg-gray-950 text-white dark:bg-gray-50 dark:text-gray-900 transition-colors duration-300">
 
-    <button class="menu-toggle" aria-label="Меню">
-        <span></span><span></span><span></span>
-    </button>
+  <!-- HEADER -->
+  <header class="fixed top-0 w-full z-50 bg-gray-950/95 dark:bg-white/95 backdrop-blur-md border-b border-gray-800 dark:border-gray-200">
+    <nav class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+      <div class="text-3xl font-bold tracking-tighter">Yana</div>
+      
+      <div class="hidden md:flex items-center gap-10 text-lg">
+        <a href="#about" class="hover:text-violet-400 transition-colors">About</a>
+        <a href="#skills" class="hover:text-violet-400 transition-colors">Skills</a>
+        <a href="#resume" class="hover:text-violet-400 transition-colors">Resume</a>
+        <a href="portfolio.html" class="hover:text-violet-400 transition-colors">Portfolio</a>
+      </div>
 
-    <nav class="nav-menu">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#resume">Resume</a>
-        <a href="#contact">Contact</a>
+      <div class="flex items-center gap-4">
+        <!-- Theme Toggle -->
+        <button id="theme-toggle" 
+                class="p-3 rounded-2xl hover:bg-gray-800 dark:hover:bg-gray-200 transition-all text-2xl">
+          <i class="fas fa-moon"></i>
+        </button>
+
+        <a href="#contact" 
+           class="bg-violet-600 hover:bg-violet-700 px-7 py-3 rounded-2xl font-semibold transition-all">
+          Contact
+        </a>
+
+        <!-- Hamburger -->
+        <button id="menu-toggle" class="md:hidden p-3 text-2xl">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
     </nav>
-</header>
+  </header>
 
-    <main>
-        <!-- Hero -->
-        <section id="home" class="hero">
-            <div class="hero-content">
-                <p class="subtitle">Hard Surface Artist</p>
-                <h1>Creating High Quality<br><span class="highlight">Game Assets</span></h1>
-                <p class="description">Military Props • Weapons • Vehicles • Game Ready Models</p>
-                <div class="hero-buttons">
-                    <a href="#portfolio" class="button">View Latest Project</a>
-                    <a href="#portfolio" class="button secondary">Browse All Works</a>
-                </div>
-            </div>
-            <div class="hero-image">
-                <div class="glow"></div>
-                <img src="images/cash-register.webp" alt="Cash Register 3D Model by Yana Kyslichenko">
-            </div>
-        </section>
+  <!-- HERO -->
+  <section class="hero-bg min-h-screen flex items-center pt-20">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+      <div class="space-y-8">
+        <h1 class="text-5xl md:text-7xl font-bold leading-tight">
+          3D Artist<br>
+          <span class="text-violet-200">Hard Surface &amp; Game Assets</span>
+        </h1>
+        <p class="text-xl md:text-2xl text-gray-200 dark:text-gray-700">
+          Hi, I'm Yana
+        </p>
+        <p class="max-w-lg text-lg">
+          I'm a Hard Surface Artist specializing in modeling clean, optimized game assets.
+        </p>
+        <div class="flex flex-wrap gap-5">
+          <a href="portfolio.html" 
+             class="bg-white text-gray-900 px-8 py-4 rounded-2xl font-semibold hover:scale-105 transition-all">
+            Переглянути роботи
+          </a>
+          <a href="#contact" 
+             class="border-2 border-white/70 hover:bg-white/10 px-8 py-4 rounded-2xl font-medium transition-all">
+            Зв’язатися
+          </a>
+        </div>
+      </div>
+      
+      <div class="flex justify-center">
+        <div class="w-80 h-80 rounded-full border-8 border-white/30 overflow-hidden bg-gray-800 flex items-center justify-center text-8xl shadow-2xl">
+          👩‍🎨
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <!-- About -->
-        <section id="about" class="about">
-            <div class="about-container">
-                <div class="about-text">
-                    <p class="section-title">ABOUT ME</p>
-                    <h2>Hi, I'm Yana</h2>
-                    <p>
-                        I'm a Hard Surface Artist specializing in modeling hard surfaces and creating clean, optimized game assets.
-                    </p>
-                    <p>
-                        I enjoy taking a simple shape and turning it into a finished asset that looks great and performs well in-game. 
-                        I work with Maya, Blender, Substance 3D Painter, Marmoset Toolbag, and Adobe Photoshop.
-                    </p>
-                    <p>
-                        I'm currently focusing on detailing and optimization, and I'm also diving deeper into Blender. 
-                        I want to keep developing in this direction and create even higher quality assets.
-                    </p>
-                    <a href="#contact" class="button secondary">Get in Touch →</a>
-                </div>
-                <div class="about-image">
-                    <img src="images/profile.webp" alt="Yana Kyslichenko">
-                </div>
-            </div>
-        </section>
+  <!-- ABOUT -->
+  <section id="about" class="py-24 bg-gray-900 dark:bg-gray-100">
+    <div class="max-w-5xl mx-auto px-6">
+      <h2 class="section-title text-5xl font-bold mb-12">About Me</h2>
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="rounded-3xl overflow-hidden aspect-square bg-gray-800 flex items-center justify-center text-9xl border border-violet-500/30">
+          👩‍🎨
+        </div>
+        <div class="space-y-6 text-lg leading-relaxed">
+          <p>I enjoy taking a simple shape and turning it into a finished asset that looks great and performs well in-game.</p>
+          <p>I work with Maya, Blender, Substance 3D Painter, Marmoset Toolbag, and Adobe Photoshop.</p>
+          <p>Currently focusing on detailing and optimization, and diving deeper into Blender.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <!-- Portfolio -->
-        <section id="portfolio" class="featured-projects">
-            <div class="section-header">
-                <p class="section-title">FEATURED PROJECTS</p>
-                <h2>Selected Works</h2>
-            </div>
-            
-            <div class="projects-grid" style="grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));">
-                <a href="project-cash-register.html" class="project-card">
-                    <div class="project-image">
-                        <img src="images/cash-register.webp" alt="Cash Register">
-                    </div>
-                    <div class="project-info">
-                        <h3>Cash Register</h3>
-                        <p>Hard Surface Prop</p>
-                    </div>
-                </a>
+  <!-- SKILLS -->
+  <section id="skills" class="py-24">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="section-title text-5xl font-bold mb-12 text-center">Skills</h2>
+      <div class="grid md:grid-cols-2 gap-12">
+        <div class="space-y-8">
+          <h3 class="text-2xl font-semibold">Core Skills</h3>
+          <ul class="space-y-4 text-lg">
+            <li>• Hard Surface Modeling</li>
+            <li>• High Poly & Low Poly Modeling</li>
+            <li>• Clean Topology & Retopology</li>
+            <li>• UV Unwrapping</li>
+            <li>• PBR Texturing</li>
+            <li>• Rendering</li>
+          </ul>
+        </div>
+        <div class="space-y-8">
+          <h3 class="text-2xl font-semibold">Software</h3>
+          <div class="flex flex-wrap gap-3">
+            <span class="bg-gray-800 dark:bg-gray-200 px-6 py-3 rounded-2xl">Maya</span>
+            <span class="bg-gray-800 dark:bg-gray-200 px-6 py-3 rounded-2xl">Blender</span>
+            <span class="bg-gray-800 dark:bg-gray-200 px-6 py-3 rounded-2xl">Substance 3D Painter</span>
+            <span class="bg-gray-800 dark:bg-gray-200 px-6 py-3 rounded-2xl">Marmoset Toolbag</span>
+            <span class="bg-gray-800 dark:bg-gray-200 px-6 py-3 rounded-2xl">Photoshop</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-                <div class="project-card coming-soon">
-                    <div class="project-image">
-                        <img src="images/placeholder.webp" alt="Weapon Pack">
-                    </div>
-                    <div class="project-info">
-                        <h3>Weapon Pack</h3>
-                        <p>Coming Soon</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+  <!-- RESUME -->
+  <section id="resume" class="py-24 bg-gray-900 dark:bg-gray-100">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="section-title text-5xl font-bold mb-12">Resume</h2>
+      <!-- Додай сюди свої реальні записи пізніше -->
+      <div class="space-y-10">
+        <div class="flex gap-8">
+          <div class="w-32 text-right text-violet-400">2024 — Present</div>
+          <div>
+            <h3 class="text-xl font-semibold">Hard Surface 3D Artist</h3>
+            <p class="text-gray-400">Freelance</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <!-- Resume -->
-        <section id="resume" style="padding: 120px 60px; background: #0A0A0B;">
-            <div style="max-width: 1000px; margin: 0 auto;">
-                <h2 style="text-align:center; font-size:52px; margin-bottom:60px;">Resume</h2>
-                <p style="text-align:center; color:#AAA;">Resume section will be filled soon.</p>
-            </div>
-        </section>
+  <!-- CONTACT -->
+  <section id="contact" class="py-24">
+    <div class="max-w-2xl mx-auto px-6 text-center">
+      <h2 class="section-title text-5xl font-bold mb-12 mx-auto">Get In Touch</h2>
+      <form class="space-y-6">
+        <input type="text" placeholder="Ім'я" class="w-full bg-gray-800 dark:bg-white border border-gray-700 dark:border-gray-300 rounded-2xl px-6 py-5 focus:outline-none focus:border-violet-500">
+        <input type="email" placeholder="Email" class="w-full bg-gray-800 dark:bg-white border border-gray-700 dark:border-gray-300 rounded-2xl px-6 py-5 focus:outline-none focus:border-violet-500">
+        <textarea placeholder="Повідомлення" rows="6" class="w-full bg-gray-800 dark:bg-white border border-gray-700 dark:border-gray-300 rounded-2xl px-6 py-5 focus:outline-none focus:border-violet-500"></textarea>
+        <button type="submit" class="w-full bg-violet-600 hover:bg-violet-700 py-5 rounded-2xl text-lg font-semibold transition">
+          Надіслати
+        </button>
+      </form>
+    </div>
+  </section>
 
-        <!-- Contact -->
-        <section id="contact" style="padding: 120px 60px;">
-            <div style="max-width: 900px; margin: 0 auto; text-align:center;">
-                <h2 style="font-size:52px; margin-bottom:60px;">Get In Touch</h2>
-                <p style="font-size:20px; color:#AAA;">Contact form and details coming soon...</p>
-            </div>
-        </section>
-    </main>
+  <script>
+    // Theme Toggle
+    const toggleBtn = document.getElementById('theme-toggle');
+    const icon = toggleBtn.querySelector('i');
 
-    <script src="js/script.js"></script>
+    toggleBtn.addEventListener('click', () => {
+      document.documentElement.classList.toggle('dark');
+      if (icon.classList.contains('fa-moon')) {
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
+      } else {
+        icon.classList.remove('fa-sun');
+        icon.classList.add('fa-moon');
+      }
+    });
+
+    console.log('%c✅ Портфоліо Яни готове!', 'color: #a855f7; font-size: 18px; font-weight: bold');
+  </script>
 </body>
 </html>
