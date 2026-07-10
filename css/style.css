@@ -10,85 +10,49 @@
 html { scroll-behavior: smooth; }
 
 body {
-    background: #0F0F10;
-    color: #FFFFFF;
     font-family: "Inter", sans-serif;
     overflow-x: hidden;
-    line-height: 1.6;
+    line-height: 1.7;
+    transition: background 0.4s, color 0.4s;
 }
 
-body.menu-open { overflow: hidden; }
-
-img { display: block; max-width: 100%; }
-
-a { color: inherit; text-decoration: none; }
-
-/* ===================================================
-   BUTTONS
-=================================================== */
-.button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 180px;
-    padding: 18px 34px;
-    border-radius: 8px;
-    background: #4EA1FF;
-    color: white;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    border: none;
+/* Темна тема (за замовчуванням) */
+body {
+    background: #0F0F10;
+    color: #F2EFE9;
 }
 
-.button:hover {
-    transform: translateY(-3px);
-    background: #3B8EF0;
-}
-
-.button.secondary {
-    background: transparent;
-    border: 1px solid rgba(255,255,255,.18);
-    color: inherit;
-}
-
-.button.secondary:hover {
-    background: white;
-    color: #111;
+/* Світла тема */
+body.light {
+    background: #F8F7F4;
+    color: #1F1F1F;
 }
 
 /* ===================================================
-   HEADER & NAV
+   HEADER
 =================================================== */
 header {
     position: sticky;
     top: 0;
     z-index: 1000;
+    padding: 22px 60px;
+    background: rgba(15,15,16,0.95);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(42,42,44,0.8);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 22px 60px;
-    background: rgba(15,15,16,.88);
-    backdrop-filter: blur(16px);
-    border-bottom: 1px solid rgba(255,255,255,.08);
 }
 
-.logo { font-size: 30px; font-weight: 700; transition: color 0.3s; }
-.logo:hover { color: #4EA1FF; }
-
-.theme-toggle {
-    background: none;
-    border: none;
-    font-size: 22px;
-    cursor: pointer;
-    padding: 8px;
-    margin-left: 16px;
-    z-index: 1001;
-    transition: transform 0.3s;
+body.light header {
+    background: rgba(248,247,244,0.98);
+    border-bottom: 1px solid rgba(0,0,0,0.1);
 }
 
-.theme-toggle:hover { transform: rotate(30deg); }
-.theme-toggle .moon { display: none; }
-.theme-toggle .sun { display: inline; }
+.logo { 
+    font-size: 30px; 
+    font-weight: 700; 
+}
 
 .nav-menu {
     display: flex;
@@ -97,74 +61,70 @@ header {
 }
 
 .nav-menu a {
-    position: relative;
     font-size: 17px;
-    color: #F5F5F5;
     transition: color 0.3s;
 }
 
-.nav-menu a:hover { color: #4EA1FF; }
+body.light .nav-menu a { color: #1F1F1F; }
 
 /* ===================================================
-   LIGHT THEME - ЧИСТА ВЕРСІЯ
+   THEME TOGGLE
 =================================================== */
-body.light {
-    background: #F8F9FA;
-    color: #111111;
+.theme-toggle {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: inherit;
 }
 
-body.light header {
-    background: rgba(248, 249, 250, 0.98);
-    border-bottom: 1px solid rgba(0,0,0,0.12);
+/* ===================================================
+   SECTIONS
+=================================================== */
+section {
+    padding: 100px 60px;
 }
 
-body.light .button {
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background: #0F0F10;
+}
+
+body.light .hero { background: #F8F7F4; }
+
+.section-title {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 3rem;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -12px;
+    left: 0;
+    width: 70px;
+    height: 4px;
+    background: #C9C2B6;
+}
+
+body.light .section-title::after { background: #4A4A4A; }
+
+/* Карточки */
+.card {
+    background: #1A1A1C;
+    padding: 2.5rem;
+    border-radius: 16px;
+    border: 1px solid #2A2A2C;
+}
+
+body.light .card {
     background: #FFFFFF;
-    color: #0066FF;
-    border: 2px solid #0066FF;
-    font-weight: 700;
-}
-
-body.light .button:hover {
-    background: #F0F7FF;
-    transform: translateY(-3px);
-}
-
-body.light .button.secondary {
-    background: #FFFFFF;
-    color: #0066FF;
-    border: 2px solid #0066FF;
-}
-
-body.light .nav-menu a,
-body.light .logo {
-    color: #1F1F1F;
-}
-
-body.light .menu-toggle span {
-    background: #111;
-}
-
-/* Секції */
-body.light .hero,
-body.light .about,
-body.light .featured-projects,
-body.light #resume,
-body.light #contact,
-body.light .project-hero,
-body.light .project-content {
-    background: #F8F9FA !important;
-}
-
-body.light h1, 
-body.light h2, 
-body.light .section-title,
-body.light .highlight {
-    color: #111111;
-}
-
-body.light .highlight {
-    color: #0066FF;
+    border: 1px solid #E5E5E5;
 }
 
 /* ===================================================
@@ -172,37 +132,10 @@ body.light .highlight {
 =================================================== */
 @media (max-width: 768px) {
     header { padding: 18px 24px; }
-    .logo { font-size: 22px; }
-
-    .menu-toggle {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        width: 32px;
-        height: 24px;
-        background: transparent;
-        border: none;
-        cursor: pointer;
-        padding: 0;
-        z-index: 1200;
-    }
-
-    .menu-toggle span {
-        width: 100%;
-        height: 3px;
-        background: white;
-        border-radius: 3px;
-        transition: 0.4s;
-    }
-
-    .menu-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(7px, 7px); }
-    .menu-toggle.active span:nth-child(2) { opacity: 0; }
-    .menu-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(6px, -6px); }
-
+    
     .nav-menu {
-        display: none !important;
         position: fixed;
-        top: 72px;
+        top: 70px;
         left: 0;
         right: 0;
         background: #0F0F10;
@@ -210,12 +143,41 @@ body.light .highlight {
         padding: 40px 20px;
         gap: 30px;
         text-align: center;
-        z-index: 1100;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+        display: none;
+        z-index: 999;
     }
 
-    .nav-menu.active { display: flex !important; }
+    body.light .nav-menu {
+        background: #F8F7F4;
+    }
 
-    .hero { padding: 50px 24px; gap: 40px; text-align: center; }
-    .hero h1 { font-size: 46px; }
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        width: 32px;
+        cursor: pointer;
+        z-index: 1001;
+    }
+
+    .menu-toggle span {
+        height: 3px;
+        background: #F2EFE9;
+        border-radius: 3px;
+        transition: 0.4s;
+    }
+
+    body.light .menu-toggle span {
+        background: #1F1F1F;
+    }
 }
+
+/* Додаткові стилі */
+h1, h2, h3 { color: inherit; }
+p { color: #D1D1D1; }
+body.light p { color: #444; }
