@@ -1,4 +1,4 @@
- /* ===================================================
+/* ===================================================
    RESET & BASE
 =================================================== */
 * {
@@ -45,13 +45,6 @@ a { color: inherit; text-decoration: none; }
     background: #3B8EF0;
 }
 
-/* Light theme buttons */
-body.light .button {
-    background: #0066FF;
-    color: #FFFFFF;           /* яскравий білий */
-    box-shadow: 0 4px 12px rgba(0, 102, 255, 0.3);
-}
-
 .button.secondary {
     background: transparent;
     border: 1px solid rgba(255,255,255,.18);
@@ -63,24 +56,8 @@ body.light .button {
     color: #111;
 }
 
-/* Light theme secondary button */
-body.light .button.secondary {
-    border-color: #0066FF;
-    color: #0066FF;
-}
-
-body.light .button.secondary:hover {
-    background: #0066FF;
-    color: white;
-}
-/* Додатковий контраст для кнопок */
-body.light .hero-buttons .button {
-    font-weight: 700;
-    letter-spacing: 0.5px;
-}
-
 /* ===================================================
-   HEADER
+   HEADER & NAV
 =================================================== */
 header {
     position: sticky;
@@ -109,16 +86,11 @@ header {
     transition: transform 0.3s;
 }
 
-.theme-toggle:hover {
-    transform: rotate(30deg);
-}
-
+.theme-toggle:hover { transform: rotate(30deg); }
 .theme-toggle .moon { display: none; }
 .theme-toggle .sun { display: inline; }
 
-/* ===================================================
-   NAV MENU
-=================================================== */
+/* Nav */
 .nav-menu {
     display: flex;
     align-items: center;
@@ -135,57 +107,62 @@ header {
 .nav-menu a:hover { color: #4EA1FF; }
 
 /* ===================================================
-   HERO
+   LIGHT THEME - ВИПРАВЛЕНА ВЕРСІЯ
 =================================================== */
-.hero {
-    max-width: 1400px;
-    margin: 0 auto;
-    min-height: calc(100vh - 90px);
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    gap: 80px;
-    padding: 80px 60px;
+body.light {
+    background: #F8F9FA;
+    color: #111111;
 }
 
-.hero h1 { font-size: 78px; font-weight: 800; line-height: 1.05; margin-bottom: 28px; }
-.highlight { color: #4EA1FF; position: relative; }
-
-.glow {
-    position: absolute;
-    width: 580px;
-    height: 580px;
-    background: #2563EB;
-    border-radius: 50%;
-    filter: blur(160px);
-    opacity: 0.22;
-    z-index: 1;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+body.light header {
+    background: rgba(248, 249, 250, 0.98);
+    border-bottom: 1px solid rgba(0,0,0,0.12);
 }
 
-/* ===================================================
-   SECTIONS
-=================================================== */
-.featured-projects {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 110px 60px;
-    background: #0A0A0B;
+body.light .button {
+    background: #0066FF;
+    color: #FFFFFF !important;
+    font-weight: 700;
 }
 
-.about {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 120px 60px;
+body.light .button:hover {
+    background: #0052cc;
 }
 
-.about-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 90px;
-    align-items: center;
+body.light .button.secondary {
+    border-color: #0066FF;
+    color: #0066FF;
+}
+
+body.light .nav-menu a {
+    color: #1F1F1F;
+}
+
+body.light .menu-toggle span {
+    background: #111;
+}
+
+/* Важливі секції у світлій темі */
+body.light .featured-projects,
+body.light #resume,
+body.light #contact,
+body.light .project-hero,
+body.light .project-content {
+    background: #F8F9FA !important;
+    color: #111;
+}
+
+body.light h1, body.light h2, body.light .section-title {
+    color: #111;
+}
+
+/* Theme icons */
+.theme-toggle.light .moon { display: inline; }
+.theme-toggle.light .sun { display: none; }
+
+body.light .nav-menu {
+    background: #F8F9FA;
+    color: #111;
 }
 
 /* ===================================================
@@ -235,187 +212,8 @@ header {
         box-shadow: 0 10px 30px rgba(0,0,0,0.6);
     }
 
-    .nav-menu.active {
-        display: flex !important;
-    }
+    .nav-menu.active { display: flex !important; }
 
     .hero { padding: 50px 24px; gap: 40px; text-align: center; }
     .hero h1 { font-size: 46px; }
-}
-
-/* ===================================================
-   LIGHT THEME
-=================================================== */
-body.light {
-    background: #F8F9FA;
-    color: #111111;
-}
-
-body.light header {
-    background: rgba(248, 249, 250, 0.98);
-    border-bottom: 1px solid rgba(0,0,0,0.12);
-}
-
-body.light .button {
-    background: #0066FF;
-    color: white;
-}
-
-body.light .button.secondary {
-    border-color: #0066FF;
-    color: #0066FF;
-}
-
-body.light .nav-menu a {
-    color: #1F1F1F;
-}
-
-body.light .project-card {
-    background: #FFFFFF;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-}
-
-body.light .menu-toggle span {
-    background: #111;
-}
-
-body.light .featured-projects,
-body.light #portfolio {
-    background: #F0F2F5;
-}
-
-body.light .about,
-body.light #resume,
-body.light #contact {
-    background: #F8F9FA;
-}
-
-body.light h1, body.light h2 {
-    color: #111;
-}
-
-/* Theme icons */
-.theme-toggle.light .moon { display: inline; }
-.theme-toggle.light .sun { display: none; }
-
-/* Mobile menu light */
-body.light .nav-menu {
-    background: #F8F9FA;
-    color: #111;
-}
-
-/* Portfolio improvements */
-#portfolio .projects-grid {
-    gap: 40px;
-}
-
-#portfolio .project-image {
-    height: 320px;
-}
-
-#portfolio .project-image img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-}
-/* ===================================================
-   PROJECT PAGE
-=================================================== */
-.project-hero {
-    padding: 100px 60px 80px;
-    text-align: center;
-    max-width: 1400px;
-    margin: 0 auto;
-}
-
-.project-main-image {
-    max-width: 100%;
-    border-radius: 12px;
-    margin: 40px 0;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
-}
-
-.project-content {
-    padding: 80px 60px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Light theme for project page */
-body.light .project-main-image {
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
-}
-
-/* ===================================================
-   IMPROVEMENTS
-=================================================== */
-header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 22px 60px;
-    background: rgba(15,15,16,.88);
-    backdrop-filter: blur(16px);
-    border-bottom: 1px solid rgba(255,255,255,.08);
-}
-
-/* Mobile improvements */
-@media (max-width: 768px) {
-    .project-hero,
-    .project-content {
-        padding: 60px 24px;
-    }
-    
-    .project-hero h1 {
-        font-size: 42px;
-    }
-}
-
-/* ===================================================
-   LIGHT THEME - FULL FIX
-=================================================== */
-
-/* Основні секції */
-body.light #resume,
-body.light #contact,
-body.light .featured-projects {
-    background: #F8F9FA !important;
-    color: #111111;
-}
-
-/* Resume та Contact */
-body.light #resume h2,
-body.light #contact h2 {
-    color: #111111;
-}
-
-body.light #resume p,
-body.light #contact p {
-    color: #555;
-}
-
-/* Hero в light theme */
-body.light .hero {
-    background: #F8F9FA;
-}
-
-/* Кнопки - фінальна версія */
-body.light .button {
-    background: #0066FF;
-    color: #FFFFFF;
-    font-weight: 700;
-    box-shadow: 0 4px 15px rgba(0, 102, 255, 0.25);
-}
-
-body.light .button:hover {
-    background: #0052cc;
-    transform: translateY(-3px);
-}
-
-/* Виправлення для "Coming Soon" */
-.coming-soon {
-    opacity: 0.85;
 }
