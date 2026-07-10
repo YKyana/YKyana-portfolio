@@ -12,12 +12,19 @@
     font-family: 'Inter', sans-serif;
     scroll-behavior: smooth;
     transition: background 0.4s, color 0.4s;
+    -ms-overflow-style: none;     /* IE і Edge */
+    scrollbar-width: none;        /* Firefox */
   }
 
-  /* Плавне прокручування з урахуванням шапки */
+  /* Приховуємо скролбар в Chrome, Safari, Edge */
+  body::-webkit-scrollbar {
+    display: none;
+    width: 0;
+  }
+
   html {
     scroll-behavior: smooth;
-    scroll-padding-top: 90px;   /* важливо! щоб не ховалося під header */
+    scroll-padding-top: 90px;
   }
 
   /* Темна тема */
@@ -26,7 +33,7 @@
   .text-light { color: #E7EAEE; }
   .text-muted { color: #C8CDD4; }
 
-  /* ===================== СВІТЛА ТЕМА ===================== */
+  /* Світла тема */
   body.light {
     background: #F8F9FA;
     color: #111827;
@@ -38,7 +45,6 @@
   body.light .text-light { color: #111827 !important; }
   body.light .text-muted { color: #4B5563 !important; }
 
-  /* Фони секцій */
   body.light .bg-\\[\\#2B2E35\\] { background: #F1F3F5 !important; }
   body.light .bg-\\[\\#101114\\] { background: #F8F9FA !important; }
   body.light .bg-\\[\\#4A4F59\\] { background: #E5E7EB !important; }
@@ -56,14 +62,6 @@
   }
   body.light header a:hover {
     color: #1F2937;
-  }
-
-  /* Кнопка теми */
-  body.light #theme-toggle {
-    color: #111827;
-  }
-  body.light #theme-toggle:hover {
-    background-color: #E5E7EB;
   }
 
   /* Секції */
