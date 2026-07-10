@@ -373,3 +373,49 @@ header {
         font-size: 42px;
     }
 }
+
+/* ===================================================
+   LIGHT THEME - FULL FIX
+=================================================== */
+
+/* Основні секції */
+body.light #resume,
+body.light #contact,
+body.light .featured-projects {
+    background: #F8F9FA !important;
+    color: #111111;
+}
+
+/* Resume та Contact */
+body.light #resume h2,
+body.light #contact h2 {
+    color: #111111;
+}
+
+body.light #resume p,
+body.light #contact p {
+    color: #555;
+}
+
+/* Hero в light theme */
+body.light .hero {
+    background: #F8F9FA;
+}
+
+/* Кнопки - фінальна версія */
+body.light .button {
+    background: #0066FF;
+    color: #FFFFFF;
+    font-weight: 700;
+    box-shadow: 0 4px 15px rgba(0, 102, 255, 0.25);
+}
+
+body.light .button:hover {
+    background: #0052cc;
+    transform: translateY(-3px);
+}
+
+/* Виправлення для "Coming Soon" */
+.coming-soon {
+    opacity: 0.85;
+}
