@@ -8,15 +8,14 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    html { scroll-behavior: smooth; }   /* Плавний скрол */
     body { 
       font-family: 'Inter', sans-serif; 
-      transition: all 0.5s ease;
+      scroll-behavior: smooth; 
     }
     .hero-bg { background: #101114; }
     .accent { color: #9AA3AD; }
     .text-light { color: #E7EAEE; }
-    .text-muted { color: #9AA3AD; }
+    .text-muted { color: #C8CDD4; }   /* світліший сірий */
 
     /* Світла тема */
     body.light {
@@ -28,7 +27,6 @@
     body.light .text-light { color: #101114; }
     body.light .text-muted { color: #4A4F59; }
     body.light .bg-[#2B2E35] { background: #F1F3F5; }
-    body.light .bg-[#101114] { background: #E7EAEE; }
   </style>
 </head>
 <body class="bg-[#101114] text-[#E7EAEE]">
@@ -51,7 +49,57 @@
     </nav>
   </header>
 
-  <!-- (решта секцій така ж) -->
+  <!-- HERO -->
+  <section class="hero-bg min-h-screen flex items-center pt-20">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <h1 class="text-6xl md:text-7xl font-bold text-[#E7EAEE]">Hard Surface Artist</h1>
+      <h2 class="text-5xl md:text-6xl font-bold accent mt-4">Creating High Quality Game Assets</h2>
+      <p class="mt-6 text-xl text-[#C8CDD4] max-w-2xl mx-auto">
+        Military Props • Weapons • Vehicles • Game Ready Models
+      </p>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="py-24 bg-[#2B2E35]">
+    <div class="max-w-5xl mx-auto px-6">
+      <h2 class="text-5xl font-bold mb-12 text-[#E7EAEE]">About Me</h2>
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="rounded-3xl bg-[#4A4F59] aspect-square flex items-center justify-center text-9xl">👩‍🎨</div>
+        <div class="space-y-6 text-[#E7EAEE]">
+          <p class="text-xl">Hi, I'm Yana</p>
+          <p>I'm a Hard Surface Artist specializing in modeling hard surfaces and creating clean, optimized game assets.</p>
+          <p>I enjoy taking a simple shape and turning it into a finished asset that looks great and performs well in-game.</p>
+          <p>I work with Maya, Blender, Substance 3D Painter, Marmoset Toolbag, and Adobe Photoshop.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="py-24 bg-[#101114]">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-5xl font-bold mb-12 text-[#E7EAEE]">Featured Projects</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-[#2B2E35] p-10 rounded-3xl">
+          <h3 class="text-3xl font-semibold text-[#E7EAEE]">Cash Register</h3>
+          <p class="text-[#C8CDD4] mt-2">Hard Surface Prop</p>
+        </div>
+        <div class="bg-[#2B2E35] p-10 rounded-3xl">
+          <h3 class="text-3xl font-semibold text-[#E7EAEE]">Weapon Pack</h3>
+          <p class="text-[#C8CDD4] mt-2">Coming Soon</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESUME -->
+  <section id="resume" class="py-24 bg-[#2B2E35]">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-5xl font-bold mb-12 text-[#E7EAEE]">Resume</h2>
+      <p class="text-[#C8CDD4] text-lg">Resume section will be filled soon.</p>
+    </div>
+  </section>
 
   <script>
     const themeToggle = document.getElementById('theme-toggle');
