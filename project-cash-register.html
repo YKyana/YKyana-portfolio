@@ -10,11 +10,18 @@
 <body>
     <header>
         <a href="index.html" class="logo">Yana Kyslichenko</a>
+        
+        <button id="theme-toggle" class="theme-toggle" aria-label="Змінити тему">
+            <span class="sun">☀️</span>
+            <span class="moon">🌙</span>
+        </button>
+
         <button class="menu-toggle" aria-label="Меню">
             <span></span><span></span><span></span>
         </button>
+
         <nav class="nav-menu">
-            <a href="index.html">Home</a>
+            <a href="index.html">← На головну</a>
             <a href="index.html#portfolio">Portfolio</a>
             <a href="index.html#about">About</a>
             <a href="index.html#resume">Resume</a>
@@ -23,20 +30,20 @@
     </header>
 
     <main>
-        <section class="project-hero" style="padding: 100px 60px 60px; text-align: center;">
+        <section class="project-hero">
             <p class="section-title">FEATURED PROJECT</p>
             <h1>Cash Register</h1>
             <p class="project-subtitle">Game Ready Hard Surface Prop</p>
             
             <img src="images/cash-register.webp" 
                  alt="Cash Register 3D Model" 
-                 style="max-width: 100%; border-radius: 12px; margin: 40px 0;">
+                 class="project-main-image">
         </section>
 
-        <!-- Pipeline та деталі можна додати нижче -->
-        <section style="padding: 80px 60px; max-width: 1200px; margin: 0 auto;">
-            <h2 style="text-align:center; margin-bottom: 50px;">Production Pipeline</h2>
-            <!-- Додай сюди свій pipeline (High Poly, Low Poly тощо) -->
+        <section class="project-content">
+            <h2>Production Pipeline</h2>
+            <!-- Тут можеш додати свій pipeline (High Poly, Low Poly, Texturing тощо) -->
+            <p>Деталі виробництва скоро з'являться.</p>
         </section>
     </main>
 
