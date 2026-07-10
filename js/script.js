@@ -25,7 +25,7 @@ const themeToggle = document.getElementById('theme-toggle');
 const body = document.body;
 
 if (themeToggle) {
-    const currentTheme = localStorage.getItem('theme');
+    const currentTheme = localStorage.getItem('theme') || 'dark';
     if (currentTheme === 'light') {
         body.classList.add('light');
         themeToggle.classList.add('light');
