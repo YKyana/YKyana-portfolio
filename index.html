@@ -11,41 +11,41 @@
     body { 
       font-family: 'Inter', sans-serif; 
       scroll-behavior: smooth; 
-      transition: background 0.4s, color 0.4s;
+      transition: all 0.4s;
     }
-    .hero-bg { background: #0F0F10; }
-    .accent { color: #C9C2B6; }
-    .text-light { color: #F2EFE9; }
-    .text-muted { color: #A8A8A8; }
+    .hero-bg { background: #101114; }
+    .accent { color: #9AA3AD; }
+    .text-light { color: #E7EAEE; }
+    .text-muted { color: #9AA3AD; }
 
     /* Світла тема */
     body.light {
-      background: #F8F7F4;
-      color: #1F1F1F;
+      background: #E7EAEE;
+      color: #101114;
     }
-    body.light .hero-bg { background: #F8F7F4; }
-    body.light .accent { color: #3B3B3B; }
-    body.light .text-light { color: #1F1F1F; }
-    body.light .text-muted { color: #555555; }
-    body.light .bg-[#1A1A1C] { background: #FFFFFF; }
-    body.light .bg-[#0F0F10] { background: #F8F7F4; }
+    body.light .hero-bg { background: #E7EAEE; }
+    body.light .accent { color: #4A4F59; }
+    body.light .text-light { color: #101114; }
+    body.light .text-muted { color: #4A4F59; }
+    body.light .bg-[#2B2E35] { background: #F1F3F5; }
+    body.light .bg-[#101114] { background: #E7EAEE; }
   </style>
 </head>
-<body class="bg-[#0F0F10] text-[#F2EFE9]">
+<body class="bg-[#101114] text-[#E7EAEE]">
 
   <!-- HEADER -->
-  <header class="fixed top-0 w-full z-50 bg-[#0F0F10]/95 backdrop-blur-md border-b border-[#2A2A2C]">
+  <header class="fixed top-0 w-full z-50 bg-[#101114]/95 backdrop-blur-md border-b border-[#2B2E35]">
     <nav class="max-w-7xl mx-auto px-6 py-6 flex justify-between items-center">
-      <div class="text-3xl font-bold">Yana</div>
+      <a href="#" class="text-3xl font-bold hover:text-[#9AA3AD] transition">Yana</a>
       
       <div class="hidden md:flex gap-10 text-lg">
-        <a href="#about" class="hover:text-[#C9C2B6]">About</a>
-        <a href="#projects" class="hover:text-[#C9C2B6]">Projects</a>
-        <a href="#resume" class="hover:text-[#C9C2B6]">Resume</a>
-        <a href="#contact" class="hover:text-[#C9C2B6]">Contact</a>
+        <a href="#about" class="hover:text-[#9AA3AD] transition">About</a>
+        <a href="#projects" class="hover:text-[#9AA3AD] transition">Projects</a>
+        <a href="#resume" class="hover:text-[#9AA3AD] transition">Resume</a>
+        <a href="#contact" class="hover:text-[#9AA3AD] transition">Contact</a>
       </div>
 
-      <button id="theme-toggle" class="p-3 rounded-2xl hover:bg-[#2A2A2C]">
+      <button id="theme-toggle" class="p-3 rounded-2xl hover:bg-[#2B2E35] transition">
         <i class="fas fa-moon text-xl"></i>
       </button>
     </nav>
@@ -63,11 +63,11 @@
   </section>
 
   <!-- ABOUT -->
-  <section id="about" class="py-24 bg-[#1A1A1C]">
+  <section id="about" class="py-24 bg-[#2B2E35]">
     <div class="max-w-5xl mx-auto px-6">
       <h2 class="text-5xl font-bold mb-12 text-light">About Me</h2>
       <div class="grid md:grid-cols-2 gap-12 items-center">
-        <div class="rounded-3xl bg-[#2A2A2C] aspect-square flex items-center justify-center text-9xl">👩‍🎨</div>
+        <div class="rounded-3xl bg-[#4A4F59] aspect-square flex items-center justify-center text-9xl">👩‍🎨</div>
         <div class="space-y-6 text-light">
           <p class="text-xl">Hi, I'm Yana</p>
           <p>I'm a Hard Surface Artist specializing in modeling hard surfaces and creating clean, optimized game assets.</p>
@@ -79,15 +79,15 @@
   </section>
 
   <!-- PROJECTS -->
-  <section id="projects" class="py-24 bg-[#0F0F10]">
+  <section id="projects" class="py-24 bg-[#101114]">
     <div class="max-w-6xl mx-auto px-6">
       <h2 class="text-5xl font-bold mb-12 text-light">Featured Projects</h2>
       <div class="grid md:grid-cols-2 gap-8">
-        <div class="bg-[#1A1A1C] p-10 rounded-3xl">
+        <div class="bg-[#2B2E35] p-10 rounded-3xl">
           <h3 class="text-3xl font-semibold">Cash Register</h3>
           <p class="text-muted mt-2">Hard Surface Prop</p>
         </div>
-        <div class="bg-[#1A1A1C] p-10 rounded-3xl">
+        <div class="bg-[#2B2E35] p-10 rounded-3xl">
           <h3 class="text-3xl font-semibold">Weapon Pack</h3>
           <p class="text-muted mt-2">Coming Soon</p>
         </div>
@@ -96,7 +96,7 @@
   </section>
 
   <!-- RESUME -->
-  <section id="resume" class="py-24 bg-[#1A1A1C]">
+  <section id="resume" class="py-24 bg-[#2B2E35]">
     <div class="max-w-4xl mx-auto px-6">
       <h2 class="text-5xl font-bold mb-12 text-light">Resume</h2>
       <p class="text-muted text-lg">Resume section will be filled soon.</p>
@@ -104,7 +104,7 @@
   </section>
 
   <!-- CONTACT -->
-  <section id="contact" class="py-24 bg-[#0F0F10]">
+  <section id="contact" class="py-24 bg-[#101114]">
     <div class="max-w-2xl mx-auto px-6 text-center">
       <h2 class="text-5xl font-bold mb-12 text-light">Get In Touch</h2>
       <p class="text-muted mb-8">Contact form coming soon...</p>
