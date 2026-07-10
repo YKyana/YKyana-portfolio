@@ -91,3 +91,20 @@ body.light .project-hero {
 .about-image img {
     max-width: 420px;
 }
+/* ===================================================
+   РОЗМІРИ ТЕКСТУ (повертаємо нормальні)
+=================================================== */
+h1 { font-size: 78px; font-weight: 800; line-height: 1.05; }
+h2 { font-size: 52px; font-weight: 700; }
+
+.subtitle { font-size: 22px; }
+.description { font-size: 20px; }
+
+body.light h1, body.light h2 {
+    color: #111;
+}
+
+@media (max-width: 768px) {
+    h1 { font-size: 46px; }
+    h2 { font-size: 42px; }
+}
