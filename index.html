@@ -7,27 +7,56 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    body { 
-      font-family: 'Inter', sans-serif; 
-      scroll-behavior: smooth; 
-    }
-    .hero-bg { background: #101114; }
-    .accent { color: #9AA3AD; }
-    .text-light { color: #E7EAEE; }
-    .text-muted { color: #C8CDD4; }   /* світліший сірий */
+<style>
+  body {
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+    transition: background 0.4s, color 0.4s;
+  }
 
-    /* Світла тема */
-    body.light {
-      background: #E7EAEE;
-      color: #101114;
-    }
-    body.light .hero-bg { background: #E7EAEE; }
-    body.light .accent { color: #4A4F59; }
-    body.light .text-light { color: #101114; }
-    body.light .text-muted { color: #4A4F59; }
-    body.light .bg-[#2B2E35] { background: #F1F3F5; }
-  </style>
+  /* Темна тема (за замовчуванням) */
+  .hero-bg { background: #101114; }
+  .accent { color: #9AA3AD; }
+  .text-light { color: #E7EAEE; }
+  .text-muted { color: #C8CDD4; }
+
+  /* ===================== СВІТЛА ТЕМА ===================== */
+  body.light {
+    background: #F8F9FA;
+    color: #111827;
+  }
+
+  body.light .hero-bg { 
+    background: #F8F9FA; 
+  }
+
+  body.light .accent { color: #374151; }
+  body.light .text-light { color: #111827; }
+  body.light .text-muted { color: #4B5563; }
+
+  /* Перевизначаємо Tailwind кольори */
+  body.light .bg-\\[\\#101114\\] { background: #F8F9FA !important; }
+  body.light .bg-\\[\\#2B2E35\\] { background: #F1F3F5 !important; }
+  body.light .bg-\\[\\#4A4F59\\] { background: #E5E7EB !important; }
+
+  body.light .text-\\[\\#E7EAEE\\] { color: #111827 !important; }
+  body.light .text-\\[\\#C8CDD4\\] { color: #4B5563 !important; }
+
+  /* Header */
+  body.light header {
+    background: rgba(248, 249, 250, 0.98) !important;
+    border-bottom-color: #E5E7EB !important;
+  }
+
+  body.light header a:hover {
+    color: #1F2937 !important;
+  }
+
+  /* Кнопка теми */
+  body.light #theme-toggle {
+    hover:bg-gray-200;
+  }
+</style>
 </head>
 <body class="bg-[#101114] text-[#E7EAEE]">
 
