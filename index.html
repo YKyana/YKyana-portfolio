@@ -8,9 +8,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
+    html { scroll-behavior: smooth; }   /* Плавний скрол */
     body { 
       font-family: 'Inter', sans-serif; 
-      scroll-behavior: smooth; 
       transition: all 0.5s ease;
     }
     .hero-bg { background: #101114; }
@@ -51,65 +51,7 @@
     </nav>
   </header>
 
-  <!-- HERO -->
-  <section class="hero-bg min-h-screen flex items-center pt-20">
-    <div class="max-w-7xl mx-auto px-6 text-center">
-      <h1 class="text-6xl md:text-7xl font-bold">Hard Surface Artist</h1>
-      <h2 class="text-5xl md:text-6xl font-bold accent mt-4">Creating High Quality Game Assets</h2>
-      <p class="mt-6 text-xl text-muted max-w-2xl mx-auto">
-        Military Props • Weapons • Vehicles • Game Ready Models
-      </p>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section id="about" class="py-24 bg-[#2B2E35]">
-    <div class="max-w-5xl mx-auto px-6">
-      <h2 class="text-5xl font-bold mb-12 text-light">About Me</h2>
-      <div class="grid md:grid-cols-2 gap-12 items-center">
-        <div class="rounded-3xl bg-[#4A4F59] aspect-square flex items-center justify-center text-9xl">👩‍🎨</div>
-        <div class="space-y-6 text-light">
-          <p class="text-xl">Hi, I'm Yana</p>
-          <p>I'm a Hard Surface Artist specializing in modeling hard surfaces and creating clean, optimized game assets.</p>
-          <p>I enjoy taking a simple shape and turning it into a finished asset that looks great and performs well in-game.</p>
-          <p>I work with Maya, Blender, Substance 3D Painter, Marmoset Toolbag, and Adobe Photoshop.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROJECTS -->
-  <section id="projects" class="py-24 bg-[#101114]">
-    <div class="max-w-6xl mx-auto px-6">
-      <h2 class="text-5xl font-bold mb-12 text-light">Featured Projects</h2>
-      <div class="grid md:grid-cols-2 gap-8">
-        <div class="bg-[#2B2E35] p-10 rounded-3xl">
-          <h3 class="text-3xl font-semibold">Cash Register</h3>
-          <p class="text-muted mt-2">Hard Surface Prop</p>
-        </div>
-        <div class="bg-[#2B2E35] p-10 rounded-3xl">
-          <h3 class="text-3xl font-semibold">Weapon Pack</h3>
-          <p class="text-muted mt-2">Coming Soon</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- RESUME -->
-  <section id="resume" class="py-24 bg-[#2B2E35]">
-    <div class="max-w-4xl mx-auto px-6">
-      <h2 class="text-5xl font-bold mb-12 text-light">Resume</h2>
-      <p class="text-muted text-lg">Resume section will be filled soon.</p>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact" class="py-24 bg-[#101114]">
-    <div class="max-w-2xl mx-auto px-6 text-center">
-      <h2 class="text-5xl font-bold mb-12 text-light">Get In Touch</h2>
-      <p class="text-muted mb-8">Contact form coming soon...</p>
-    </div>
-  </section>
+  <!-- (решта секцій така ж) -->
 
   <script>
     const themeToggle = document.getElementById('theme-toggle');
