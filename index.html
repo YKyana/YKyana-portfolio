@@ -14,7 +14,7 @@
     transition: background 0.4s, color 0.4s;
   }
 
-  /* Темна тема (за замовчуванням) */
+  /* Темна тема */
   .hero-bg { background: #101114; }
   .accent { color: #9AA3AD; }
   .text-light { color: #E7EAEE; }
@@ -30,15 +30,17 @@
     background: #F8F9FA; 
   }
 
+  /* Основні перевизначення */
   body.light .accent { color: #374151; }
   body.light .text-light { color: #111827; }
   body.light .text-muted { color: #4B5563; }
 
-  /* Перевизначаємо Tailwind кольори */
-  body.light .bg-\\[\\#101114\\] { background: #F8F9FA !important; }
+  /* Фони секцій */
   body.light .bg-\\[\\#2B2E35\\] { background: #F1F3F5 !important; }
+  body.light .bg-\\[\\#101114\\] { background: #F8F9FA !important; }
   body.light .bg-\\[\\#4A4F59\\] { background: #E5E7EB !important; }
 
+  /* Текст */
   body.light .text-\\[\\#E7EAEE\\] { color: #111827 !important; }
   body.light .text-\\[\\#C8CDD4\\] { color: #4B5563 !important; }
 
@@ -48,17 +50,24 @@
     border-bottom-color: #E5E7EB !important;
   }
 
+  /* Навігація */
+  body.light header a {
+    color: #111827;
+  }
   body.light header a:hover {
-    color: #1F2937 !important;
+    color: #374151;
   }
 
-  /* Кнопка теми */
+  /* Кнопка перемикання теми */
   body.light #theme-toggle {
-    hover:bg-gray-200;
+    color: #111827;
+  }
+  body.light #theme-toggle:hover {
+    background-color: #E5E7EB;
   }
 </style>
 </head>
-<body class="bg-[#101114] text-[#E7EAEE]">
+<body class="bg-[#101114] text-light">
 
   <!-- HEADER -->
  <header class="fixed top-0 w-full z-50 bg-[#101114]/95 backdrop-blur-md border-b border-[#2B2E35]">
@@ -92,8 +101,8 @@
   <!-- ABOUT -->
   <section id="about" class="py-24 bg-[#2B2E35]">
     <div class="max-w-5xl mx-auto px-6">
-      <h2 class="text-5xl font-bold mb-12 text-[#E7EAEE]">About Me</h2>
-      <div class="grid md:grid-cols-2 gap-12 items-center">
+     <h2 class="text-5xl font-bold mb-12 text-light">About Me</h2>
+<div class="space-y-6 text-light">   <!-- замість text-[#E7EAEE] -->
         <div class="rounded-3xl bg-[#4A4F59] aspect-square flex items-center justify-center text-9xl">👩‍🎨</div>
         <div class="space-y-6 text-[#E7EAEE]">
           <p class="text-xl">Hi, I'm Yana</p>
