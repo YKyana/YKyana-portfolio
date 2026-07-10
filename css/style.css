@@ -181,3 +181,14 @@ body.light .card {
 h1, h2, h3 { color: inherit; }
 p { color: #D1D1D1; }
 body.light p { color: #444; }
+
+/* Приховуємо скролбар, але залишаємо можливість прокручувати */
+body::-webkit-scrollbar {
+    display: none;           /* Chrome, Safari, Edge */
+    width: 0;
+}
+
+body {
+    -ms-overflow-style: none;    /* IE і Edge */
+    scrollbar-width: none;       /* Firefox */
+}
