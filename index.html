@@ -167,39 +167,21 @@
     </div>
   </section>
 
-<script>
-  // Theme toggle
-  const themeToggle = document.getElementById('theme-toggle');
-  const icon = themeToggle.querySelector('i');
+  <script>
+    const themeToggle = document.getElementById('theme-toggle');
+    const icon = themeToggle.querySelector('i');
 
-  themeToggle.addEventListener('click', () => {
-    document.body.classList.toggle('light');
-    
-    if (document.body.classList.contains('light')) {
-      icon.classList.remove('fa-moon');
-      icon.classList.add('fa-sun');
-    } else {
-      icon.classList.remove('fa-sun');
-      icon.classList.add('fa-moon');
-    }
-  });
-
-  // Анімація появи секцій при скролі
-  const sections = document.querySelectorAll('section');
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
+    themeToggle.addEventListener('click', () => {
+      document.body.classList.toggle('light');
+      
+      if (document.body.classList.contains('light')) {
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
+      } else {
+        icon.classList.remove('fa-sun');
+        icon.classList.add('fa-moon');
       }
     });
-  }, {
-    threshold: 0.15
-  });
-
-  sections.forEach(section => {
-    observer.observe(section);
-  });
-</script>
+  </script>
 </body>
 </html>
