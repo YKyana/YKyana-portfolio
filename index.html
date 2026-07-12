@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   
- <style>
+<style>
   body {
     font-family: 'Inter', sans-serif;
     scroll-behavior: smooth;
@@ -18,63 +18,59 @@
   body::-webkit-scrollbar { display: none; }
   html { scroll-padding-top: 100px; }
 
-  /* Hero + Дим (покращений) */
+  /* Hero */
   .hero-bg {
-    position: relative;
-    background: linear-gradient(135deg, #0F1117 0%, #1A2333 60%, #0F1117 100%);
+    background: linear-gradient(135deg, #0F1117 0%, #1A2333 100%);
     min-height: 100vh;
-    overflow: hidden;
+    position: relative;
   }
 
-  .hero-bg::before,
-  .hero-bg::after {
+  /* Дим - спрощений варіант */
+  .hero-bg::before {
     content: '';
     position: absolute;
     inset: 0;
-    background: radial-gradient(circle at 30% 25%, rgba(200,220,255,0.18) 0%, transparent 45%);
-    animation: smoke 25s linear infinite;
+    background: linear-gradient(transparent, rgba(255,255,255,0.08), transparent);
+    animation: smoke 20s linear infinite;
     opacity: 0.6;
-    pointer-events: none;
-  }
-  .hero-bg::after {
-    background: radial-gradient(circle at 70% 70%, rgba(220,230,255,0.12) 0%, transparent 50%);
-    animation: smoke 38s linear infinite reverse;
-    opacity: 0.45;
   }
 
   @keyframes smoke {
-    0%   { transform: translate(0, 0) rotate(0deg); }
-    100% { transform: translate(140px, -100px) rotate(15deg); }
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-80px); }
   }
 
-  /* Світла тема - покращений контраст */
+  /* Світла тема */
   body.light .hero-bg {
-    background: linear-gradient(135deg, #F0F4FA 0%, #E2E9F5 60%, #F8FAFC 100%);
+    background: linear-gradient(135deg, #F0F4FA 0%, #E2E9F5 100%);
   }
-  body.light .hero-bg::before,
-  body.light .hero-bg::after {
-    opacity: 0.18;
+
+  /* Покращений текст на світлій темі */
+  body.light {
+    color: #0F172A;
+  }
+  body.light .text-light,
+  body.light h1, body.light h2, body.light h3 {
+    color: #0F172A !important;
+  }
+  body.light .text-muted {
+    color: #334155 !important;
   }
 
   /* Header */
   header {
-    background: rgba(15, 17, 23, 0.85) !important;
-    backdrop-filter: blur(22px);
+    background: rgba(15, 17, 23, 0.9) !important;
+    backdrop-filter: blur(20px);
   }
   body.light header {
-    background: rgba(248, 249, 250, 0.85) !important;
+    background: rgba(248, 249, 250, 0.92) !important;
   }
-
-  /* Текст на світлій темі */
-  body.light .text-light { color: #0F172A !important; }
-  body.light .text-muted { color: #334155 !important; }
-  body.light h1, body.light h2, body.light h3 { color: #0F172A !important; }
 
   /* Анімація секцій */
   section {
     opacity: 0;
-    transform: translateY(70px);
-    transition: all 1s cubic-bezier(0.25, 0.1, 0.25, 1);
+    transform: translateY(60px);
+    transition: all 0.9s ease-out;
   }
   section.visible {
     opacity: 1;
