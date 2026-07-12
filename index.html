@@ -18,7 +18,7 @@
   body::-webkit-scrollbar { display: none; }
   html { scroll-padding-top: 100px; }
 
-  /* Hero */
+  /* Hero + Дим (більш помітний) */
   .hero-bg {
     position: relative;
     background: linear-gradient(135deg, #0F1117 0%, #1A2333 100%);
@@ -26,52 +26,72 @@
     overflow: hidden;
   }
 
-  /* Білий дим на темній темі */
-  .hero-bg::before,
-  .hero-bg::after {
+  .hero-bg::before {
     content: '';
     position: absolute;
     inset: 0;
-    background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.15) 0%, transparent 50%);
-    animation: smoke 28s linear infinite;
-    opacity: 0.5;
-  }
-  .hero-bg::after {
-    background: radial-gradient(circle at 70% 70%, rgba(255,255,255,0.10) 0%, transparent 55%);
-    animation: smoke 40s linear infinite reverse;
-    opacity: 0.35;
-  }
-
-  /* Темний дим на світлій темі */
-  body.light .hero-bg::before,
-  body.light .hero-bg::after {
-    background: radial-gradient(circle at 30% 30%, rgba(0,0,0,0.12) 0%, transparent 50%);
-    opacity: 0.25;
-  }
-  body.light .hero-bg::after {
-    background: radial-gradient(circle at 70% 70%, rgba(0,0,0,0.09) 0%, transparent 55%);
+    background: linear-gradient(transparent, rgba(255,255,255,0.25), transparent);
+    animation: smoke 18s linear infinite;
+    opacity: 0.65;
   }
 
   @keyframes smoke {
-    0%   { transform: translate(0, 0) rotate(0deg); }
-    100% { transform: translate(110px, -90px) rotate(12deg); }
+    0%   { transform: translateY(0); }
+    100% { transform: translateY(-120px); }
   }
 
   /* Світла тема */
   body.light .hero-bg {
     background: linear-gradient(135deg, #F0F4FA 0%, #E2E9F5 100%);
   }
+  body.light .hero-bg::before {
+    background: linear-gradient(transparent, rgba(0,0,0,0.15), transparent);
+    opacity: 0.3;
+  }
 
-  /* Решта стилів */
+  /* Всі секції на світлій темі */
+  body.light #about,
+  body.light #resume,
+  body.light #contact {
+    background: #F1F5F9 !important;
+  }
+  body.light #projects {
+    background: #E2E8F0 !important;
+  }
+
+  /* Текст на світлій темі */
   body.light {
     color: #0F172A;
   }
   body.light .text-light,
-  body.light h1, body.light h2, body.light h3 {
+  body.light h1,
+  body.light h2,
+  body.light h3 {
     color: #0F172A !important;
   }
-  body.light .text-muted {
+  body.light .text-muted,
+  body.light p {
     color: #334155 !important;
+  }
+
+  /* Header */
+  header {
+    background: rgba(15, 17, 23, 0.85) !important;
+    backdrop-filter: blur(20px);
+  }
+  body.light header {
+    background: rgba(248, 249, 250, 0.9) !important;
+  }
+
+  /* Анімація секцій */
+  section {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: all 0.9s ease-out;
+  }
+  section.visible {
+    opacity: 1;
+    transform: translateY(0);
   }
 </style>
 </head>
