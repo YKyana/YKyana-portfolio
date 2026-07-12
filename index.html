@@ -12,63 +12,73 @@
     body {
       font-family: 'Inter', sans-serif;
       scroll-behavior: smooth;
-      transition: background 0.4s, color 0.4s;
       -ms-overflow-style: none;
       scrollbar-width: none;
     }
-
     body::-webkit-scrollbar { display: none; }
-    html { scroll-padding-top: 90px; }
+    html { scroll-padding-top: 100px; }
 
-    /* Hero */
+    /* Hero з анімацією диму */
     .hero-bg {
+      position: relative;
       background: linear-gradient(135deg, #101114 0%, #1A1F2E 50%, #101114 100%);
+      overflow: hidden;
+      min-height: 100vh;
     }
+
+    .hero-bg::before,
+    .hero-bg::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: radial-gradient(circle at 30% 20%, rgba(255,255,255,0.08) 0%, transparent 50%);
+      animation: smoke 28s linear infinite;
+      opacity: 0.55;
+    }
+    .hero-bg::after {
+      background: radial-gradient(circle at 70% 65%, rgba(255,255,255,0.06) 0%, transparent 60%);
+      animation: smoke 38s linear infinite reverse;
+      opacity: 0.35;
+    }
+
+    @keyframes smoke {
+      0% { transform: translate(0, 0) rotate(0deg); }
+      100% { transform: translate(90px, -80px) rotate(10deg); }
+    }
+
     body.light .hero-bg {
       background: linear-gradient(135deg, #F0F4F8 0%, #E2E8F0 50%, #F8FAFC 100%);
     }
+    body.light .hero-bg::before,
+    body.light .hero-bg::after { opacity: 0.25; }
 
-    /* Header - ще прозоріший */
-    header {
-      background: rgba(16, 17, 20, 0.75) !important;
-      backdrop-filter: blur(20px);
-      border-bottom: 1px solid rgba(43, 46, 53, 0.5);
+    /* Анімація секцій */
+    section {
+      opacity: 0;
+      transform: translateY(60px);
+      transition: all 1s cubic-bezier(0.25, 0.1, 0.25, 1);
     }
-    body.light header {
-      background: rgba(248, 249, 250, 0.70) !important;
-      border-bottom: 1px solid rgba(226, 232, 240, 0.7);
-    }
-
-    /* Секції */
-    #about, #resume, #contact {
-      background: linear-gradient(135deg, #1F242E 0%, #2B2E35 100%);
-    }
-    body.light #about,
-    body.light #resume,
-    body.light #contact {
-      background: linear-gradient(135deg, #F8FAFC 0%, #F1F5F9 100%);
-    }
-
-    #projects {
-      background: linear-gradient(135deg, #101114 0%, #1A1F2E 100%);
-    }
-    body.light #projects {
-      background: linear-gradient(135deg, #F1F5F9 0%, #E2E8F0 100%);
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
 
     /* Карточки */
     .project-card {
-      background: linear-gradient(145deg, #2B2E35, #1F242E);
-      transition: all 0.3s ease;
+      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     }
     .project-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.4);
+      transform: translateY(-15px) scale(1.03);
     }
 
-    body.light .project-card {
-      background: linear-gradient(145deg, #FFFFFF, #F8FAFC);
-      box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+    /* Header */
+    header {
+      background: rgba(16, 17, 20, 0.78) !important;
+      backdrop-filter: blur(20px);
+    }
+    body.light header {
+      background: rgba(248, 249, 250, 0.75) !important;
     }
   </style>
 </head>
@@ -93,8 +103,8 @@
   </header>
 
   <!-- HERO -->
-  <section class="hero-bg min-h-screen flex items-center pt-20">
-    <div class="max-w-7xl mx-auto px-6 text-center">
+  <section class="hero-bg flex items-center pt-20">
+    <div class="max-w-7xl mx-auto px-6 text-center z-10">
       <h1 class="text-6xl md:text-7xl font-bold text-light">Hard Surface Artist</h1>
       <h2 class="text-5xl md:text-6xl font-bold accent mt-4">Creating High Quality Game Assets</h2>
       <p class="mt-6 text-xl text-muted max-w-2xl mx-auto">
@@ -104,7 +114,7 @@
   </section>
 
   <!-- ABOUT -->
-  <section id="about" class="py-24">
+  <section id="about" class="py-24 bg-[#2B2E35]">
     <div class="max-w-5xl mx-auto px-6">
       <h2 class="text-5xl font-bold mb-12 text-light">About Me</h2>
       <div class="grid md:grid-cols-2 gap-12 items-center">
@@ -120,7 +130,7 @@
   </section>
 
   <!-- PROJECTS -->
-  <section id="projects" class="py-24">
+  <section id="projects" class="py-24 bg-[#101114]">
     <div class="max-w-6xl mx-auto px-6">
       <h2 class="text-5xl font-bold mb-12 text-light">Featured Projects</h2>
       <div class="grid md:grid-cols-2 gap-8">
@@ -137,7 +147,7 @@
   </section>
 
   <!-- RESUME -->
-  <section id="resume" class="py-24">
+  <section id="resume" class="py-24 bg-[#2B2E35]">
     <div class="max-w-4xl mx-auto px-6">
       <h2 class="text-5xl font-bold mb-12 text-light">Resume</h2>
       <p class="text-muted text-lg">Resume section will be filled soon.</p>
@@ -145,22 +155,22 @@
   </section>
 
   <!-- CONTACT -->
-  <section id="contact" class="py-24">
+  <section id="contact" class="py-24 bg-[#2B2E35]">
     <div class="max-w-4xl mx-auto px-6 text-center">
       <h2 class="text-5xl font-bold mb-12 text-light">Get In Touch</h2>
       <p class="text-muted text-lg mb-12">Зв'яжіться зі мною:</p>
       
       <div class="flex flex-wrap justify-center gap-10 text-4xl">
-        <a href="https://t.me/yourusername" target="_blank" rel="noopener" class="text-[#9AA3AD] hover:text-[#60A5FA] transition hover:scale-110">
+        <a href="https://t.me/yourusername" target="_blank" class="text-[#9AA3AD] hover:text-[#60A5FA] transition hover:scale-110">
           <i class="fab fa-telegram-plane"></i>
         </a>
-        <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener" class="text-[#9AA3AD] hover:text-[#3B82F6] transition hover:scale-110">
+        <a href="https://linkedin.com/in/yourprofile" target="_blank" class="text-[#9AA3AD] hover:text-[#3B82F6] transition hover:scale-110">
           <i class="fab fa-linkedin"></i>
         </a>
-        <a href="https://instagram.com/yourusername" target="_blank" rel="noopener" class="text-[#9AA3AD] hover:text-[#EC4899] transition hover:scale-110">
+        <a href="https://instagram.com/yourusername" target="_blank" class="text-[#9AA3AD] hover:text-[#EC4899] transition hover:scale-110">
           <i class="fab fa-instagram"></i>
         </a>
-        <a href="https://www.artstation.com/yourusername" target="_blank" rel="noopener" class="text-[#9AA3AD] hover:text-white transition hover:scale-110">
+        <a href="https://www.artstation.com/yourusername" target="_blank" class="text-[#9AA3AD] hover:text-white transition hover:scale-110">
           <i class="fab fa-artstation"></i>
         </a>
       </div>
@@ -173,15 +183,21 @@
 
     themeToggle.addEventListener('click', () => {
       document.body.classList.toggle('light');
-      
-      if (document.body.classList.contains('light')) {
-        icon.classList.remove('fa-moon');
-        icon.classList.add('fa-sun');
-      } else {
-        icon.classList.remove('fa-sun');
-        icon.classList.add('fa-moon');
-      }
+      icon.classList.toggle('fa-moon');
+      icon.classList.toggle('fa-sun');
     });
+
+    // Анімація появи
+    const sections = document.querySelectorAll('section');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    sections.forEach(section => observer.observe(section));
   </script>
 </body>
 </html>
