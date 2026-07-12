@@ -12,43 +12,55 @@
     body {
       font-family: 'Inter', sans-serif;
       scroll-behavior: smooth;
-      background: #0F1117;
-      color: #E7EAEE;
+      background: #1E1E1E;
+      color: #E5E5EA;
     }
 
+    /* Hero */
     .hero-bg {
-      background: linear-gradient(135deg, #0F1117 0%, #1A2333 100%);
+      background: linear-gradient(135deg, #1E1E1E 0%, #2C2C2E 100%);
     }
 
+    /* Header */
     header {
-      background: rgba(15, 17, 23, 0.95);
-      backdrop-filter: blur(16px);
+      background: rgba(30, 30, 30, 0.95);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid #3A3A3C;
     }
 
-    /* Покращена світла тема */
+    /* Світла тема Safari */
     body.light {
-      background: #F8FAFC;
-      color: #0F172A;
+      background: #F3F3F3;
+      color: #1C1C1E;
     }
     body.light .hero-bg {
-      background: linear-gradient(135deg, #F0F4FA 0%, #E2E9F5 100%);
+      background: linear-gradient(135deg, #F3F3F3 0%, #E5E5E5 100%);
     }
     body.light header {
-      background: rgba(248, 249, 250, 0.95);
+      background: rgba(243, 243, 243, 0.95);
+      border-bottom: 1px solid #D1D1D6;
     }
 
+    /* Текст */
     body.light .text-light,
-    body.light h1, body.light h2, body.light h3 {
-      color: #0F172A !important;
+    body.light h1,
+    body.light h2,
+    body.light h3 {
+      color: #1C1C1E !important;
     }
     body.light .text-muted {
-      color: #334155 !important;
+      color: #3A3A3C !important;
+    }
+
+    /* Акцентний колір Apple Blue */
+    .accent {
+      color: #007AFF;
     }
 
     section {
       opacity: 0;
-      transform: translateY(40px);
-      transition: all 0.8s ease;
+      transform: translateY(50px);
+      transition: all 0.9s ease;
     }
     section.visible {
       opacity: 1;
@@ -56,21 +68,21 @@
     }
   </style>
 </head>
-<body class="bg-[#0F1117] text-[#E7EAEE]">
+<body class="bg-[#1E1E1E] text-[#E5E5EA]">
 
   <!-- HEADER -->
-  <header class="fixed top-0 w-full z-50 border-b border-[#2A2F3A]">
+  <header class="fixed top-0 w-full z-50">
     <nav class="max-w-7xl mx-auto px-6 py-6 flex justify-between items-center">
-      <a href="#" class="text-3xl font-bold hover:text-[#9AA3AD] transition">Yana</a>
+      <a href="#" class="text-3xl font-bold hover:text-[#007AFF] transition">Yana</a>
       
       <div class="hidden md:flex gap-10 text-lg">
-        <a href="#about" class="hover:text-[#9AA3AD] transition">About</a>
-        <a href="#projects" class="hover:text-[#9AA3AD] transition">Projects</a>
-        <a href="#resume" class="hover:text-[#9AA3AD] transition">Resume</a>
-        <a href="#contact" class="hover:text-[#9AA3AD] transition">Contact</a>
+        <a href="#about" class="hover:text-[#007AFF] transition">About</a>
+        <a href="#projects" class="hover:text-[#007AFF] transition">Projects</a>
+        <a href="#resume" class="hover:text-[#007AFF] transition">Resume</a>
+        <a href="#contact" class="hover:text-[#007AFF] transition">Contact</a>
       </div>
 
-      <button id="theme-toggle" class="p-3 rounded-2xl hover:bg-[#2B2E35] transition">
+      <button id="theme-toggle" class="p-3 rounded-2xl hover:bg-[#2C2C2E] transition">
         <i class="fas fa-moon text-xl"></i>
       </button>
     </nav>
@@ -88,11 +100,11 @@
   </section>
 
   <!-- ABOUT -->
-  <section id="about" class="py-24 bg-[#1F242E]">
+  <section id="about" class="py-24 bg-[#2C2C2E]">
     <div class="max-w-5xl mx-auto px-6">
       <h2 class="text-5xl font-bold mb-12 text-light">About Me</h2>
       <div class="grid md:grid-cols-2 gap-12 items-center">
-        <div class="rounded-3xl bg-[#2A2F3A] aspect-square flex items-center justify-center text-9xl">👩‍🎨</div>
+        <div class="rounded-3xl bg-[#3A3A3C] aspect-square flex items-center justify-center text-9xl">👩‍🎨</div>
         <div class="space-y-6 text-light">
           <p class="text-xl">Hi, I'm Yana</p>
           <p>I'm a Hard Surface Artist specializing in modeling hard surfaces and creating clean, optimized game assets.</p>
@@ -104,15 +116,15 @@
   </section>
 
   <!-- PROJECTS -->
-  <section id="projects" class="py-24 bg-[#0F1117]">
+  <section id="projects" class="py-24 bg-[#1E1E1E]">
     <div class="max-w-6xl mx-auto px-6">
       <h2 class="text-5xl font-bold mb-12 text-light">Featured Projects</h2>
       <div class="grid md:grid-cols-2 gap-8">
-        <div class="bg-[#1F242E] p-10 rounded-3xl">
+        <div class="bg-[#2C2C2E] p-10 rounded-3xl">
           <h3 class="text-3xl font-semibold text-light">Cash Register</h3>
           <p class="text-muted mt-2">Hard Surface Prop</p>
         </div>
-        <div class="bg-[#1F242E] p-10 rounded-3xl">
+        <div class="bg-[#2C2C2E] p-10 rounded-3xl">
           <h3 class="text-3xl font-semibold text-light">Weapon Pack</h3>
           <p class="text-muted mt-2">Coming Soon</p>
         </div>
@@ -121,7 +133,7 @@
   </section>
 
   <!-- RESUME -->
-  <section id="resume" class="py-24 bg-[#1F242E]">
+  <section id="resume" class="py-24 bg-[#2C2C2E]">
     <div class="max-w-4xl mx-auto px-6">
       <h2 class="text-5xl font-bold mb-12 text-light">Resume</h2>
       <p class="text-muted text-lg">Resume section will be filled soon.</p>
@@ -129,15 +141,15 @@
   </section>
 
   <!-- CONTACT -->
-  <section id="contact" class="py-24 bg-[#1F242E]">
+  <section id="contact" class="py-24 bg-[#2C2C2E]">
     <div class="max-w-4xl mx-auto px-6 text-center">
       <h2 class="text-5xl font-bold mb-12 text-light">Get In Touch</h2>
       <p class="text-muted text-lg mb-12">Зв'яжіться зі мною:</p>
       <div class="flex flex-wrap justify-center gap-12 text-4xl">
-        <a href="#" class="hover:text-white transition">Telegram</a>
-        <a href="#" class="hover:text-white transition">LinkedIn</a>
-        <a href="#" class="hover:text-white transition">Instagram</a>
-        <a href="#" class="hover:text-white transition">ArtStation</a>
+        <a href="#" class="hover:text-[#007AFF] transition">Telegram</a>
+        <a href="#" class="hover:text-[#007AFF] transition">LinkedIn</a>
+        <a href="#" class="hover:text-[#007AFF] transition">Instagram</a>
+        <a href="#" class="hover:text-[#007AFF] transition">ArtStation</a>
       </div>
     </div>
   </section>
@@ -156,20 +168,9 @@
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function(e) {
         e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-        });
+        document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
       });
     });
-
-    // Анімація появи
-    const sections = document.querySelectorAll('section');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add('visible');
-      });
-    });
-    sections.forEach(s => observer.observe(s));
   </script>
 </body>
 </html>
