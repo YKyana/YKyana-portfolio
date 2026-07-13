@@ -152,13 +152,57 @@
     </div>
   </section>
 
-  <!-- RESUME -->
-  <section id="resume" class="py-24 bg-[#2C2C2E] bg-section">
-    <div class="max-w-4xl mx-auto px-6">
-      <h2 id="resume-title" class="text-5xl font-bold mb-12">Resume</h2>
-      <p id="resume-text" class="text-[#A1A1AA]">Resume section will be filled soon.</p>
+ <!-- RESUME -->
+<section id="resume" class="py-24 bg-[#2C2C2E] bg-section dark:bg-[#2C2C2E]">
+  <div class="max-w-4xl mx-auto px-6">
+    <h2 id="resume-title" class="text-5xl font-bold mb-12 text-white dark:text-white">Resume</h2>
+    
+    <div class="max-w-3xl mx-auto">
+      <h3 id="resume-subtitle" class="text-3xl font-semibold mb-8 text-center text-white dark:text-white">3D Artist | Hard Surface & Game Assets</h3>
+      
+      <p id="resume-desc" class="text-lg leading-relaxed mb-10 text-center text-gray-300 dark:text-gray-300">
+        I'm a 3D Artist specializing in hard surface modeling and creating clean, production-ready game assets.
+      </p>
+
+      <div class="grid md:grid-cols-2 gap-12">
+        <div>
+          <h4 id="resume-skills-title" class="text-xl font-semibold mb-4 border-b border-gray-600 pb-2 text-white">Core Skills</h4>
+          <ul id="resume-skills" class="space-y-2 text-gray-300">
+            <li>• Hard Surface Modeling</li>
+            <li>• High-Poly & Low-Poly</li>
+            <li>• Clean Topology & Retopology</li>
+            <li>• UV Unwrapping</li>
+            <li>• PBR Texturing</li>
+            <li>• Rendering</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 id="resume-pipeline-title" class="text-xl font-semibold mb-4 border-b border-gray-600 pb-2 text-white">Production Pipeline</h4>
+          <ul id="resume-pipeline" class="space-y-2 text-gray-300">
+            <li>• Blockout & Base Mesh</li>
+            <li>• High-Poly Detailing</li>
+            <li>• Low-Poly Optimization</li>
+            <li>• UV & Baking</li>
+            <li>• Full High-to-Low Pipeline</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-12 grid md:grid-cols-2 gap-12">
+        <div>
+          <h4 id="resume-texturing-title" class="text-xl font-semibold mb-4 text-white">Texturing</h4>
+          <p id="resume-texturing" class="text-gray-400">PBR in Substance 3D Painter, realistic materials, wear & tear details.</p>
+        </div>
+        
+        <div>
+          <h4 id="resume-software-title" class="text-xl font-semibold mb-4 text-white">Software</h4>
+          <p id="resume-software" class="text-gray-400">Maya, Blender, Substance 3D Painter, Marmoset Toolbag, Photoshop</p>
+        </div>
+      </div>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- CONTACT -->
   <section id="contact" class="py-24 bg-[#1E1E1E] bg-section">
@@ -178,36 +222,56 @@
     let currentLang = 'en';
 
     const translations = {
-      en: {
-        'hero-title': 'Hard Surface Artist',
-        'hero-subtitle': 'Creating High Quality Game Assets',
-        'hero-desc': 'Military Props • Weapons • Vehicles • Game Ready Models',
-        'about-title': 'About Me',
-        'about-greeting': "Hi, I'm Yana",
-        'about-text1': "I'm a Hard Surface Artist specializing in modeling hard surfaces and creating clean, optimized game assets.",
-        'about-text2': "I enjoy taking a simple shape and turning it into a finished asset that looks great and performs well in-game.",
-        'about-tools': 'I work with: <strong>Maya, Blender, Substance 3D Painter, Marmoset Toolbag, Adobe Photoshop</strong>.',
-        'projects-title': 'Featured Projects',
-        'resume-title': 'Resume',
-        'resume-text': 'Resume section will be filled soon.',
-        'contact-title': 'Get In Touch',
-        'contact-desc': "Let's create something cool together!"
-      },
-      ua: {
-        'hero-title': 'Художник Твердих Поверхонь',
-        'hero-subtitle': 'Створюю Якісні Ігрові Ассети',
-        'hero-desc': 'Військові Пропи • Зброя • Техніка • Моделі для ігор',
-        'about-title': 'Про мене',
-        'about-greeting': 'Привіт, я Яна',
-        'about-text1': 'Я Hard Surface Artist, спеціалізуюся на моделюванні твердих поверхонь та створенні чистих, оптимізованих ігрових ассетів.',
-        'about-text2': 'Обожнюю брати просту форму і перетворювати її на готовий ассет, який виглядає круто і добре працює в грі.',
-        'about-tools': 'Працюю з: <strong>Maya, Blender, Substance 3D Painter, Marmoset Toolbag, Adobe Photoshop</strong>.',
-        'projects-title': 'Вибрані Проєкти',
-        'resume-title': 'Резюме',
-        'resume-text': 'Секція резюме буде заповнена найближчим часом.',
-        'contact-title': 'Зв\'яжіться зі мною',
-        'contact-desc': 'Давайте створимо щось круте разом!'
-      }
+  en: {
+    'hero-title': 'Hard Surface Artist',
+    'hero-subtitle': 'Creating High Quality Game Assets',
+    'hero-desc': 'Military Props • Weapons • Vehicles • Game Ready Models',
+    'about-title': 'About Me',
+    'about-greeting': "Hi, I'm Yana",
+    'about-text1': "I'm a Hard Surface Artist specializing in modeling hard surfaces and creating clean, optimized game assets.",
+    'about-text2': "I enjoy taking a simple shape and turning it into a finished asset that looks great and performs well in-game.",
+    'about-tools': 'I work with: <strong>Maya, Blender, Substance 3D Painter, Marmoset Toolbag, Adobe Photoshop</strong>.',
+    'projects-title': 'Featured Projects',
+    'resume-title': 'Resume',
+    'resume-text': 'Resume section will be filled soon.',
+    'contact-title': 'Get In Touch',
+    'contact-desc': "Let's create something cool together!",
+    
+    // Resume new keys
+    'resume-subtitle': '3D Artist | Hard Surface & Game Assets',
+    'resume-desc': "I'm a 3D Artist specializing in hard surface modeling and creating clean, production-ready game assets.",
+    'resume-skills-title': 'Core Skills',
+    'resume-pipeline-title': 'Production Pipeline',
+    'resume-texturing-title': 'Texturing',
+    'resume-texturing': 'PBR in Substance 3D Painter, realistic materials, wear & tear details.',
+    'resume-software-title': 'Software',
+    'resume-software': 'Maya, Blender, Substance 3D Painter, Marmoset Toolbag, Photoshop'
+  },
+  ua: {
+    'hero-title': 'Художник Твердих Поверхонь',
+    'hero-subtitle': 'Створюю Якісні Ігрові Ассети',
+    'hero-desc': 'Військові Пропи • Зброя • Техніка • Моделі для ігор',
+    'about-title': 'Про мене',
+    'about-greeting': 'Привіт, я Яна',
+    'about-text1': 'Я Hard Surface Artist, спеціалізуюся на моделюванні твердих поверхонь та створенні чистих, оптимізованих ігрових ассетів.',
+    'about-text2': 'Обожнюю брати просту форму і перетворювати її на готовий ассет, який виглядає круто і добре працює в грі.',
+    'about-tools': 'Працюю з: <strong>Maya, Blender, Substance 3D Painter, Marmoset Toolbag, Adobe Photoshop</strong>.',
+    'projects-title': 'Вибрані Проєкти',
+    'resume-title': 'Резюме',
+    'resume-text': 'Секція резюме буде заповнена найближчим часом.',
+    'contact-title': 'Зв\'яжіться зі мною',
+    'contact-desc': 'Давайте створимо щось круте разом!',
+
+    // Resume new keys
+    'resume-subtitle': '3D Художник | Тверді Поверхні та Ігрові Ассети',
+    'resume-desc': 'Я — 3D-художник, який спеціалізується на моделюванні твердих поверхонь і створенні чистих, оптимізованих гейм-ріді ассетів.',
+    'resume-skills-title': 'Основні навички',
+    'resume-pipeline-title': 'Продакшн пайплайн',
+    'resume-texturing-title': 'Текстуринг',
+    'resume-texturing': 'PBR в Substance 3D Painter, реалістичні матеріали, знос та деталі.',
+    'resume-software-title': 'Програмне забезпечення',
+    'resume-software': 'Maya, Blender, Substance 3D Painter, Marmoset Toolbag, Photoshop'
+  }
     };
 
     function switchLanguage(lang) {
