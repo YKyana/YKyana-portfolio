@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-<style>
+  <style>
     body {
       font-family: 'Inter', sans-serif;
       scroll-behavior: smooth;
@@ -26,7 +26,7 @@
       backdrop-filter: blur(20px);
     }
 
-    /* Light mode fixes */
+    /* Light Mode */
     body.light {
       background: #F3F3F3;
       color: #1C1C1E;
@@ -41,8 +41,8 @@
       background: #FFFFFF !important;
       box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
     }
-    body.light .text-muted {
-      color: #6B7280 !important;
+    body.light .bg-section {
+      background: #E5E5E5 !important;
     }
 
     section {
@@ -54,14 +54,6 @@
       opacity: 1;
       transform: translateY(0);
     }
-
-    /* Language buttons */
-    .lang-switch {
-      background: #2C2C2E;
-    }
-    body.light .lang-switch {
-      background: #E5E5E5;
-    }
   </style>
 </head>
 <body class="bg-[#1E1E1E] text-[#E5E5EA]">
@@ -69,7 +61,8 @@
   <!-- HEADER -->
   <header class="fixed top-0 w-full z-50">
     <nav class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
-      <a href="#" class="text-3xl font-bold hover:text-[#007AFF] transition">Yana</a>
+      <a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" 
+         class="text-3xl font-bold hover:text-[#007AFF] transition">Yana</a>
 
       <div class="hidden md:flex gap-10 text-lg">
         <a href="#about" class="hover:text-[#007AFF] transition lang-en">About</a>
@@ -83,7 +76,6 @@
       </div>
 
       <div class="flex items-center gap-4">
-        <!-- Language Switch -->
         <div class="lang-switch flex rounded-2xl p-1 text-sm">
           <button onclick="switchLanguage('en')" class="lang-btn active px-4 py-1.5 rounded-xl" id="btn-en">EN</button>
           <button onclick="switchLanguage('ua')" class="lang-btn px-4 py-1.5 rounded-xl" id="btn-ua">UA</button>
@@ -95,6 +87,7 @@
       </div>
     </nav>
   </header>
+
   <!-- HERO -->
   <section class="hero-bg flex items-center pt-20">
     <div class="max-w-7xl mx-auto px-6 text-center">
@@ -107,32 +100,24 @@
   </section>
 
   <!-- ABOUT -->
-  <section id="about" class="py-24 bg-[#2C2C2E] bg-dark">
+  <section id="about" class="py-24 bg-[#2C2C2E] bg-section">
     <div class="max-w-5xl mx-auto px-6">
       <h2 id="about-title" class="text-5xl font-bold mb-12">About Me</h2>
-      <div class="grid md:grid-cols-2 gap-12 items-center">
-        <div class="rounded-3xl bg-[#3A3A3C] bg-darker aspect-square flex items-center justify-center text-9xl">👩‍🎨</div>
-        <div class="space-y-6">
-          <p id="about-greeting" class="text-xl">Hi, I'm Yana</p>
-          <p id="about-text1">I'm a Hard Surface Artist specializing in modeling hard surfaces and creating clean, optimized game assets.</p>
-          <p id="about-text2">I enjoy taking a simple shape and turning it into a finished asset that looks great and performs well in-game.</p>
-          <p id="about-tools">I work with: <strong>Maya, Blender, Substance 3D Painter, Marmoset Toolbag, Adobe Photoshop</strong>.</p>
-        </div>
-      </div>
+      <!-- контент About -->
     </div>
   </section>
 
-  <!-- PROJECTS (виправлений для світлої теми) -->
-  <section id="projects" class="py-24 bg-[#1E1E1E]">
+  <!-- PROJECTS -->
+  <section id="projects" class="py-24 bg-[#1E1E1E] bg-section">
     <div class="max-w-6xl mx-auto px-6">
       <h2 id="projects-title" class="text-5xl font-bold mb-12">Featured Projects</h2>
       <div class="grid md:grid-cols-2 gap-8">
-        <div class="bg-card bg-[#2C2C2E] p-10 rounded-3xl hover:scale-105 transition-transform">
+        <div class="bg-card p-10 rounded-3xl hover:scale-105 transition-transform">
           <h3 class="text-3xl font-semibold">Cash Register</h3>
           <p class="text-muted mt-2 lang-en">Hard Surface Prop</p>
           <p class="text-muted mt-2 lang-ua hidden">Проп твердих поверхонь</p>
         </div>
-        <div class="bg-card bg-[#2C2C2E] p-10 rounded-3xl hover:scale-105 transition-transform">
+        <div class="bg-card p-10 rounded-3xl hover:scale-105 transition-transform">
           <h3 class="text-3xl font-semibold">Weapon Pack</h3>
           <p class="text-muted mt-2 lang-en">Coming Soon</p>
           <p class="text-muted mt-2 lang-ua hidden">Скоро</p>
@@ -140,7 +125,6 @@
       </div>
     </div>
   </section>
-
   <!-- RESUME -->
   <section id="resume" class="py-24 bg-[#2C2C2E] bg-dark">
     <div class="max-w-4xl mx-auto px-6">
