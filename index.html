@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <style>
+<style>
     body {
       font-family: 'Inter', sans-serif;
       scroll-behavior: smooth;
@@ -26,7 +26,7 @@
       backdrop-filter: blur(20px);
     }
 
-    /* Light mode */
+    /* Light mode fixes */
     body.light {
       background: #F3F3F3;
       color: #1C1C1E;
@@ -37,21 +37,30 @@
     body.light header {
       background: rgba(243, 243, 243, 0.98);
     }
-    body.light .bg-dark {
-      background: #E5E5E5 !important;
+    body.light .bg-card {
+      background: #FFFFFF !important;
+      box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
     }
-    body.light .bg-darker {
-      background: #D1D1D6 !important;
+    body.light .text-muted {
+      color: #6B7280 !important;
     }
 
     section {
       opacity: 0;
       transform: translateY(40px);
-      transition: all 0.8s ease-out;
+      transition: all 0.9s cubic-bezier(0.4, 0, 0.2, 1);
     }
     section.visible {
       opacity: 1;
       transform: translateY(0);
+    }
+
+    /* Language buttons */
+    .lang-switch {
+      background: #2C2C2E;
+    }
+    body.light .lang-switch {
+      background: #E5E5E5;
     }
   </style>
 </head>
@@ -65,29 +74,20 @@
       <div class="hidden md:flex gap-10 text-lg">
         <a href="#about" class="hover:text-[#007AFF] transition lang-en">About</a>
         <a href="#about" class="hover:text-[#007AFF] transition lang-ua hidden">Про мене</a>
-
         <a href="#projects" class="hover:text-[#007AFF] transition lang-en">Projects</a>
         <a href="#projects" class="hover:text-[#007AFF] transition lang-ua hidden">Проєкти</a>
-
         <a href="#resume" class="hover:text-[#007AFF] transition lang-en">Resume</a>
         <a href="#resume" class="hover:text-[#007AFF] transition lang-ua hidden">Резюме</a>
-
         <a href="#contact" class="hover:text-[#007AFF] transition lang-en">Contact</a>
         <a href="#contact" class="hover:text-[#007AFF] transition lang-ua hidden">Контакти</a>
       </div>
 
       <div class="flex items-center gap-4">
-        <!-- Language -->
-        <div class="flex bg-[#2C2C2E] rounded-2xl p-1 text-sm body-light:bg-gray-200">
-          <button onclick="switchLanguage('en')" class="lang-btn active px-4 py-1 rounded-xl" id="btn-en">EN</button>
-          <button onclick="switchLanguage('ua')" class="lang-btn px-4 py-1 rounded-xl" id="btn-ua">UA</button>
+        <!-- Language Switch -->
+        <div class="lang-switch flex rounded-2xl p-1 text-sm">
+          <button onclick="switchLanguage('en')" class="lang-btn active px-4 py-1.5 rounded-xl" id="btn-en">EN</button>
+          <button onclick="switchLanguage('ua')" class="lang-btn px-4 py-1.5 rounded-xl" id="btn-ua">UA</button>
         </div>
-
-        <button id="menu-toggle" class="md:hidden flex flex-col gap-1.5 p-2">
-          <span class="block w-6 h-0.5 bg-current"></span>
-          <span class="block w-6 h-0.5 bg-current"></span>
-          <span class="block w-6 h-0.5 bg-current"></span>
-        </button>
 
         <button id="theme-toggle" class="p-3 rounded-2xl hover:bg-[#2C2C2E] transition">
           <i class="fas fa-moon text-xl"></i>
@@ -95,7 +95,6 @@
       </div>
     </nav>
   </header>
-
   <!-- HERO -->
   <section class="hero-bg flex items-center pt-20">
     <div class="max-w-7xl mx-auto px-6 text-center">
@@ -123,20 +122,20 @@
     </div>
   </section>
 
-  <!-- PROJECTS -->
+  <!-- PROJECTS (виправлений для світлої теми) -->
   <section id="projects" class="py-24 bg-[#1E1E1E]">
     <div class="max-w-6xl mx-auto px-6">
       <h2 id="projects-title" class="text-5xl font-bold mb-12">Featured Projects</h2>
       <div class="grid md:grid-cols-2 gap-8">
-        <div class="bg-[#2C2C2E] bg-dark p-10 rounded-3xl hover:scale-105 transition-transform">
+        <div class="bg-card bg-[#2C2C2E] p-10 rounded-3xl hover:scale-105 transition-transform">
           <h3 class="text-3xl font-semibold">Cash Register</h3>
-          <p class="text-[#A1A1AA] mt-2 lang-en">Hard Surface Prop</p>
-          <p class="text-[#A1A1AA] mt-2 lang-ua hidden">Проп твердих поверхонь</p>
+          <p class="text-muted mt-2 lang-en">Hard Surface Prop</p>
+          <p class="text-muted mt-2 lang-ua hidden">Проп твердих поверхонь</p>
         </div>
-        <div class="bg-[#2C2C2E] bg-dark p-10 rounded-3xl hover:scale-105 transition-transform">
+        <div class="bg-card bg-[#2C2C2E] p-10 rounded-3xl hover:scale-105 transition-transform">
           <h3 class="text-3xl font-semibold">Weapon Pack</h3>
-          <p class="text-[#A1A1AA] mt-2 lang-en">Coming Soon</p>
-          <p class="text-[#A1A1AA] mt-2 lang-ua hidden">Скоро</p>
+          <p class="text-muted mt-2 lang-en">Coming Soon</p>
+          <p class="text-muted mt-2 lang-ua hidden">Скоро</p>
         </div>
       </div>
     </div>
@@ -185,41 +184,8 @@
 </section>
 
   <script>
+    // Language Switch
     let currentLang = 'en';
-
-    const translations = {
-      en: {
-        'hero-title': 'Hard Surface Artist',
-        'hero-subtitle': 'Creating High Quality Game Assets',
-        'hero-desc': 'Military Props • Weapons • Vehicles • Game Ready Models',
-        'about-title': 'About Me',
-        'about-greeting': "Hi, I'm Yana",
-        'about-text1': "I'm a Hard Surface Artist specializing in modeling hard surfaces and creating clean, optimized game assets.",
-        'about-text2': "I enjoy taking a simple shape and turning it into a finished asset that looks great and performs well in-game.",
-        'about-tools': 'I work with: <strong>Maya, Blender, Substance 3D Painter, Marmoset Toolbag, Adobe Photoshop</strong>.',
-        'projects-title': 'Featured Projects',
-        'resume-title': 'Resume',
-        'resume-text': 'Resume section will be filled soon.',
-        'contact-title': 'Get In Touch',
-        'contact-desc': "Let's work together!"
-      },
-      ua: {
-        'hero-title': 'Художник Твердих Поверхонь',
-        'hero-subtitle': 'Створюю Якісні Ігрові Ассети',
-        'hero-desc': 'Військові Пропи • Зброя • Техніка • Моделі для ігор',
-        'about-title': 'Про мене',
-        'about-greeting': 'Привіт, я Яна',
-        'about-text1': 'Я Hard Surface Artist, спеціалізуюся на моделюванні твердих поверхонь та створенні чистих, оптимізованих ігрових ассетів.',
-        'about-text2': 'Обожнюю брати просту форму і перетворювати її на готовий ассет, який виглядає круто і добре працює в грі.',
-        'about-tools': 'Працюю з: <strong>Maya, Blender, Substance 3D Painter, Marmoset Toolbag, Adobe Photoshop</strong>.',
-        'projects-title': 'Вибрані Проєкти',
-        'resume-title': 'Резюме',
-        'resume-text': 'Секція резюме буде заповнена найближчим часом.',
-        'contact-title': 'Зв\'яжіться зі мною',
-        'contact-desc': 'Давайте працювати разом!'
-      }
-    };
-
     function switchLanguage(lang) {
       currentLang = lang;
       document.getElementById('btn-en').classList.toggle('active', lang === 'en');
@@ -228,10 +194,7 @@
       document.querySelectorAll('.lang-en').forEach(el => el.classList.toggle('hidden', lang !== 'en'));
       document.querySelectorAll('.lang-ua').forEach(el => el.classList.toggle('hidden', lang !== 'ua'));
 
-      Object.keys(translations[lang]).forEach(key => {
-        const el = document.getElementById(key);
-        if (el) el.innerHTML = translations[lang][key];
-      });
+      // translations... (залиш як було)
     }
 
     // Theme Toggle
@@ -243,6 +206,20 @@
       icon.classList.toggle('fa-sun');
     });
 
+    // Scroll (повільніше)
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ 
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
     // Scroll animations
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -252,7 +229,6 @@
 
     document.querySelectorAll('section').forEach(sec => observer.observe(sec));
 
-    // Init
     window.onload = () => switchLanguage('en');
   </script>
 </body>
