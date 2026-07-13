@@ -26,12 +26,23 @@
       backdrop-filter: blur(20px);
     }
 
+    /* Light mode */
     body.light {
       background: #F3F3F3;
       color: #1C1C1E;
     }
-    body.light .hero-bg { background: linear-gradient(135deg, #F3F3F3 0%, #E5E5E5 100%); }
-    body.light header { background: rgba(243, 243, 243, 0.98); }
+    body.light .hero-bg {
+      background: linear-gradient(135deg, #F3F3F3 0%, #E5E5E5 100%);
+    }
+    body.light header {
+      background: rgba(243, 243, 243, 0.98);
+    }
+    body.light .bg-dark {
+      background: #E5E5E5 !important;
+    }
+    body.light .bg-darker {
+      background: #D1D1D6 !important;
+    }
 
     section {
       opacity: 0;
@@ -42,14 +53,6 @@
       opacity: 1;
       transform: translateY(0);
     }
-
-    .lang-btn {
-      transition: all 0.3s;
-    }
-    .lang-btn.active {
-      color: #007AFF;
-      font-weight: 600;
-    }
   </style>
 </head>
 <body class="bg-[#1E1E1E] text-[#E5E5EA]">
@@ -59,29 +62,27 @@
     <nav class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
       <a href="#" class="text-3xl font-bold hover:text-[#007AFF] transition">Yana</a>
 
-      <!-- Desktop Nav -->
       <div class="hidden md:flex gap-10 text-lg">
         <a href="#about" class="hover:text-[#007AFF] transition lang-en">About</a>
         <a href="#about" class="hover:text-[#007AFF] transition lang-ua hidden">Про мене</a>
-        
+
         <a href="#projects" class="hover:text-[#007AFF] transition lang-en">Projects</a>
         <a href="#projects" class="hover:text-[#007AFF] transition lang-ua hidden">Проєкти</a>
-        
+
         <a href="#resume" class="hover:text-[#007AFF] transition lang-en">Resume</a>
         <a href="#resume" class="hover:text-[#007AFF] transition lang-ua hidden">Резюме</a>
-        
+
         <a href="#contact" class="hover:text-[#007AFF] transition lang-en">Contact</a>
         <a href="#contact" class="hover:text-[#007AFF] transition lang-ua hidden">Контакти</a>
       </div>
 
       <div class="flex items-center gap-4">
-        <!-- Language Switcher -->
-        <div class="flex bg-[#2C2C2E] rounded-2xl p-1 text-sm">
+        <!-- Language -->
+        <div class="flex bg-[#2C2C2E] rounded-2xl p-1 text-sm body-light:bg-gray-200">
           <button onclick="switchLanguage('en')" class="lang-btn active px-4 py-1 rounded-xl" id="btn-en">EN</button>
           <button onclick="switchLanguage('ua')" class="lang-btn px-4 py-1 rounded-xl" id="btn-ua">UA</button>
         </div>
 
-        <!-- Hamburger -->
         <button id="menu-toggle" class="md:hidden flex flex-col gap-1.5 p-2">
           <span class="block w-6 h-0.5 bg-current"></span>
           <span class="block w-6 h-0.5 bg-current"></span>
@@ -107,11 +108,11 @@
   </section>
 
   <!-- ABOUT -->
-  <section id="about" class="py-24 bg-[#2C2C2E]">
+  <section id="about" class="py-24 bg-[#2C2C2E] bg-dark">
     <div class="max-w-5xl mx-auto px-6">
       <h2 id="about-title" class="text-5xl font-bold mb-12">About Me</h2>
       <div class="grid md:grid-cols-2 gap-12 items-center">
-        <div class="rounded-3xl bg-[#3A3A3C] aspect-square flex items-center justify-center text-9xl">👩‍🎨</div>
+        <div class="rounded-3xl bg-[#3A3A3C] bg-darker aspect-square flex items-center justify-center text-9xl">👩‍🎨</div>
         <div class="space-y-6">
           <p id="about-greeting" class="text-xl">Hi, I'm Yana</p>
           <p id="about-text1">I'm a Hard Surface Artist specializing in modeling hard surfaces and creating clean, optimized game assets.</p>
@@ -122,7 +123,66 @@
     </div>
   </section>
 
-  <!-- PROJECTS, RESUME, CONTACT — аналогічно з id -->
+  <!-- PROJECTS -->
+  <section id="projects" class="py-24 bg-[#1E1E1E]">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 id="projects-title" class="text-5xl font-bold mb-12">Featured Projects</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-[#2C2C2E] bg-dark p-10 rounded-3xl hover:scale-105 transition-transform">
+          <h3 class="text-3xl font-semibold">Cash Register</h3>
+          <p class="text-[#A1A1AA] mt-2 lang-en">Hard Surface Prop</p>
+          <p class="text-[#A1A1AA] mt-2 lang-ua hidden">Проп твердих поверхонь</p>
+        </div>
+        <div class="bg-[#2C2C2E] bg-dark p-10 rounded-3xl hover:scale-105 transition-transform">
+          <h3 class="text-3xl font-semibold">Weapon Pack</h3>
+          <p class="text-[#A1A1AA] mt-2 lang-en">Coming Soon</p>
+          <p class="text-[#A1A1AA] mt-2 lang-ua hidden">Скоро</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESUME -->
+  <section id="resume" class="py-24 bg-[#2C2C2E] bg-dark">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 id="resume-title" class="text-5xl font-bold mb-12">Resume</h2>
+      <p id="resume-text" class="text-[#A1A1AA] text-lg">Resume section will be filled soon.</p>
+    </div>
+  </section>
+
+<!-- CONTACT -->
+<section id="contact" class="py-24 bg-[#2C2C2E] bg-dark">
+  <div class="max-w-4xl mx-auto px-6 text-center">
+    <h2 id="contact-title" class="text-5xl font-bold mb-12">Get In Touch</h2>
+    <p id="contact-desc" class="text-[#A1A1AA] text-lg mb-16">Давайте створимо щось круте разом!</p>
+    
+    <div class="flex flex-wrap justify-center gap-10 text-5xl">
+      <a href="https://t.me/ykyana" target="_blank" 
+         class="hover:text-[#007AFF] transition-all hover:scale-110 flex flex-col items-center gap-3">
+        <i class="fab fa-telegram"></i>
+        <span class="text-base">Telegram</span>
+      </a>
+      
+      <a href="https://linkedin.com/in/ykyana" target="_blank" 
+         class="hover:text-[#007AFF] transition-all hover:scale-110 flex flex-col items-center gap-3">
+        <i class="fab fa-linkedin"></i>
+        <span class="text-base">LinkedIn</span>
+      </a>
+      
+      <a href="https://instagram.com/ykyana" target="_blank" 
+         class="hover:text-[#007AFF] transition-all hover:scale-110 flex flex-col items-center gap-3">
+        <i class="fab fa-instagram"></i>
+        <span class="text-base">Instagram</span>
+      </a>
+      
+      <a href="https://www.artstation.com/ykyana" target="_blank" 
+         class="hover:text-[#007AFF] transition-all hover:scale-110 flex flex-col items-center gap-3">
+        <i class="fab fa-artstation"></i>
+        <span class="text-base">ArtStation</span>
+      </a>
+    </div>
+  </div>
+</section>
 
   <script>
     let currentLang = 'en';
@@ -136,8 +196,12 @@
         'about-greeting': "Hi, I'm Yana",
         'about-text1': "I'm a Hard Surface Artist specializing in modeling hard surfaces and creating clean, optimized game assets.",
         'about-text2': "I enjoy taking a simple shape and turning it into a finished asset that looks great and performs well in-game.",
-        'about-tools': 'I work with: <strong>Maya, Blender, Substance 3D Painter, Marmoset Toolbag, Adobe Photoshop</strong>.'
-        // додай інші ключі за потребою
+        'about-tools': 'I work with: <strong>Maya, Blender, Substance 3D Painter, Marmoset Toolbag, Adobe Photoshop</strong>.',
+        'projects-title': 'Featured Projects',
+        'resume-title': 'Resume',
+        'resume-text': 'Resume section will be filled soon.',
+        'contact-title': 'Get In Touch',
+        'contact-desc': "Let's work together!"
       },
       ua: {
         'hero-title': 'Художник Твердих Поверхонь',
@@ -147,28 +211,30 @@
         'about-greeting': 'Привіт, я Яна',
         'about-text1': 'Я Hard Surface Artist, спеціалізуюся на моделюванні твердих поверхонь та створенні чистих, оптимізованих ігрових ассетів.',
         'about-text2': 'Обожнюю брати просту форму і перетворювати її на готовий ассет, який виглядає круто і добре працює в грі.',
-        'about-tools': 'Працюю з: <strong>Maya, Blender, Substance 3D Painter, Marmoset Toolbag, Adobe Photoshop</strong>.'
+        'about-tools': 'Працюю з: <strong>Maya, Blender, Substance 3D Painter, Marmoset Toolbag, Adobe Photoshop</strong>.',
+        'projects-title': 'Вибрані Проєкти',
+        'resume-title': 'Резюме',
+        'resume-text': 'Секція резюме буде заповнена найближчим часом.',
+        'contact-title': 'Зв\'яжіться зі мною',
+        'contact-desc': 'Давайте працювати разом!'
       }
     };
 
     function switchLanguage(lang) {
       currentLang = lang;
-      
       document.getElementById('btn-en').classList.toggle('active', lang === 'en');
       document.getElementById('btn-ua').classList.toggle('active', lang === 'ua');
 
-      // Показуємо/ховаємо навігацію
       document.querySelectorAll('.lang-en').forEach(el => el.classList.toggle('hidden', lang !== 'en'));
       document.querySelectorAll('.lang-ua').forEach(el => el.classList.toggle('hidden', lang !== 'ua'));
 
-      // Оновлюємо текст
       Object.keys(translations[lang]).forEach(key => {
         const el = document.getElementById(key);
         if (el) el.innerHTML = translations[lang][key];
       });
     }
 
-    // Theme toggle (залишаю)
+    // Theme Toggle
     const themeToggle = document.getElementById('theme-toggle');
     const icon = themeToggle.querySelector('i');
     themeToggle.addEventListener('click', () => {
@@ -186,10 +252,8 @@
 
     document.querySelectorAll('section').forEach(sec => observer.observe(sec));
 
-    // Ініціалізація
-    window.onload = () => {
-      switchLanguage('en'); // за замовчуванням англійська
-    };
+    // Init
+    window.onload = () => switchLanguage('en');
   </script>
 </body>
 </html>
