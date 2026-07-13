@@ -26,7 +26,7 @@
       backdrop-filter: blur(20px);
     }
 
-    /* LIGHT THEME */
+    /* Light Theme */
     body.light {
       background: #F3F3F3;
       color: #1C1C1E;
@@ -38,8 +38,8 @@
 
     section {
       opacity: 0;
-      transform: translateY(40px);
-      transition: all 0.9s cubic-bezier(0.4, 0, 0.2, 1);
+      transform: translateY(50px);
+      transition: all 0.9s cubic-bezier(0.25, 0.1, 0.25, 1);
     }
     section.visible {
       opacity: 1;
@@ -52,8 +52,9 @@
   <!-- HEADER -->
   <header class="fixed top-0 w-full z-50">
     <nav class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
-      <a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="text-3xl font-bold hover:text-[#007AFF] transition">Yana</a>
+      <a href="#" onclick="window.scrollTo({top:0, behavior:'smooth'})" class="text-3xl font-bold hover:text-[#007AFF] transition">Yana</a>
 
+      <!-- Desktop Nav -->
       <div class="hidden md:flex gap-10 text-lg">
         <a href="#about" class="hover:text-[#007AFF] lang-en">About</a>
         <a href="#about" class="hover:text-[#007AFF] lang-ua hidden">Про мене</a>
@@ -66,15 +67,33 @@
       </div>
 
       <div class="flex items-center gap-4">
+        <!-- Language Switch -->
         <div class="flex bg-[#2C2C2E] rounded-2xl p-1 text-sm">
-          <button onclick="switchLanguage('en')" class="px-4 py-1.5 rounded-xl active" id="btn-en">EN</button>
-          <button onclick="switchLanguage('ua')" class="px-4 py-1.5 rounded-xl" id="btn-ua">UA</button>
+          <button onclick="switchLanguage('en')" class="lang-btn px-4 py-1.5 rounded-xl active" id="btn-en">EN</button>
+          <button onclick="switchLanguage('ua')" class="lang-btn px-4 py-1.5 rounded-xl" id="btn-ua">UA</button>
         </div>
+
+        <!-- Theme Toggle -->
         <button id="theme-toggle" class="p-3 rounded-2xl hover:bg-[#2C2C2E] transition">
           <i class="fas fa-moon text-xl"></i>
         </button>
+
+        <!-- Hamburger -->
+        <button id="menu-toggle" class="md:hidden p-3">
+          <i class="fas fa-bars text-xl"></i>
+        </button>
       </div>
     </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-[#1E1E1E] border-t border-[#3A3A3C]">
+      <div class="flex flex-col py-6 px-6 gap-6 text-lg">
+        <a href="#about" class="hover:text-[#007AFF]">About</a>
+        <a href="#projects" class="hover:text-[#007AFF]">Projects</a>
+        <a href="#resume" class="hover:text-[#007AFF]">Resume</a>
+        <a href="#contact" class="hover:text-[#007AFF]">Contact</a>
+      </div>
+    </div>
   </header>
 
   <!-- HERO -->
@@ -82,7 +101,7 @@
     <div class="max-w-7xl mx-auto px-6 text-center">
       <h1 id="hero-title" class="text-6xl md:text-7xl font-bold">Hard Surface Artist</h1>
       <h2 id="hero-subtitle" class="text-5xl md:text-6xl font-bold text-[#007AFF] mt-4">Creating High Quality Game Assets</h2>
-      <p id="hero-desc" class="mt-6 text-xl text-[#A1A1AA] max-w-2xl mx-auto">Military Props • Weapons • Vehicles • Game Ready Models</p>
+      <p id="hero-desc" class="mt-6 text-xl text-[#A1A1AA]">Military Props • Weapons • Vehicles • Game Ready Models</p>
     </div>
   </section>
 
@@ -125,16 +144,16 @@
   <section id="resume" class="py-24 bg-[#2C2C2E] bg-section">
     <div class="max-w-4xl mx-auto px-6">
       <h2 id="resume-title" class="text-5xl font-bold mb-12">Resume</h2>
-      <p id="resume-text" class="text-[#A1A1AA] text-lg">Resume section will be filled soon.</p>
+      <p id="resume-text" class="text-[#A1A1AA]">Resume section will be filled soon.</p>
     </div>
   </section>
 
   <!-- CONTACT -->
-  <section id="contact" class="py-24 bg-[#2C2C2E] bg-section">
+  <section id="contact" class="py-24 bg-[#1E1E1E] bg-section">
     <div class="max-w-4xl mx-auto px-6 text-center">
       <h2 id="contact-title" class="text-5xl font-bold mb-12">Get In Touch</h2>
-      <p id="contact-desc" class="text-[#A1A1AA] text-lg mb-16">Давайте створимо щось круте разом!</p>
-      <div class="flex flex-wrap justify-center gap-10 text-5xl">
+      <p id="contact-desc" class="text-[#A1A1AA] mb-12">Давайте створимо щось круте разом!</p>
+      <div class="flex flex-wrap justify-center gap-12 text-5xl">
         <a href="#" class="hover:text-[#007AFF] transition flex flex-col items-center gap-3"><i class="fab fa-telegram"></i><span class="text-base">Telegram</span></a>
         <a href="#" class="hover:text-[#007AFF] transition flex flex-col items-center gap-3"><i class="fab fa-linkedin"></i><span class="text-base">LinkedIn</span></a>
         <a href="#" class="hover:text-[#007AFF] transition flex flex-col items-center gap-3"><i class="fab fa-instagram"></i><span class="text-base">Instagram</span></a>
@@ -153,8 +172,8 @@
         'hero-desc': 'Military Props • Weapons • Vehicles • Game Ready Models',
         'about-title': 'About Me',
         'about-greeting': "Hi, I'm Yana",
-        'about-text1': "I'm a Hard Surface Artist specializing in modeling hard surfaces...",
-        'about-text2': "I enjoy taking a simple shape...",
+        'about-text1': "I'm a Hard Surface Artist specializing in modeling hard surfaces and creating clean, optimized game assets.",
+        'about-text2': "I enjoy taking a simple shape and turning it into a finished asset that looks great and performs well in-game.",
         'about-tools': 'I work with: <strong>Maya, Blender, Substance 3D Painter, Marmoset Toolbag, Adobe Photoshop</strong>.',
         'projects-title': 'Featured Projects',
         'resume-title': 'Resume',
@@ -168,8 +187,8 @@
         'hero-desc': 'Військові Пропи • Зброя • Техніка • Моделі для ігор',
         'about-title': 'Про мене',
         'about-greeting': 'Привіт, я Яна',
-        'about-text1': 'Я Hard Surface Artist, спеціалізуюся на моделюванні твердих поверхонь...',
-        'about-text2': 'Обожнюю брати просту форму...',
+        'about-text1': 'Я Hard Surface Artist, спеціалізуюся на моделюванні твердих поверхонь та створенні чистих, оптимізованих ігрових ассетів.',
+        'about-text2': 'Обожнюю брати просту форму і перетворювати її на готовий ассет, який виглядає круто і добре працює в грі.',
         'about-tools': 'Працюю з: <strong>Maya, Blender, Substance 3D Painter, Marmoset Toolbag, Adobe Photoshop</strong>.',
         'projects-title': 'Вибрані Проєкти',
         'resume-title': 'Резюме',
@@ -193,13 +212,27 @@
       });
     }
 
-    // Theme
+    // Theme Toggle
     document.getElementById('theme-toggle').addEventListener('click', () => {
       document.body.classList.toggle('light');
       const icon = document.querySelector('#theme-toggle i');
       icon.classList.toggle('fa-moon');
       icon.classList.toggle('fa-sun');
     });
+
+    // Mobile Menu
+    document.getElementById('menu-toggle').addEventListener('click', () => {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+
+    // Scroll Animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('section').forEach(sec => observer.observe(sec));
 
     // Init
     window.onload = () => switchLanguage('en');
