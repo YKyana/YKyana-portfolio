@@ -34,8 +34,6 @@
   }
   body.light .hero-bg { background: linear-gradient(135deg, #F3F3F3 0%, #E5E5E5 100%); }
   body.light header { background: rgba(243, 243, 243, 0.98); }
-  body.light .bg-card { background: #FFFFFF !important; box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1); }
-  body.light .bg-section { background: #E5E5E5 !important; }
 
   section {
     opacity: 0;
@@ -47,60 +45,27 @@
     transform: translateY(0);
   }
 
-  /* Resume light theme fix */
+  /* Resume */
   body.light #resume {
     background: #f8f8f8 !important;
   }
-  body.light #resume,
   body.light #resume * {
     color: #1C1C1E !important;
   }
-  body.light #resume h2,
-  body.light #resume h3,
-  body.light #resume h4 {
-    color: #111111 !important;
+
+  /* Buttons on light theme */
+  body.light .lang-btn {
+    background: white !important;
+    color: black !important;
   }
-  body.light #resume p,
-  body.light #resume li {
-    color: #374151 !important;
+  body.light .lang-btn.active {
+    background: #007AFF !important;
+    color: white !important;
   }
-
- /* Header buttons fix for light theme */
-body.light .lang-btn {
-  background: #ffffff !important;
-  color: #111111 !important;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
-}
-
-body.light .lang-btn.active {
-  background: #007AFF !important;
-  color: white !important;
-}
-
-body.light #theme-toggle {
-  background: #ffffff !important;
-  color: #111111 !important;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
-}
-
-body.light #theme-toggle:hover {
-  background: #f0f0f0 !important;
-}
-/* Фінальне виправлення кнопок */
-body.light .flex.bg-\\[\\#2C2C2E\\] .lang-btn {
-  background: white !important;
-  color: black !important;
-}
-
-body.light .flex.bg-\\[\\#2C2C2E\\] .lang-btn.active {
-  background: #007AFF !important;
-  color: white !important;
-}
-
-body.light #theme-toggle {
-  background: white !important;
-  color: black !important;
-}
+  body.light #theme-toggle {
+    background: white !important;
+    color: black !important;
+  }
 </style>
 </head>
 <body class="bg-[#1E1E1E] text-[#E5E5EA]">
