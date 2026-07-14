@@ -34,6 +34,8 @@
   }
   body.light .hero-bg { background: linear-gradient(135deg, #F3F3F3 0%, #E5E5E5 100%); }
   body.light header { background: rgba(243, 243, 243, 0.98); }
+  body.light .bg-card { background: #FFFFFF !important; box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1); }
+  body.light .bg-section { background: #E5E5E5 !important; }
 
   section {
     opacity: 0;
@@ -45,26 +47,39 @@
     transform: translateY(0);
   }
 
-  /* Resume */
+  /* Resume fixes */
   body.light #resume {
     background: #f8f8f8 !important;
   }
+  body.light #resume,
   body.light #resume * {
     color: #1C1C1E !important;
   }
+  body.light #resume h2,
+  body.light #resume h3,
+  body.light #resume h4 {
+    color: #111111 !important;
+  }
+  body.light #resume p,
+  body.light #resume li {
+    color: #374151 !important;
+  }
 
-  /* Buttons on light theme */
+  /* Header buttons on light theme */
   body.light .lang-btn {
-    background: white !important;
-    color: black !important;
+    background: #E5E5E5;
+    color: #1C1C1E;
   }
   body.light .lang-btn.active {
-    background: #007AFF !important;
-    color: white !important;
+    background: #007AFF;
+    color: white;
   }
   body.light #theme-toggle {
-    background: white !important;
-    color: black !important;
+    background: #E5E5E5;
+    color: #1C1C1E;
+  }
+  body.light #theme-toggle:hover {
+    background: #D1D5DB;
   }
 </style>
 </head>
