@@ -65,24 +65,27 @@
     color: #374151 !important;
   }
 
-  /* Header buttons on light theme */
-  body.light .lang-btn {
-    background: white;
-    color: black;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-  }
-  body.light .lang-btn.active {
-    background: #007AFF;
-    color: white;
-  }
-  body.light #theme-toggle {
-    background: white;
-    color: black;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-  }
-  body.light #theme-toggle:hover {
-    background: #f1f1f1;
-  }
+ /* Header buttons fix for light theme */
+body.light .lang-btn {
+  background: #ffffff !important;
+  color: #111111 !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+}
+
+body.light .lang-btn.active {
+  background: #007AFF !important;
+  color: white !important;
+}
+
+body.light #theme-toggle {
+  background: #ffffff !important;
+  color: #111111 !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+}
+
+body.light #theme-toggle:hover {
+  background: #f0f0f0 !important;
+}
 </style>
 </head>
 <body class="bg-[#1E1E1E] text-[#E5E5EA]">
