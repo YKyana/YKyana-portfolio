@@ -1,52 +1,77 @@
-<!DOCTYPE html>
-<html lang="uk">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Cash Register - Game Ready Hard Surface Prop by Yana Kyslichenko">
-    <title>Cash Register | Yana Kyslichenko</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <header>
-        <a href="index.html" class="logo">Yana Kyslichenko</a>
-        
-        <button id="theme-toggle" class="theme-toggle" aria-label="Змінити тему">
-            <span class="sun">☀️</span>
-            <span class="moon">🌙</span>
-        </button>
+<!-- PIPELINE SECTION -->
+<section class="py-16 px-6 max-w-6xl mx-auto">
+  <h2 class="text-4xl font-bold text-center mb-6 text-gray-900 dark:text-white">Production Pipeline</h2>
+  <p class="text-center text-gray-600 dark:text-gray-400 mb-12">Повний процес створення Cash Register — від ідеї до game-ready asset</p>
 
-        <button class="menu-toggle" aria-label="Меню">
-            <span></span><span></span><span></span>
-        </button>
+  <div class="space-y-16">
+    <!-- Step 1 -->
+    <div class="grid md:grid-cols-12 gap-8 items-center">
+      <div class="md:col-span-5">
+        <h3 class="text-2xl font-semibold mb-3">1. References &amp; Concept</h3>
+        <p class="text-gray-600 dark:text-gray-400">Збір референсів реальних касових апаратів, матеріали, деталі.</p>
+      </div>
+      <div class="md:col-span-7">
+        <div class="grid grid-cols-2 gap-4">
+          <img src="images/cash-ref1.jpg" alt="References" class="rounded-xl shadow-lg">
+          <img src="images/cash-ref2.jpg" alt="References" class="rounded-xl shadow-lg">
+        </div>
+      </div>
+    </div>
 
-        <nav class="nav-menu">
-            <a href="index.html">← На головну</a>
-            <a href="index.html#portfolio">Portfolio</a>
-            <a href="index.html#about">About</a>
-            <a href="index.html#resume">Resume</a>
-            <a href="index.html#contact">Contact</a>
-        </nav>
-    </header>
+    <!-- Step 2 -->
+    <div class="grid md:grid-cols-12 gap-8 items-center">
+      <div class="md:col-span-5">
+        <h3 class="text-2xl font-semibold mb-3">2. Blockout → High-Poly Sculpt</h3>
+        <p class="text-gray-600 dark:text-gray-400">Блокінг геометрії + деталізація в ZBrush / Blender.</p>
+      </div>
+      <div class="md:col-span-7">
+        <img src="images/cash-highpoly.jpg" alt="High Poly" class="rounded-xl shadow-lg w-full">
+      </div>
+    </div>
 
-    <main>
-        <section class="project-hero">
-            <p class="section-title">FEATURED PROJECT</p>
-            <h1>Cash Register</h1>
-            <p class="project-subtitle">Game Ready Hard Surface Prop</p>
-            
-            <img src="images/cash-register.webp" 
-                 alt="Cash Register 3D Model" 
-                 class="project-main-image">
-        </section>
+    <!-- Step 3 -->
+    <div class="grid md:grid-cols-12 gap-8 items-center">
+      <div class="md:col-span-5">
+        <h3 class="text-2xl font-semibold mb-3">3. Low-Poly + Retopology + UV</h3>
+        <p class="text-gray-600 dark:text-gray-400">Оптимізована low-poly модель, чиста топологія, розгортка UV.</p>
+      </div>
+      <div class="md:col-span-7 grid grid-cols-2 gap-4">
+        <img src="images/cash-lowpoly-wire.jpg" alt="Low Poly Wireframe" class="rounded-xl shadow-lg">
+        <img src="images/cash-uv.jpg" alt="UV Layout" class="rounded-xl shadow-lg">
+      </div>
+    </div>
 
-        <section class="project-content">
-            <h2>Production Pipeline</h2>
-            <!-- Тут можеш додати свій pipeline (High Poly, Low Poly, Texturing тощо) -->
-            <p>Деталі виробництва скоро з'являться.</p>
-        </section>
-    </main>
+    <!-- Step 4 -->
+    <div class="grid md:grid-cols-12 gap-8 items-center">
+      <div class="md:col-span-5">
+        <h3 class="text-2xl font-semibold mb-3">4. Baking Maps</h3>
+        <p class="text-gray-600 dark:text-gray-400">Normal, AO, Curvature, Height (Marmoset Toolbag / Substance).</p>
+      </div>
+      <div class="md:col-span-7">
+        <img src="images/cash-baking.jpg" alt="Baking" class="rounded-xl shadow-lg w-full">
+      </div>
+    </div>
 
-    <script src="js/script.js"></script>
-</body>
-</html>
+    <!-- Step 5 -->
+    <div class="grid md:grid-cols-12 gap-8 items-center">
+      <div class="md:col-span-5">
+        <h3 class="text-2xl font-semibold mb-3">5. PBR Texturing</h3>
+        <p class="text-gray-600 dark:text-gray-400">Substance 3D Painter — realistic materials + wear.</p>
+      </div>
+      <div class="md:col-span-7">
+        <img src="images/cash-texturing.jpg" alt="Texturing" class="rounded-xl shadow-lg w-full">
+      </div>
+    </div>
+
+    <!-- Final -->
+    <div>
+      <h3 class="text-2xl font-semibold mb-6 text-center">Final Result</h3>
+      <img src="images/cash-final.jpg" alt="Final Render" class="mx-auto rounded-2xl shadow-2xl">
+      <div class="flex justify-center gap-8 mt-8 text-sm">
+        <div><strong>Polycount:</strong> XXX tri</div>
+        <div><strong>Textures:</strong> 2K–4K PBR</div>
+        <div><strong>Software:</strong> Blender / Maya, Substance, Marmoset</div>
+      </div>
+    </div>
+  </div>
+</section>
