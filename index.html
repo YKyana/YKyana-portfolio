@@ -365,7 +365,7 @@
     // Init
     window.onload = () => switchLanguage('en');
 
-// Cash Register Slider with swipe
+// Cash Register Slider with better swipe
 let currentSlide = 0;
 const slider = document.getElementById('cash-slider');
 const dots = [document.getElementById('dot-0'), document.getElementById('dot-1')];
@@ -392,11 +392,11 @@ slider.addEventListener('touchend', e => {
   const endX = e.changedTouches[0].clientX;
   const diff = startX - endX;
 
-  if (diff > 50) {
-    // Swipe left
+  if (diff > 60) {
+    // Swipe left → next
     goToSlide((currentSlide + 1) % 2);
-  } else if (diff < -50) {
-    // Swipe right
+  } else if (diff < -60) {
+    // Swipe right → previous
     goToSlide((currentSlide - 1 + 2) % 2);
   }
 });
