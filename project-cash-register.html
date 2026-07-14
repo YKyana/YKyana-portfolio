@@ -1,85 +1,134 @@
-<!-- CASH REGISTER PIPELINE -->
-<section id="pipeline" class="py-20 bg-white dark:bg-gray-900">
-  <div class="max-w-6xl mx-auto px-6">
-    <div class="text-center mb-12">
-      <h2 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-        Cash Register — Full Pipeline
-      </h2>
-      <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-        Повний production pipeline від блокінгу до game-ready PBR asset
-      </p>
-    </div>
-
-    <div class="space-y-20">
-      <!-- Step -->
-      <div class="grid md:grid-cols-12 gap-10 items-center">
-        <div class="md:col-span-5">
-          <div class="sticky top-24">
-            <div class="inline-flex items-center gap-3 bg-gray-100 dark:bg-gray-800 px-5 py-2 rounded-full mb-6">
-              <span class="text-xl font-mono font-bold text-blue-600 dark:text-blue-400">01</span>
-              <h3 class="text-2xl font-semibold">References &amp; Research</h3>
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cash Register — Pipeline | Яна Кисличенко</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+    
+    <script>
+        function toggleTheme() {
+            document.documentElement.classList.toggle('dark');
+            localStorage.theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+        }
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        }
+    </script>
+</head>
+<body class="bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100">
+    
+    <!-- Навігація -->
+    <nav class="fixed top-0 w-full bg-white/90 dark:bg-gray-950/90 backdrop-blur border-b border-gray-200 dark:border-gray-800 z-50">
+        <div class="max-w-6xl mx-auto px-6 py-5 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold">Y.Kyana</a>
+            <div class="flex items-center gap-8 text-sm">
+                <a href="index.html" class="hover:text-blue-600 transition">Головна</a>
+                <a href="portfolio.html" class="hover:text-blue-600 transition">Портфоліо</a>
+                <button onclick="toggleTheme()" class="p-2 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800">🌗</button>
             </div>
-            <p class="text-gray-600 dark:text-gray-400 text-lg leading-relaxed">
-              Збір реальних фото, матеріали, деталі механіки та зносу.
-            </p>
-          </div>
         </div>
-        <div class="md:col-span-7">
-          <div class="grid grid-cols-2 gap-6">
-            <img src="images/cash-ref1.jpg" alt="Reference 1" 
-                 class="rounded-2xl shadow-xl hover:scale-105 transition-transform duration-300">
-            <img src="images/cash-ref2.jpg" alt="Reference 2" 
-                 class="rounded-2xl shadow-xl hover:scale-105 transition-transform duration-300">
-          </div>
-        </div>
-      </div>
+    </nav>
 
-      <!-- Повтори структуру для інших кроків (2-5) -->
-      <!-- Приклад Step 2 -->
-      <div class="grid md:grid-cols-12 gap-10 items-center">
-        <div class="md:col-span-5">
-          <div class="sticky top-24">
-            <div class="inline-flex items-center gap-3 bg-gray-100 dark:bg-gray-800 px-5 py-2 rounded-full mb-6">
-              <span class="text-xl font-mono font-bold text-blue-600 dark:text-blue-400">02</span>
-              <h3 class="text-2xl font-semibold">High-Poly Sculpt</h3>
+    <main class="pt-24">
+        <!-- Hero -->
+        <section class="px-6 py-20 text-center">
+            <h1 class="text-5xl md:text-6xl font-bold mb-4">Cash Register</h1>
+            <p class="text-xl text-gray-600 dark:text-gray-400">Hard Surface Prop • Game Ready Asset</p>
+        </section>
+
+        <!-- Pipeline -->
+        <section class="py-20 px-6">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-4xl font-bold text-center mb-16">Production Pipeline</h2>
+
+                <div class="space-y-24">
+                    <!-- 1 -->
+                    <div class="grid md:grid-cols-12 gap-12 items-center">
+                        <div class="md:col-span-5">
+                            <span class="text-6xl font-mono font-bold text-blue-600 dark:text-blue-400">01</span>
+                            <h3 class="text-3xl font-semibold mt-6">References & Research</h3>
+                            <p class="mt-6 text-lg text-gray-600 dark:text-gray-400">
+                                Збір референсів реальних кас, аналіз матеріалів, деталей і зносу.
+                            </p>
+                        </div>
+                        <div class="md:col-span-7 grid grid-cols-2 gap-6">
+                            <img src="images/cash-register/ref-01.jpg" alt="Reference" class="rounded-3xl shadow-xl">
+                            <img src="images/cash-register/ref-02.jpg" alt="Reference" class="rounded-3xl shadow-xl">
+                        </div>
+                    </div>
+
+                    <!-- 2 -->
+                    <div class="grid md:grid-cols-12 gap-12 items-center">
+                        <div class="md:col-span-5">
+                            <span class="text-6xl font-mono font-bold text-blue-600 dark:text-blue-400">02</span>
+                            <h3 class="text-3xl font-semibold mt-6">High-Poly Sculpt</h3>
+                            <p class="mt-6 text-lg text-gray-600 dark:text-gray-400">
+                                Блокінг геометрії та деталізація.
+                            </p>
+                        </div>
+                        <div class="md:col-span-7">
+                            <img src="images/cash-register/highpoly.jpg" alt="High Poly" class="rounded-3xl shadow-xl w-full">
+                        </div>
+                    </div>
+
+                    <!-- 3 -->
+                    <div class="grid md:grid-cols-12 gap-12 items-center">
+                        <div class="md:col-span-5">
+                            <span class="text-6xl font-mono font-bold text-blue-600 dark:text-blue-400">03</span>
+                            <h3 class="text-3xl font-semibold mt-6">Low-Poly + Retopology + UV</h3>
+                            <p class="mt-6 text-lg text-gray-600 dark:text-gray-400">
+                                Оптимізація, чиста топологія, розгортка UV.
+                            </p>
+                        </div>
+                        <div class="md:col-span-7 grid grid-cols-2 gap-6">
+                            <img src="images/cash-register/lowpoly-wire.jpg" alt="Low Poly Wire" class="rounded-3xl shadow-xl">
+                            <img src="images/cash-register/uv.jpg" alt="UV" class="rounded-3xl shadow-xl">
+                        </div>
+                    </div>
+
+                    <!-- 4 -->
+                    <div class="grid md:grid-cols-12 gap-12 items-center">
+                        <div class="md:col-span-5">
+                            <span class="text-6xl font-mono font-bold text-blue-600 dark:text-blue-400">04</span>
+                            <h3 class="text-3xl font-semibold mt-6">Baking Maps</h3>
+                            <p class="mt-6 text-lg text-gray-600 dark:text-gray-400">
+                                Normal, AO, Curvature та інші карти.
+                            </p>
+                        </div>
+                        <div class="md:col-span-7">
+                            <img src="images/cash-register/baking.jpg" alt="Baking" class="rounded-3xl shadow-xl w-full">
+                        </div>
+                    </div>
+
+                    <!-- 5 -->
+                    <div class="grid md:grid-cols-12 gap-12 items-center">
+                        <div class="md:col-span-5">
+                            <span class="text-6xl font-mono font-bold text-blue-600 dark:text-blue-400">05</span>
+                            <h3 class="text-3xl font-semibold mt-6">PBR Texturing</h3>
+                            <p class="mt-6 text-lg text-gray-600 dark:text-gray-400">
+                                Substance 3D Painter — матеріали, знос, деталі.
+                            </p>
+                        </div>
+                        <div class="md:col-span-7">
+                            <img src="images/cash-register/texturing.jpg" alt="Texturing" class="rounded-3xl shadow-xl w-full">
+                        </div>
+                    </div>
+
+                    <!-- Final -->
+                    <div class="pt-16 border-t border-gray-200 dark:border-gray-700 text-center">
+                        <h3 class="text-3xl font-semibold mb-10">Final Game-Ready Asset</h3>
+                        <img src="images/cash-register/final.jpg" alt="Final Render" 
+                             class="mx-auto rounded-3xl shadow-2xl max-w-5xl w-full">
+                    </div>
+                </div>
             </div>
-            <p class="text-gray-600 dark:text-gray-400">Деталізація в Blender / ZBrush.</p>
-          </div>
-        </div>
-        <div class="md:col-span-7">
-          <img src="images/cash-highpoly.jpg" alt="High Poly" 
-               class="rounded-2xl shadow-2xl w-full">
-        </div>
-      </div>
+        </section>
+    </main>
 
-      <!-- Додай аналогічно Step 3 (Low-Poly + UV), Step 4 (Baking), Step 5 (Texturing) -->
-
-      <!-- Final Render -->
-      <div class="pt-12 border-t border-gray-200 dark:border-gray-700">
-        <h3 class="text-3xl font-semibold text-center mb-8">Final Game-Ready Result</h3>
-        <img src="images/cash-final-render.jpg" alt="Final Cash Register" 
-             class="mx-auto rounded-3xl shadow-2xl">
-        
-        <div class="mt-10 grid grid-cols-2 md:grid-cols-4 gap-6 text-center text-sm">
-          <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-2xl">
-            <strong class="block text-lg">Polycount</strong>
-            <span class="text-2xl font-mono text-blue-600">~12k tri</span>
-          </div>
-          <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-2xl">
-            <strong class="block text-lg">Textures</strong>
-            <span class="text-2xl font-mono text-blue-600">4K PBR</span>
-          </div>
-          <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-2xl">
-            <strong class="block text-lg">Tools</strong>
-            <span>Blender • Substance • Marmoset</span>
-          </div>
-          <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-2xl">
-            <strong class="block text-lg">Time</strong>
-            <span>~XX hours</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
+    <footer class="bg-gray-900 text-white py-12 text-center text-sm">
+        <p>© 2026 Яна Кисличенко • 3D Hard Surface Artist</p>
+    </footer>
+</body>
+</html>
