@@ -174,16 +174,23 @@
     <h2 id="projects-title" class="text-5xl font-bold mb-12">Featured Projects</h2>
     <div class="grid md:grid-cols-2 gap-8">
       
-      <!-- Cash Register -->
-      <div class="bg-card p-6 rounded-3xl hover:scale-105 transition-transform">
-        <div class="grid grid-cols-2 gap-4 mb-6">
-          <img src="images/cash-register.webp" alt="Cash Register 1" class="w-full aspect-square object-cover rounded-2xl">
-          <img src="images/IMG_0531.webp" alt="Cash Register 2" class="w-full aspect-square object-cover rounded-2xl">
-        </div>
-        <h3 class="text-3xl font-semibold">Cash Register</h3>
-        <p class="text-[#A1A1AA] mt-2 lang-en">Hard Surface Prop</p>
-        <p class="text-[#A1A1AA] mt-2 lang-ua hidden">Проп твердих поверхонь</p>
-      </div>
+    <!-- Cash Register -->
+<div class="bg-card p-6 rounded-3xl hover:scale-105 transition-transform">
+  <div class="relative overflow-hidden rounded-2xl mb-6">
+    <div id="cash-slider" class="flex transition-transform duration-300">
+      <img src="images/cash-register.webp" alt="Cash Register 1" class="w-full flex-shrink-0 aspect-video object-cover">
+      <img src="images/IMG_0531.webp" alt="Cash Register 2" class="w-full flex-shrink-0 aspect-video object-cover">
+    </div>
+    
+    <!-- Кнопки навігації -->
+    <button onclick="prevSlide()" class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-3 rounded-full transition">‹</button>
+    <button onclick="nextSlide()" class="absolute right-3 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-3 rounded-full transition">›</button>
+  </div>
+  
+  <h3 class="text-3xl font-semibold">Cash Register</h3>
+  <p class="text-[#A1A1AA] mt-2 lang-en">Hard Surface Prop</p>
+  <p class="text-[#A1A1AA] mt-2 lang-ua hidden">Проп твердих поверхонь</p>
+</div>
 
       <!-- Weapon Pack -->
       <div class="bg-card p-10 rounded-3xl hover:scale-105 transition-transform">
@@ -355,6 +362,19 @@
 
     // Init
     window.onload = () => switchLanguage('en');
+    // Slider for Cash Register
+let currentSlide = 0;
+const slider = document.getElementById('cash-slider');
+
+function nextSlide() {
+  currentSlide = (currentSlide + 1) % 2;
+  slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+}
+
+function prevSlide() {
+  currentSlide = (currentSlide - 1 + 2) % 2;
+  slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+}
   </script>
 </body>
 </html>
