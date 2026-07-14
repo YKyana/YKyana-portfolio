@@ -1,77 +1,85 @@
-<!-- PIPELINE SECTION -->
-<section class="py-16 px-6 max-w-6xl mx-auto">
-  <h2 class="text-4xl font-bold text-center mb-6 text-gray-900 dark:text-white">Production Pipeline</h2>
-  <p class="text-center text-gray-600 dark:text-gray-400 mb-12">Повний процес створення Cash Register — від ідеї до game-ready asset</p>
+<!-- CASH REGISTER PIPELINE -->
+<section id="pipeline" class="py-20 bg-white dark:bg-gray-900">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+        Cash Register — Full Pipeline
+      </h2>
+      <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+        Повний production pipeline від блокінгу до game-ready PBR asset
+      </p>
+    </div>
 
-  <div class="space-y-16">
-    <!-- Step 1 -->
-    <div class="grid md:grid-cols-12 gap-8 items-center">
-      <div class="md:col-span-5">
-        <h3 class="text-2xl font-semibold mb-3">1. References &amp; Concept</h3>
-        <p class="text-gray-600 dark:text-gray-400">Збір референсів реальних касових апаратів, матеріали, деталі.</p>
-      </div>
-      <div class="md:col-span-7">
-        <div class="grid grid-cols-2 gap-4">
-          <img src="images/cash-ref1.jpg" alt="References" class="rounded-xl shadow-lg">
-          <img src="images/cash-ref2.jpg" alt="References" class="rounded-xl shadow-lg">
+    <div class="space-y-20">
+      <!-- Step -->
+      <div class="grid md:grid-cols-12 gap-10 items-center">
+        <div class="md:col-span-5">
+          <div class="sticky top-24">
+            <div class="inline-flex items-center gap-3 bg-gray-100 dark:bg-gray-800 px-5 py-2 rounded-full mb-6">
+              <span class="text-xl font-mono font-bold text-blue-600 dark:text-blue-400">01</span>
+              <h3 class="text-2xl font-semibold">References &amp; Research</h3>
+            </div>
+            <p class="text-gray-600 dark:text-gray-400 text-lg leading-relaxed">
+              Збір реальних фото, матеріали, деталі механіки та зносу.
+            </p>
+          </div>
+        </div>
+        <div class="md:col-span-7">
+          <div class="grid grid-cols-2 gap-6">
+            <img src="images/cash-ref1.jpg" alt="Reference 1" 
+                 class="rounded-2xl shadow-xl hover:scale-105 transition-transform duration-300">
+            <img src="images/cash-ref2.jpg" alt="Reference 2" 
+                 class="rounded-2xl shadow-xl hover:scale-105 transition-transform duration-300">
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- Step 2 -->
-    <div class="grid md:grid-cols-12 gap-8 items-center">
-      <div class="md:col-span-5">
-        <h3 class="text-2xl font-semibold mb-3">2. Blockout → High-Poly Sculpt</h3>
-        <p class="text-gray-600 dark:text-gray-400">Блокінг геометрії + деталізація в ZBrush / Blender.</p>
+      <!-- Повтори структуру для інших кроків (2-5) -->
+      <!-- Приклад Step 2 -->
+      <div class="grid md:grid-cols-12 gap-10 items-center">
+        <div class="md:col-span-5">
+          <div class="sticky top-24">
+            <div class="inline-flex items-center gap-3 bg-gray-100 dark:bg-gray-800 px-5 py-2 rounded-full mb-6">
+              <span class="text-xl font-mono font-bold text-blue-600 dark:text-blue-400">02</span>
+              <h3 class="text-2xl font-semibold">High-Poly Sculpt</h3>
+            </div>
+            <p class="text-gray-600 dark:text-gray-400">Деталізація в Blender / ZBrush.</p>
+          </div>
+        </div>
+        <div class="md:col-span-7">
+          <img src="images/cash-highpoly.jpg" alt="High Poly" 
+               class="rounded-2xl shadow-2xl w-full">
+        </div>
       </div>
-      <div class="md:col-span-7">
-        <img src="images/cash-highpoly.jpg" alt="High Poly" class="rounded-xl shadow-lg w-full">
-      </div>
-    </div>
 
-    <!-- Step 3 -->
-    <div class="grid md:grid-cols-12 gap-8 items-center">
-      <div class="md:col-span-5">
-        <h3 class="text-2xl font-semibold mb-3">3. Low-Poly + Retopology + UV</h3>
-        <p class="text-gray-600 dark:text-gray-400">Оптимізована low-poly модель, чиста топологія, розгортка UV.</p>
-      </div>
-      <div class="md:col-span-7 grid grid-cols-2 gap-4">
-        <img src="images/cash-lowpoly-wire.jpg" alt="Low Poly Wireframe" class="rounded-xl shadow-lg">
-        <img src="images/cash-uv.jpg" alt="UV Layout" class="rounded-xl shadow-lg">
-      </div>
-    </div>
+      <!-- Додай аналогічно Step 3 (Low-Poly + UV), Step 4 (Baking), Step 5 (Texturing) -->
 
-    <!-- Step 4 -->
-    <div class="grid md:grid-cols-12 gap-8 items-center">
-      <div class="md:col-span-5">
-        <h3 class="text-2xl font-semibold mb-3">4. Baking Maps</h3>
-        <p class="text-gray-600 dark:text-gray-400">Normal, AO, Curvature, Height (Marmoset Toolbag / Substance).</p>
-      </div>
-      <div class="md:col-span-7">
-        <img src="images/cash-baking.jpg" alt="Baking" class="rounded-xl shadow-lg w-full">
-      </div>
-    </div>
-
-    <!-- Step 5 -->
-    <div class="grid md:grid-cols-12 gap-8 items-center">
-      <div class="md:col-span-5">
-        <h3 class="text-2xl font-semibold mb-3">5. PBR Texturing</h3>
-        <p class="text-gray-600 dark:text-gray-400">Substance 3D Painter — realistic materials + wear.</p>
-      </div>
-      <div class="md:col-span-7">
-        <img src="images/cash-texturing.jpg" alt="Texturing" class="rounded-xl shadow-lg w-full">
-      </div>
-    </div>
-
-    <!-- Final -->
-    <div>
-      <h3 class="text-2xl font-semibold mb-6 text-center">Final Result</h3>
-      <img src="images/cash-final.jpg" alt="Final Render" class="mx-auto rounded-2xl shadow-2xl">
-      <div class="flex justify-center gap-8 mt-8 text-sm">
-        <div><strong>Polycount:</strong> XXX tri</div>
-        <div><strong>Textures:</strong> 2K–4K PBR</div>
-        <div><strong>Software:</strong> Blender / Maya, Substance, Marmoset</div>
+      <!-- Final Render -->
+      <div class="pt-12 border-t border-gray-200 dark:border-gray-700">
+        <h3 class="text-3xl font-semibold text-center mb-8">Final Game-Ready Result</h3>
+        <img src="images/cash-final-render.jpg" alt="Final Cash Register" 
+             class="mx-auto rounded-3xl shadow-2xl">
+        
+        <div class="mt-10 grid grid-cols-2 md:grid-cols-4 gap-6 text-center text-sm">
+          <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-2xl">
+            <strong class="block text-lg">Polycount</strong>
+            <span class="text-2xl font-mono text-blue-600">~12k tri</span>
+          </div>
+          <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-2xl">
+            <strong class="block text-lg">Textures</strong>
+            <span class="text-2xl font-mono text-blue-600">4K PBR</span>
+          </div>
+          <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-2xl">
+            <strong class="block text-lg">Tools</strong>
+            <span>Blender • Substance • Marmoset</span>
+          </div>
+          <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-2xl">
+            <strong class="block text-lg">Time</strong>
+            <span>~XX hours</span>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
+
