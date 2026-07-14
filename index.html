@@ -10,81 +10,78 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      scroll-behavior: smooth;
-      background: #1E1E1E;
-      color: #E5E5EA;
-    }
+  body {
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+    background: #1E1E1E;
+    color: #E5E5EA;
+  }
 
-    .hero-bg {
-      background: linear-gradient(135deg, #1E1E1E 0%, #2C2C2E 100%);
-      min-height: 100vh;
-    }
+  .hero-bg {
+    background: linear-gradient(135deg, #1E1E1E 0%, #2C2C2E 100%);
+    min-height: 100vh;
+  }
 
-    header {
-      background: rgba(30, 30, 30, 0.98);
-      backdrop-filter: blur(20px);
-    }
+  header {
+    background: rgba(30, 30, 30, 0.98);
+    backdrop-filter: blur(20px);
+  }
 
-    /* Light Theme */
-    body.light {
-      background: #F3F3F3;
-      color: #1C1C1E;
-    }
-    body.light .hero-bg { background: linear-gradient(135deg, #F3F3F3 0%, #E5E5E5 100%); }
-    body.light header { background: rgba(243, 243, 243, 0.98); }
-    body.light .bg-card { background: #FFFFFF !important; box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1); }
-    body.light .bg-section { background: #E5E5E5 !important; }
+  /* Light Theme */
+  body.light {
+    background: #F3F3F3;
+    color: #1C1C1E;
+  }
+  body.light .hero-bg { background: linear-gradient(135deg, #F3F3F3 0%, #E5E5E5 100%); }
+  body.light header { background: rgba(243, 243, 243, 0.98); }
+  body.light .bg-card { background: #FFFFFF !important; box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1); }
+  body.light .bg-section { background: #E5E5E5 !important; }
 
-    section {
-      opacity: 0;
-      transform: translateY(50px);
-      transition: all 0.9s cubic-bezier(0.25, 0.1, 0.25, 1);
-    }
-    section.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    body.light #resume {
-  background: #f8f8f8 !important;
-}
-   /* Fix for light theme */
-body.light #resume,
-body.light #resume * {
-  color: #1C1C1E !important;
-}
+  section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.9s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+  section.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
 
-body.light #resume h2,
-body.light #resume h3,
-body.light #resume h4 {
-  color: #111111 !important;
-}
+  /* Resume fixes */
+  body.light #resume {
+    background: #f8f8f8 !important;
+  }
+  body.light #resume,
+  body.light #resume * {
+    color: #1C1C1E !important;
+  }
+  body.light #resume h2,
+  body.light #resume h3,
+  body.light #resume h4 {
+    color: #111111 !important;
+  }
+  body.light #resume p,
+  body.light #resume li {
+    color: #374151 !important;
+  }
 
-body.light #resume p,
-body.light #resume li {
-  color: #374151 !important;
-} 
-    /* Light theme fixes for header buttons */
-body.light .lang-btn {
-  background: #E5E5E5;
-  color: #1C1C1E;
-}
-
-body.light .lang-btn.active {
-  background: #007AFF;
-  color: white;
-}
-
-body.light #theme-toggle {
-  background: #E5E5E5;
-  color: #1C1C1E;
-}
-
-body.light #theme-toggle:hover {
-  background: #D1D5DB;
-}
-  </style>
+  /* Header buttons on light theme */
+  body.light .lang-btn {
+    background: #E5E5E5;
+    color: #1C1C1E;
+  }
+  body.light .lang-btn.active {
+    background: #007AFF;
+    color: white;
+  }
+  body.light #theme-toggle {
+    background: #E5E5E5;
+    color: #1C1C1E;
+  }
+  body.light #theme-toggle:hover {
+    background: #D1D5DB;
+  }
+</style>
 </head>
 <body class="bg-[#1E1E1E] text-[#E5E5EA]">
 
