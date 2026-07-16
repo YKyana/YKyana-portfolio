@@ -1,6 +1,6 @@
 
-<!DOCTYPE html>
-<html lang="uk">
+<!doctype html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,78 +10,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-  body {
-    font-family: 'Inter', sans-serif;
-    scroll-behavior: smooth;
-    background: #1E1E1E;
-    color: #E5E5EA;
-  }
-
-  .hero-bg {
-    background: linear-gradient(135deg, #1E1E1E 0%, #2C2C2E 100%);
-    min-height: 100vh;
-  }
-
-  header {
-    background: rgba(30, 30, 30, 0.98);
-    backdrop-filter: blur(20px);
-  }
-
-  /* Light Theme */
-  body.light {
-    background: #F3F3F3;
-    color: #1C1C1E;
-  }
-  body.light .hero-bg { background: linear-gradient(135deg, #F3F3F3 0%, #E5E5E5 100%); }
-  body.light header { background: rgba(243, 243, 243, 0.98); }
-  body.light .bg-card { background: #FFFFFF !important; box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1); }
-  body.light .bg-section { background: #E5E5E5 !important; }
-
-  section {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: all 0.9s cubic-bezier(0.25, 0.1, 0.25, 1);
-  }
-  section.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  /* Resume fixes */
-  body.light #resume {
-    background: #f8f8f8 !important;
-  }
-  body.light #resume,
-  body.light #resume * {
-    color: #1C1C1E !important;
-  }
-  body.light #resume h2,
-  body.light #resume h3,
-  body.light #resume h4 {
-    color: #111111 !important;
-  }
-  body.light #resume p,
-  body.light #resume li {
-    color: #374151 !important;
-  }
-
-  /* Header buttons on light theme */
-  body.light .lang-btn {
-    background: #E5E5E5;
-    color: #1C1C1E;
-  }
-  body.light .lang-btn.active {
-    background: #007AFF;
-    color: white;
-  }
-  body.light #theme-toggle {
-    background: #E5E5E5;
-    color: #1C1C1E;
-  }
-  body.light #theme-toggle:hover {
-    background: #D1D5DB;
-  }
-</style>
+ <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Yana Kyslichenko, a 3D hard surface artist creating production-ready game assets.">
+  <meta name="theme-color" content="#0b0b0b"><meta property="og:title" content="Yana Kyslichenko — 3D Hard Surface Artist"><meta property="og:image" content="images/cash-register.webp">
+  <title>Yana Kyslichenko — 3D Hard Surface Artist</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="css/style.css">
 </head>
 <body class="bg-[#1E1E1E] text-[#E5E5EA]">
 
@@ -130,6 +64,13 @@
         <a href="#contact" class="hover:text-[#007AFF]">Contact</a>
       </div>
     </div>
+  <body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="wordmark" href="#top" aria-label="Yana Kyslichenko, home">YK<span>.</span></a>
+    <nav class="desktop-nav" aria-label="Main navigation"><a href="#work">Work</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+    <button class="menu-button" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav"><span></span><span></span></button>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation"><a href="#work">Work</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
   </header>
 
   <!-- HERO -->
@@ -398,3 +339,26 @@ slider.addEventListener('touchend', e => {
   </script>
 </body>
 </html>
+<main id="main">
+    <section class="hero" id="top">
+      <div class="hero-copy reveal"><p class="eyebrow"><span>01</span> 3D Hard Surface Artist</p><h1>Yana<br><span>Kyslichenko</span></h1><p class="hero-intro">I create production-ready hard surface assets with clean topology and realistic PBR materials.</p><div class="hero-actions"><a class="button" href="#work">View selected work <span>↘</span></a><a class="text-link" href="https://yanamain.artstation.com" target="_blank" rel="noreferrer">ArtStation ↗</a></div></div>
+      <div class="hero-visual reveal"><div class="accent-orbit" aria-hidden="true"></div><img src="images/cash-register.webp" width="1600" height="900" alt="Vintage cash register 3D game asset by Yana Kyslichenko"><p class="image-caption">Cash Register <span>Game-ready asset · 2026</span></p></div>
+      <a class="scroll-cue" href="#work"><span>Scroll to explore</span><span>↓</span></a>
+    </section>
+    <section class="work section" id="work">
+      <div class="section-heading reveal"><p class="eyebrow"><span>02</span> Selected work</p><h2>Built with<br><em>precision.</em></h2></div>
+      <a class="project reveal" href="project-cash-register.html" aria-label="View Cash Register project"><div class="project-image"><img src="images/cash-register.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Final render of a vintage cash register game asset"><span class="project-arrow">↗</span></div><div class="project-meta"><div><span class="project-number">01</span><h3>Cash Register</h3></div><p>Hard Surface · Game-ready Prop</p><p>2026</p></div></a>
+    </section>
+    <section class="about section" id="about">
+      <div class="about-heading reveal"><p class="eyebrow"><span>03</span> About</p><h2>Form, function<br>&amp; <em>detail.</em></h2></div>
+      <div class="about-content reveal"><p class="about-lead">I’m Yana, a 3D artist focused on hard surface modeling and optimized assets for games.</p><p>I enjoy taking a simple shape through the full high-to-low workflow and turning it into a believable, production-ready object.</p><div class="capabilities"><div><h3>Expertise</h3><ul><li>Hard Surface Modeling</li><li>High &amp; Low Poly</li><li>UV &amp; Baking</li><li>PBR Texturing</li></ul></div><div><h3>Tools</h3><ul><li>Maya &amp; Blender</li><li>Substance 3D Painter</li><li>Marmoset Toolbag</li><li>Adobe Photoshop</li></ul></div></div></div>
+    </section>
+    <section class="contact section" id="contact"><p class="eyebrow reveal"><span>04</span> Get in touch</p><div class="contact-main reveal"><h2>Have a project<br>in mind?</h2><a class="email-link" href="mailto:yanakislichenko@icloud.com">yanakislichenko@icloud.com ↗</a></div><div class="socials reveal"><a href="https://yanamain.artstation.com" target="_blank" rel="noreferrer">ArtStation ↗</a><a href="https://www.linkedin.com/in/yana-kyslichenko-04148a252/" target="_blank" rel="noreferrer">LinkedIn ↗</a></div></section>
+  </main>
+  <footer><p>© 2026 Yana Kyslichenko</p><p>3D Hard Surface Artist</p><a href="#top">Back to top ↑</a></footer><script src="js/script.js"></script>
+</body></html>
+
+
+
+
+  
