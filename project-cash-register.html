@@ -1,134 +1,341 @@
-<!DOCTYPE html>
-<html lang="uk">
+<!doctype html>
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cash Register — Pipeline | Яна Кисличенко</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="css/style.css">
-    
-    <script>
-        function toggleTheme() {
-            document.documentElement.classList.toggle('dark');
-            localStorage.theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
-        }
-        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            document.documentElement.classList.add('dark');
-        }
-    </script>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Cash Register — a game-ready hard surface asset created by 3D artist Yana Kyslichenko."
+  >
+
+  <meta
+    name="theme-color"
+    content="#0b0b0b"
+  >
+
+  <meta
+    property="og:title"
+    content="Cash Register — Yana Kyslichenko"
+  >
+
+  <meta
+    property="og:description"
+    content="A game-ready vintage cash register created through a complete high-to-low production pipeline."
+  >
+
+  <meta
+    property="og:image"
+    content="https://ykyana.github.io/YKyana-portfolio/images/cash-register.webp"
+  >
+
+  <meta
+    property="og:url"
+    content="https://ykyana.github.io/YKyana-portfolio/project-cash-register.html"
+  >
+
+  <meta
+    property="og:type"
+    content="website"
+  >
+
+  <link
+    rel="canonical"
+    href="https://ykyana.github.io/YKyana-portfolio/project-cash-register.html"
+  >
+
+  <title>
+    Cash Register — Yana Kyslichenko
+  </title>
+
+
+  <!-- Google Fonts -->
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap"
+    rel="stylesheet"
+  >
+
+
+  <!-- Main stylesheet -->
+
+  <link
+    rel="stylesheet"
+    href="css/style.css"
+  >
 </head>
-<body class="bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100">
-    
-    <!-- Навігація -->
-    <nav class="fixed top-0 w-full bg-white/90 dark:bg-gray-950/90 backdrop-blur border-b border-gray-200 dark:border-gray-800 z-50">
-        <div class="max-w-6xl mx-auto px-6 py-5 flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold">Y.Kyana</a>
-            <div class="flex items-center gap-8 text-sm">
-                <a href="index.html" class="hover:text-blue-600 transition">Головна</a>
-                <a href="portfolio.html" class="hover:text-blue-600 transition">Портфоліо</a>
-                <button onclick="toggleTheme()" class="p-2 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800">🌗</button>
-            </div>
-        </div>
+
+
+<body>
+
+  <!-- Accessibility link -->
+
+  <a
+    class="skip-link"
+    href="#main"
+  >
+    Skip to content
+  </a>
+
+
+  <!-- ============================
+       HEADER
+  ============================= -->
+
+  <header class="site-header">
+
+    <a
+      class="wordmark"
+      href="index.html"
+      aria-label="Yana Kyslichenko, home"
+    >
+      YK<span>.</span>
+    </a>
+
+
+    <!-- Desktop navigation -->
+
+    <nav
+      class="desktop-nav"
+      aria-label="Project navigation"
+    >
+
+      <a href="index.html#work">
+        All work
+      </a>
+
+      <a href="index.html#about">
+        About
+      </a>
+
+      <a href="index.html#contact">
+        Contact
+      </a>
+
     </nav>
 
-    <main class="pt-24">
-        <!-- Hero -->
-        <section class="px-6 py-20 text-center">
-            <h1 class="text-5xl md:text-6xl font-bold mb-4">Cash Register</h1>
-            <p class="text-xl text-gray-600 dark:text-gray-400">Hard Surface Prop • Game Ready Asset</p>
-        </section>
 
-        <!-- Pipeline -->
-        <section class="py-20 px-6">
-            <div class="max-w-6xl mx-auto">
-                <h2 class="text-4xl font-bold text-center mb-16">Production Pipeline</h2>
+    <!-- Mobile back button -->
 
-                <div class="space-y-24">
-                    <!-- 1 -->
-                    <div class="grid md:grid-cols-12 gap-12 items-center">
-                        <div class="md:col-span-5">
-                            <span class="text-6xl font-mono font-bold text-blue-600 dark:text-blue-400">01</span>
-                            <h3 class="text-3xl font-semibold mt-6">References & Research</h3>
-                            <p class="mt-6 text-lg text-gray-600 dark:text-gray-400">
-                                Збір референсів реальних кас, аналіз матеріалів, деталей і зносу.
-                            </p>
-                        </div>
-                        <div class="md:col-span-7 grid grid-cols-2 gap-6">
-                            <img src="images/cash-register/ref-01.jpg" alt="Reference" class="rounded-3xl shadow-xl">
-                            <img src="images/cash-register/ref-02.jpg" alt="Reference" class="rounded-3xl shadow-xl">
-                        </div>
-                    </div>
+    <a
+      class="text-link project-back"
+      href="index.html#work"
+    >
+      <span aria-hidden="true">←</span>
+      Back
+    </a>
 
-                    <!-- 2 -->
-                    <div class="grid md:grid-cols-12 gap-12 items-center">
-                        <div class="md:col-span-5">
-                            <span class="text-6xl font-mono font-bold text-blue-600 dark:text-blue-400">02</span>
-                            <h3 class="text-3xl font-semibold mt-6">High-Poly Sculpt</h3>
-                            <p class="mt-6 text-lg text-gray-600 dark:text-gray-400">
-                                Блокінг геометрії та деталізація.
-                            </p>
-                        </div>
-                        <div class="md:col-span-7">
-                            <img src="images/cash-register/highpoly.jpg" alt="High Poly" class="rounded-3xl shadow-xl w-full">
-                        </div>
-                    </div>
+  </header>
 
-                    <!-- 3 -->
-                    <div class="grid md:grid-cols-12 gap-12 items-center">
-                        <div class="md:col-span-5">
-                            <span class="text-6xl font-mono font-bold text-blue-600 dark:text-blue-400">03</span>
-                            <h3 class="text-3xl font-semibold mt-6">Low-Poly + Retopology + UV</h3>
-                            <p class="mt-6 text-lg text-gray-600 dark:text-gray-400">
-                                Оптимізація, чиста топологія, розгортка UV.
-                            </p>
-                        </div>
-                        <div class="md:col-span-7 grid grid-cols-2 gap-6">
-                            <img src="images/cash-register/lowpoly-wire.jpg" alt="Low Poly Wire" class="rounded-3xl shadow-xl">
-                            <img src="images/cash-register/uv.jpg" alt="UV" class="rounded-3xl shadow-xl">
-                        </div>
-                    </div>
 
-                    <!-- 4 -->
-                    <div class="grid md:grid-cols-12 gap-12 items-center">
-                        <div class="md:col-span-5">
-                            <span class="text-6xl font-mono font-bold text-blue-600 dark:text-blue-400">04</span>
-                            <h3 class="text-3xl font-semibold mt-6">Baking Maps</h3>
-                            <p class="mt-6 text-lg text-gray-600 dark:text-gray-400">
-                                Normal, AO, Curvature та інші карти.
-                            </p>
-                        </div>
-                        <div class="md:col-span-7">
-                            <img src="images/cash-register/baking.jpg" alt="Baking" class="rounded-3xl shadow-xl w-full">
-                        </div>
-                    </div>
+  <!-- ============================
+       PROJECT CONTENT
+  ============================= -->
 
-                    <!-- 5 -->
-                    <div class="grid md:grid-cols-12 gap-12 items-center">
-                        <div class="md:col-span-5">
-                            <span class="text-6xl font-mono font-bold text-blue-600 dark:text-blue-400">05</span>
-                            <h3 class="text-3xl font-semibold mt-6">PBR Texturing</h3>
-                            <p class="mt-6 text-lg text-gray-600 dark:text-gray-400">
-                                Substance 3D Painter — матеріали, знос, деталі.
-                            </p>
-                        </div>
-                        <div class="md:col-span-7">
-                            <img src="images/cash-register/texturing.jpg" alt="Texturing" class="rounded-3xl shadow-xl w-full">
-                        </div>
-                    </div>
+  <main
+    class="case-study"
+    id="main"
+  >
 
-                    <!-- Final -->
-                    <div class="pt-16 border-t border-gray-200 dark:border-gray-700 text-center">
-                        <h3 class="text-3xl font-semibold mb-10">Final Game-Ready Asset</h3>
-                        <img src="images/cash-register/final.jpg" alt="Final Render" 
-                             class="mx-auto rounded-3xl shadow-2xl max-w-5xl w-full">
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
 
-    <footer class="bg-gray-900 text-white py-12 text-center text-sm">
-        <p>© 2026 Яна Кисличенко • 3D Hard Surface Artist</p>
-    </footer>
+    <!-- ==========================
+         PROJECT HERO
+    =========================== -->
+
+    <section class="case-hero">
+
+      <p class="eyebrow reveal">
+
+        <span>
+          01
+        </span>
+
+        Selected work · 2026
+
+      </p>
+
+
+      <h1 class="reveal">
+        Cash
+        <br>
+        <span>Register</span>
+      </h1>
+
+
+      <div class="case-facts reveal">
+
+        <p>
+          Hard Surface
+        </p>
+
+        <p>
+          Game-ready Prop
+        </p>
+
+        <p>
+          Full Production Pipeline
+        </p>
+
+      </div>
+
+
+      <img
+        class="reveal"
+        src="images/cash-register.webp"
+        width="1600"
+        height="900"
+        alt="Final render of a vintage cash register game asset created by Yana Kyslichenko"
+      >
+
+    </section>
+
+
+    <!-- ==========================
+         ABOUT THE PROJECT
+    =========================== -->
+
+    <section class="case-intro section">
+
+      <p class="eyebrow reveal">
+
+        <span>
+          About
+        </span>
+
+        The project
+
+      </p>
+
+
+      <div class="reveal">
+
+        <h2>
+          A vintage object,
+          <br>
+          <em>rebuilt in 3D.</em>
+        </h2>
+
+        <p>
+          This project explores a complete high-to-low
+          workflow — from hard surface modeling and
+          optimization to PBR texturing and final
+          presentation.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- ==========================
+         DETAIL RENDER
+    =========================== -->
+
+    <section class="case-gallery section">
+
+      <p class="eyebrow reveal">
+
+        <span>
+          Detail
+        </span>
+
+        Material &amp; wear
+
+      </p>
+
+
+      <img
+        class="reveal"
+        src="images/IMG_0531.webp"
+        width="1600"
+        height="900"
+        loading="lazy"
+        decoding="async"
+        alt="Close-up render showing worn metal, painted surfaces and small details on the cash register"
+      >
+
+    </section>
+
+
+    <!-- ==========================
+         CONTACT CTA
+    =========================== -->
+
+    <section class="next-project section">
+
+      <p class="eyebrow reveal">
+
+        <span>
+          Next
+        </span>
+
+        Get in touch
+
+      </p>
+
+
+      <a
+        class="reveal"
+        href="index.html#contact"
+      >
+
+        <span>
+          Let’s work together
+        </span>
+
+        <span aria-hidden="true">
+          ↗
+        </span>
+
+      </a>
+
+    </section>
+
+  </main>
+
+
+  <!-- ============================
+       FOOTER
+  ============================= -->
+
+  <footer>
+
+    <p>
+      © 2026 Yana Kyslichenko
+    </p>
+
+    <p>
+      3D Hard Surface Artist
+    </p>
+
+    <a href="#main">
+      Back to top
+      <span aria-hidden="true">↑</span>
+    </a>
+
+  </footer>
+
+
+  <!-- Main JavaScript -->
+
+  <script src="js/script.js"></script>
+
 </body>
+
 </html>
