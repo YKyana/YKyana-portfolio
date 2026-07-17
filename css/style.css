@@ -262,29 +262,43 @@ footer a:hover {
 .hero-visual {
   position: relative;
   z-index: 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  width: 100%;
+  max-width: 760px;
+
+  margin-left: auto;
 }
 
 .hero-visual::after {
   content: "";
 
   position: absolute;
-  right: -10%;
-  bottom: -8%;
-  left: 10%;
+  right: -5%;
+  bottom: -5%;
+  left: 15%;
   z-index: -1;
 
-  height: 35%;
+  height: 30%;
 
   background: var(--accent);
   filter: blur(110px);
-  opacity: 0.13;
+  opacity: 0.11;
 }
 
 .hero-visual img {
   position: relative;
   z-index: 2;
 
-  width: 100%;
+  width: 92%;
+  height: auto;
+
+  margin-left: auto;
+
+  object-fit: contain;
 
   filter: drop-shadow(
     0 35px 40px rgba(0, 0, 0, 0.53)
@@ -294,15 +308,15 @@ footer a:hover {
 .accent-orbit {
   position: absolute;
   top: 8%;
-  right: 10%;
+  right: 8%;
 
-  width: 52%;
+  width: 48%;
   aspect-ratio: 1;
 
   border: 1px solid var(--accent);
   border-radius: 50%;
 
-  opacity: 0.45;
+  opacity: 0.4;
 }
 
 .accent-orbit::after {
@@ -322,11 +336,14 @@ footer a:hover {
 }
 
 .image-caption {
-  margin: 1rem 0 0;
+  width: 92%;
+
+  margin: 1rem 0 0 auto;
   padding-top: 0.8rem;
 
   display: flex;
   justify-content: space-between;
+  gap: 1rem;
 
   border-top: 1px solid var(--line);
 
@@ -347,6 +364,7 @@ footer a:hover {
 
   display: flex;
   justify-content: space-between;
+  gap: 1rem;
 
   color: var(--muted);
 
