@@ -856,8 +856,35 @@ footer p {
   }
 
   .hero-visual {
-    margin-top: 1rem;
-  }
+  width: 100%;
+  max-width: 720px;
+
+  margin: 2rem auto 0;
+}
+
+.hero-visual img {
+  width: 100%;
+  height: auto;
+
+  margin: 0 auto;
+
+  object-fit: contain;
+}
+
+.accent-orbit {
+  top: 5%;
+  right: 5%;
+
+  width: 52%;
+}
+
+.image-caption {
+  width: 100%;
+
+  margin: 1rem 0 0;
+
+  gap: 1rem;
+}
 
   .scroll-cue {
     display: none;
@@ -953,6 +980,24 @@ footer p {
     flex-direction: column;
     gap: 1rem;
   }
+  .hero-visual {
+     margin-top: 1.5rem;
+   }
+
+.hero-visual img {
+  width: 100%;
+}
+
+.accent-orbit {
+  top: 4%;
+  right: 3%;
+
+  width: 58%;
+}
+
+.image-caption {
+  font-size: 0.56rem;
+}
 
   .image-caption span {
     display: none;
