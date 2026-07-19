@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, user-scalable=no"
+  >
+
+  <title>Cash Register — Interactive 3D Model</title>
+
+  <style>
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      overflow: hidden;
+      background: #252525;
+    }
+  </style>
+
+  <script src="https://viewer.marmoset.co/main/marmoset.js"></script>
+</head>
+
+<body>
+  <script>
+    marmoset.embed(
+      "cash-register.mview",
+      {
+        width: 800,
+        height: 600,
+        autoStart: true,
+        fullFrame: true,
+        pagePreset: false
+      }
+    );
+  </script>
+</body>
+
+</html>
