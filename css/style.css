@@ -780,8 +780,115 @@ footer p {
   font-size: 1.1rem;
 }
 
-.case-gallery img {
+.breakdown-heading {
+  margin-bottom: clamp(3rem, 7vw, 6rem);
+
+  display: grid;
+  grid-template-columns: 1.4fr 0.8fr;
+  align-items: end;
+  gap: clamp(2rem, 7vw, 8rem);
+}
+
+.breakdown-heading h2 {
+  font-size: clamp(3.2rem, 6vw, 7rem);
+}
+
+.breakdown-heading > p {
+  max-width: 34rem;
+  margin: 0;
+
+  color: var(--muted);
+
+  font-size: 1rem;
+}
+
+.breakdown-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+
+  border: 1px solid var(--line);
+  background: var(--line);
+}
+
+.breakdown-card,
+.texture-card {
+  margin: 0;
+  background: var(--surface);
+}
+
+.breakdown-card img,
+.texture-card img {
   width: 100%;
+  display: block;
+  background: #252525;
+}
+
+.breakdown-card img {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.breakdown-card figcaption,
+.texture-card figcaption {
+  min-height: 72px;
+  padding: 1rem 1.2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+
+  border-top: 1px solid var(--line);
+}
+
+.breakdown-card figcaption strong,
+.texture-card figcaption strong {
+  font-family: var(--display-font);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.breakdown-card figcaption span,
+.texture-card figcaption span {
+  color: var(--muted);
+
+  font-size: 0.62rem;
+  text-align: right;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.texture-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.75fr);
+  align-items: stretch;
+  gap: 1.5rem;
+}
+
+.texture-card {
+  border: 1px solid var(--line);
+}
+
+.texture-card img {
+  aspect-ratio: 1;
+  object-fit: contain;
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.detail-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.detail-grid img:first-child {
+  grid-column: 1 / -1;
 }
 
 .next-project a {
@@ -979,6 +1086,16 @@ footer p {
     aspect-ratio: 4 / 3;
   }
 
+  .breakdown-heading {
+    grid-template-columns: 1fr;
+    align-items: start;
+    gap: 2rem;
+  }
+
+  .texture-grid {
+    grid-template-columns: 1fr;
+  }
+
   .case-intro {
     grid-template-columns: 1fr;
   }
@@ -1059,6 +1176,26 @@ footer p {
 
   .viewer-help {
     line-height: 1.7;
+  }
+
+  .breakdown-grid,
+  .detail-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .breakdown-card figcaption,
+  .texture-card figcaption {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .breakdown-card figcaption span,
+  .texture-card figcaption span {
+    text-align: left;
+  }
+
+  .detail-grid img:first-child {
+    grid-column: auto;
   }
 
   .capabilities {
