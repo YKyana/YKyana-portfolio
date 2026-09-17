@@ -29,6 +29,7 @@ h1{margin:0;font-size:clamp(4.3rem,9.5vw,10.4rem);line-height:.79;letter-spacing
 @media(max-width:390px){nav a:first-child{display:none}h1,.hero h1{font-size:14.4vw}.actions{display:grid;grid-template-columns:1fr}.btn{justify-content:center}.shot-info h2{font-size:12vw}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
 .project-controls{display:flex;align-items:center;justify-content:flex-end;gap:16px;margin-top:18px}.project-controls button{width:44px;height:44px;border:1px solid var(--line);background:#090b0e;color:var(--text);font-size:25px;cursor:pointer}.project-controls button:hover{border-color:var(--o);color:var(--os)}.project-controls span{color:var(--muted);font-size:11px;letter-spacing:.12em}.project[hidden]{display:none!important}#work .project{opacity:1;transform:none}.project-controls button:focus-visible{outline:2px solid var(--o);outline-offset:3px}
+#work .head{margin-bottom:30px}.work-track{display:flex;gap:24px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:thin;scrollbar-color:var(--o) #090b0e;padding:12px 0 20px}.work-track .project{flex:0 0 calc((100% - 48px)/3);min-width:0;padding:0 0 18px;border-top:0;scroll-snap-align:start}.work-track .ptop{display:block;margin:0 0 18px}.work-track .pname{font-size:clamp(1.5rem,2.8vw,3rem);line-height:.95;letter-spacing:-.045em}.work-track .ptype{display:none}.work-track .visual,.work-track .visual.crate{min-height:0;aspect-ratio:4/3;background-size:cover}.work-track .label{top:10px;left:10px;padding:7px 8px;font-size:8px}.work-track .pbot{display:block;margin-top:16px}.work-track .plink{font-size:11px}.project-controls button:disabled{opacity:.3;cursor:default}.project-controls button:disabled:hover{border-color:var(--line);color:var(--text)}@media(max-width:980px){.work-track .project{flex-basis:calc((100% - 24px)/2)}}@media(max-width:600px){.work-track .project{flex-basis:85%}.work-track .pname{font-size:2rem}}
 </style>
 </head>
 <body>
@@ -65,18 +66,18 @@ h1{margin:0;font-size:clamp(4.3rem,9.5vw,10.4rem);line-height:.79;letter-spacing
 <section class="section" id="work">
   <div class="head reveal"><div class="index">Selected Work</div><h2 class="title outline">Projects</h2></div>
   <div class="project-controls"><button type="button" id="workPrev" aria-label="Previous project">‹</button><span id="workCount" aria-live="polite">01 / 02</span><button type="button" id="workNext" aria-label="Next project">›</button></div>
+  <div class="work-track" id="workTrack" aria-label="Portfolio projects">
   <article class="project reveal">
     <div class="ptop"><h3 class="pname">Cash<br>Register</h3><div class="ptype">Hard Surface Prop<br>Game Ready</div></div>
     <div class="visual cash clickable"><a class="cover-link" href="cash-register.html?v=20260826c" aria-label="Open Cash Register project"></a><div class="label">Final asset / 2026</div></div>
-    <p class="desc">A hard-surface prop focused on readable forms, worn materials and a production-ready presentation.</p>
-    <div class="pbot"><div class="meta"><span>Discipline — <b>Hard Surface</b></span><span>Asset — <b>Prop</b></span><span>Workflow — <b>Game Ready / PBR</b></span><span>Presentation — <b>Marmoset Toolbag</b></span></div><a class="plink" href="cash-register.html?v=20260826c">View case study ↗</a></div>
+    <div class="pbot"><a class="plink" href="cash-register.html?v=20260826c">View case study ↗</a></div>
   </article>
-  <article class="project reveal" hidden>
+  <article class="project reveal">
     <div class="ptop"><h3 class="pname">Military<br>Crate</h3><div class="ptype">Hard Surface Asset<br>Completed</div></div>
-    <div class="visual crate clickable"><a class="cover-link" href="military-crate.html" aria-label="Open Military Crate project"></a><div class="label">Final asset / 2026</div><div class="stage"><small>Project status</small><strong>Completed asset</strong></div></div>
-    <p class="desc">A completed military crate with wooden construction, metal fittings and a twisted rope handle. Created through the full modeling, UV, baking and PBR texturing workflow.</p>
-    <div class="pbot"><div class="meta"><span>Discipline — <b>Hard Surface</b></span><span>Status — <b>Completed</b></span><span>Primary Tool — <b>Autodesk Maya</b></span><span>Pipeline — <b>HP → LP → UV → Bake → Texture → Render</b></span></div><a class="plink" href="military-crate.html">View case study ↗</a></div>
+    <div class="visual crate clickable"><a class="cover-link" href="military-crate.html" aria-label="Open Military Crate project"></a><div class="label">Final asset / 2026</div></div>
+    <div class="pbot"><a class="plink" href="military-crate.html">View case study ↗</a></div>
   </article>
+  </div>
 </section>
 <section class="section contact" id="contact">
   <div><div class="index reveal">Contact</div><h2 class="reveal">Let's work<span>together.</span></h2></div>
@@ -104,9 +105,10 @@ const featuredShot=document.getElementById("featuredShot");
 function showFeatured(n){featuredIndex=(n+featuredProjects.length)%featuredProjects.length;const p=featuredProjects[featuredIndex];const img=featuredShot.querySelector("img");img.src=p.image;img.alt=p.title+" by Yana Kyslichenko";featuredShot.querySelector("h2").textContent=p.title;featuredShot.querySelector(".shot-info small").textContent=p.type;featuredShot.querySelectorAll("a").forEach(a=>a.href=p.url);featuredShot.querySelector(".cover-link").setAttribute("aria-label","Open "+p.title+" project");document.getElementById("featuredCount").textContent=String(featuredIndex+1).padStart(2,"0")+" / "+String(featuredProjects.length).padStart(2,"0");}
 document.getElementById("featuredPrev").addEventListener("click",()=>showFeatured(featuredIndex-1));
 document.getElementById("featuredNext").addEventListener("click",()=>showFeatured(featuredIndex+1));
-const workProjects=[...document.querySelectorAll("#work .project")];
-function showWork(n){workIndex=(n+workProjects.length)%workProjects.length;workProjects.forEach((p,i)=>{p.hidden=i!==workIndex;p.classList.add("visible")});document.getElementById("workCount").textContent=String(workIndex+1).padStart(2,"0")+" / "+String(workProjects.length).padStart(2,"0");}
-document.getElementById("workPrev").addEventListener("click",()=>showWork(workIndex-1));
-document.getElementById("workNext").addEventListener("click",()=>showWork(workIndex+1));
+const workTrack=document.getElementById("workTrack"),workProjects=[...workTrack.querySelectorAll(".project")],workPrev=document.getElementById("workPrev"),workNext=document.getElementById("workNext");
+function updateWork(){const overflow=workTrack.scrollWidth>workTrack.clientWidth+2;workPrev.disabled=!overflow||workTrack.scrollLeft<=2;workNext.disabled=!overflow||workTrack.scrollLeft+workTrack.clientWidth>=workTrack.scrollWidth-2;document.getElementById("workCount").textContent=workProjects.length+" projects";}
+function scrollWork(direction){const card=workProjects[0];workTrack.scrollBy({left:direction*(card.getBoundingClientRect().width+24),behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth"});}
+workPrev.addEventListener("click",()=>scrollWork(-1));workNext.addEventListener("click",()=>scrollWork(1));
+workTrack.addEventListener("scroll",updateWork,{passive:true});addEventListener("resize",updateWork);updateWork();
 </script>
 </body></html>
