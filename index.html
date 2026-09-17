@@ -28,6 +28,7 @@ h1{margin:0;font-size:clamp(4.3rem,9.5vw,10.4rem);line-height:.79;letter-spacing
 @media(max-width:700px){:root{--p:20px}.topbar{padding:18px var(--p)}.brand{font-size:9px;white-space:nowrap}nav{gap:13px}nav a{font-size:9px}nav a:nth-child(2){display:none}.hero{padding:104px var(--p) 54px;gap:30px}.hero-copy{width:100%}.kicker{margin-bottom:18px;font-size:8px}.kicker:before{width:28px}h1,.hero h1{font-size:clamp(3rem,15.3vw,5.25rem);line-height:.82;letter-spacing:-.07em;max-width:100%}.hero-copy>p{margin-top:24px;font-size:15px;line-height:1.55}.actions{margin-top:22px}.btn{min-height:46px;padding:0 17px;font-size:11px}.showcase{width:100%;max-width:none;margin-top:4px}.shot{min-height:0;aspect-ratio:4/5}.shot img{min-height:0;position:absolute;inset:0;object-position:center}.badge{top:14px;left:14px;font-size:8px}.shot-info{left:16px;right:16px;bottom:16px;grid-template-columns:1fr;gap:12px}.shot-info h2{font-size:clamp(2.4rem,14vw,4rem)}.shot-info a{width:max-content}.show-meta{flex-direction:column;gap:6px;font-size:8px}.section{padding:68px var(--p)}.head{margin-bottom:42px}.title{font-size:clamp(2.8rem,15vw,4.6rem)}.about-layout{grid-template-columns:1fr}.about-photo{width:100%;max-width:360px}.lead{font-size:clamp(1.45rem,7vw,2rem)}.copy{font-size:13px}.caps{margin-top:48px}.cap,.cert{grid-template-columns:1fr}.cert-meta{align-items:flex-start;flex-direction:column;gap:14px}.pname{font-size:clamp(2.7rem,15vw,4.8rem)}.visual,.visual.crate{min-height:0;aspect-ratio:4/5}.stage{right:12px;bottom:12px;left:12px}.pbot{grid-template-columns:1fr}.contact{min-height:auto;gap:54px}.contact h2{font-size:clamp(3.2rem,16vw,5.8rem)}.links a{min-height:72px;padding:0 16px}footer{flex-direction:column;align-items:flex-start;padding-left:var(--p);padding-right:var(--p)}}
 @media(max-width:390px){nav a:first-child{display:none}h1,.hero h1{font-size:14.4vw}.actions{display:grid;grid-template-columns:1fr}.btn{justify-content:center}.shot-info h2{font-size:12vw}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+.project-controls{display:flex;align-items:center;justify-content:flex-end;gap:16px;margin-top:18px}.project-controls button{width:44px;height:44px;border:1px solid var(--line);background:#090b0e;color:var(--text);font-size:25px;cursor:pointer}.project-controls button:hover{border-color:var(--o);color:var(--os)}.project-controls span{color:var(--muted);font-size:11px;letter-spacing:.12em}.project[hidden]{display:none!important}#work .project{opacity:1;transform:none}.project-controls button:focus-visible{outline:2px solid var(--o);outline-offset:3px}
 </style>
 </head>
 <body>
@@ -42,12 +43,12 @@ h1{margin:0;font-size:clamp(4.3rem,9.5vw,10.4rem);line-height:.79;letter-spacing
     <div class="actions"><a class="btn primary" href="#work">View selected work ↘</a><a class="btn" href="#about">About me</a></div>
   </div>
   <div class="showcase reveal" id="showcase">
-    <div class="shot clickable"><a class="cover-link" href="cash-register.html?v=20260826c" aria-label="Open Cash Register project"></a>
+    <div class="shot clickable" id="featuredShot"><a class="cover-link" href="cash-register.html?v=20260826c" aria-label="Open Cash Register project"></a>
       <img src="images/cash-register.webp" width="1600" height="900" alt="Cash Register hard surface game-ready asset by Yana Kyslichenko">
       <div class="badge">Featured project</div>
       <div class="shot-info"><div><small>Hard Surface / Game-ready Prop</small><h2>Cash Register</h2></div><a href="cash-register.html?v=20260826c">View project ↗</a></div>
     </div>
-    <div class="show-meta"><span>Maya / Substance 3D Painter / Marmoset</span><span>Selected Work / 2026</span></div>
+    <div class="project-controls"><button type="button" id="featuredPrev" aria-label="Previous featured project">‹</button><span id="featuredCount" aria-live="polite">01 / 02</span><button type="button" id="featuredNext" aria-label="Next featured project">›</button></div><div class="show-meta"><span>Maya / Substance 3D Painter / Marmoset</span><span>Selected Work / 2026</span></div>
   </div>
 </section>
 <section class="section" id="about">
@@ -63,13 +64,14 @@ h1{margin:0;font-size:clamp(4.3rem,9.5vw,10.4rem);line-height:.79;letter-spacing
 </section>
 <section class="section" id="work">
   <div class="head reveal"><div class="index">Selected Work</div><h2 class="title outline">Projects</h2></div>
+  <div class="project-controls"><button type="button" id="workPrev" aria-label="Previous project">‹</button><span id="workCount" aria-live="polite">01 / 02</span><button type="button" id="workNext" aria-label="Next project">›</button></div>
   <article class="project reveal">
     <div class="ptop"><h3 class="pname">Cash<br>Register</h3><div class="ptype">Hard Surface Prop<br>Game Ready</div></div>
     <div class="visual cash clickable"><a class="cover-link" href="cash-register.html?v=20260826c" aria-label="Open Cash Register project"></a><div class="label">Final asset / 2026</div></div>
     <p class="desc">A hard-surface prop focused on readable forms, worn materials and a production-ready presentation.</p>
     <div class="pbot"><div class="meta"><span>Discipline — <b>Hard Surface</b></span><span>Asset — <b>Prop</b></span><span>Workflow — <b>Game Ready / PBR</b></span><span>Presentation — <b>Marmoset Toolbag</b></span></div><a class="plink" href="cash-register.html?v=20260826c">View case study ↗</a></div>
   </article>
-  <article class="project reveal">
+  <article class="project reveal" hidden>
     <div class="ptop"><h3 class="pname">Military<br>Crate</h3><div class="ptype">Hard Surface Asset<br>Completed</div></div>
     <div class="visual crate clickable"><a class="cover-link" href="military-crate.html" aria-label="Open Military Crate project"></a><div class="label">Final asset / 2026</div><div class="stage"><small>Project status</small><strong>Completed asset</strong></div></div>
     <p class="desc">A completed military crate with wooden construction, metal fittings and a twisted rope handle. Created through the full modeling, UV, baking and PBR texturing workflow.</p>
@@ -92,5 +94,19 @@ function resize(){const d=Math.min(devicePixelRatio||1,2);c.width=innerWidth*d;c
 function draw(){x.clearRect(0,0,innerWidth,innerHeight);for(const a of s){a.y+=.045+a.z*.12;if(a.y>innerHeight+4){a.y=-4;a.x=Math.random()*innerWidth}const px=(mx-innerWidth/2)*a.z*.008,py=(my-innerHeight/2)*a.z*.008;x.beginPath();x.fillStyle=a.w?`rgba(255,173,104,${a.a})`:`rgba(226,235,246,${a.a})`;x.arc(a.x+px,a.y+py,a.r*a.z,0,Math.PI*2);x.fill()}requestAnimationFrame(draw)}
 addEventListener("resize",resize);addEventListener("pointermove",e=>{mx=e.clientX;my=e.clientY;const v=document.getElementById("showcase");if(v&&innerWidth>1450){const rx=(e.clientY/innerHeight-.5)*-1.3,ry=(e.clientX/innerWidth-.5)*1.8;v.style.transform=`perspective(1200px) rotateX(${rx}deg) rotateY(${ry}deg)`}});
 const o=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add("visible")}),{threshold:.06,rootMargin:"0px 0px 80px 0px"});document.querySelectorAll(".reveal").forEach(e=>o.observe(e));addEventListener("scroll",()=>document.getElementById("topbar").classList.toggle("scrolled",scrollY>24));resize();draw();
+
+const featuredProjects=[
+{title:"Cash Register",image:"images/cash-register.webp",url:"cash-register.html",type:"Hard Surface / Game-ready Prop"},
+{title:"Military Crate",image:"images/military-crate/hero.webp",url:"military-crate.html",type:"Hard Surface / PBR Prop"}
+];
+let featuredIndex=0,workIndex=0;
+const featuredShot=document.getElementById("featuredShot");
+function showFeatured(n){featuredIndex=(n+featuredProjects.length)%featuredProjects.length;const p=featuredProjects[featuredIndex];const img=featuredShot.querySelector("img");img.src=p.image;img.alt=p.title+" by Yana Kyslichenko";featuredShot.querySelector("h2").textContent=p.title;featuredShot.querySelector(".shot-info small").textContent=p.type;featuredShot.querySelectorAll("a").forEach(a=>a.href=p.url);featuredShot.querySelector(".cover-link").setAttribute("aria-label","Open "+p.title+" project");document.getElementById("featuredCount").textContent=String(featuredIndex+1).padStart(2,"0")+" / "+String(featuredProjects.length).padStart(2,"0");}
+document.getElementById("featuredPrev").addEventListener("click",()=>showFeatured(featuredIndex-1));
+document.getElementById("featuredNext").addEventListener("click",()=>showFeatured(featuredIndex+1));
+const workProjects=[...document.querySelectorAll("#work .project")];
+function showWork(n){workIndex=(n+workProjects.length)%workProjects.length;workProjects.forEach((p,i)=>{p.hidden=i!==workIndex;p.classList.add("visible")});document.getElementById("workCount").textContent=String(workIndex+1).padStart(2,"0")+" / "+String(workProjects.length).padStart(2,"0");}
+document.getElementById("workPrev").addEventListener("click",()=>showWork(workIndex-1));
+document.getElementById("workNext").addEventListener("click",()=>showWork(workIndex+1));
 </script>
 </body></html>
